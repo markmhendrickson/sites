@@ -6,7 +6,7 @@ if(process.argv.includes('--r4')){
  brands.neotoma.recognition='Context is scattered across conversations and files. Copies fall out of step. You become the reconciliation layer.';
 }
 brands.ateles.eyebrow='Delegate meaningful work';
-brands.neotoma.eyebrow='Context worth relying on';
+brands.neotoma.eyebrow='Make context worth relying on';
 for(const p of Object.values(brands))p.cta='Get started';
 const contributors=brands.ateles.sections.find(s=>s.key==='contributors');
 contributors.copy='Give contributors distinct roles, responsibilities and an inspectable relationship to the work.';
