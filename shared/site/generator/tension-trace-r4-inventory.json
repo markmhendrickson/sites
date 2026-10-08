@@ -1,0 +1,216 @@
+{
+  "ateles": [
+    {
+      "key": "agent-harnesses",
+      "title": "Agent harnesses",
+      "asset": "A-harness",
+      "linkLabel": "agent harnesses",
+      "intro": "A capable working environment helps an agent carry out meaningful tasks.",
+      "takeaway": "Keep the environment. Add the operating contract.",
+      "relationship": "Ateles can organize work performed through harnesses; the distinction is the continuing responsibility and authority model, not a claim that harnesses lack controls.",
+      "visualAlt": "A single cloth contributor advances a marked work packet within its bounded work area.",
+      "strength": "Working environments with tools, instructions, project context and controls for carrying out tasks.",
+      "question": "What continuing responsibility and authority contract should the agent environment serve?",
+      "offerings": [
+        {
+          "name": "Claude Code",
+          "summary": "Agentic coding environment, project memory and extensibility.",
+          "url": "https://code.claude.com/docs/en/overview",
+          "additionalUrl": null
+        },
+        {
+          "name": "Codex",
+          "summary": "Coding agent available through terminal, editor and app surfaces.",
+          "url": "https://github.com/openai/codex",
+          "additionalUrl": null
+        },
+        {
+          "name": "Cursor",
+          "summary": "Coding agent with codebase tools, rules, checkpoints and project coordination.",
+          "url": "https://cursor.com/docs/agent/overview",
+          "additionalUrl": null
+        },
+        {
+          "name": "OpenCode",
+          "summary": "A coding agent with terminal, desktop and editor surfaces and project instructions.",
+          "url": "https://opencode.ai/docs/",
+          "additionalUrl": null
+        }
+      ]
+    },
+    {
+      "key": "workflow-frameworks",
+      "title": "Workflow and agent frameworks",
+      "asset": "A-framework",
+      "linkLabel": "workflow frameworks",
+      "intro": "Execution frameworks help developers define and coordinate agent contributions.",
+      "takeaway": "Define what the execution serves.",
+      "relationship": "A framework can implement substantial governance. Ateles supplies the organizational design around purpose, responsibility and authority.",
+      "visualAlt": "Distinct woven contributor stations join a defined ribbon route around one work packet.",
+      "strength": "Explicit execution and coordination mechanisms, including persistence, recovery and human intervention.",
+      "question": "Which organizational purpose, responsibilities and authority should these flows implement?",
+      "offerings": [
+        {
+          "name": "LangGraph",
+          "summary": "Graph execution with checkpointed and cross-thread state.",
+          "url": "https://docs.langchain.com/oss/python/langgraph/persistence",
+          "additionalUrl": null
+        },
+        {
+          "name": "CrewAI Flows",
+          "summary": "Structured flows with state persistence, resumption and forking.",
+          "url": "https://docs.crewai.com/v1.15.23/en/concepts/flows",
+          "additionalUrl": null
+        },
+        {
+          "name": "AutoGen AgentChat",
+          "summary": "Multi-agent applications, teams and predefined coordination patterns.",
+          "url": "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/index.html",
+          "additionalUrl": null
+        },
+        {
+          "name": "Temporal",
+          "summary": "Durable execution and recovery after crashes or infrastructure interruptions.",
+          "url": "https://docs.temporal.io/",
+          "additionalUrl": null
+        }
+      ]
+    }
+  ],
+  "neotoma": [
+    {
+      "key": "session-project-platform-memory",
+      "title": "Session, project and platform memory",
+      "asset": "N-platform-memory",
+      "linkLabel": "platform memory",
+      "intro": "Remembered context inside the environment where you already work.",
+      "takeaway": "Carry useful context across interactions.",
+      "relationship": "Use tool-native continuity where it fits. Add Neotoma when a shared structured record matters across tools.",
+      "visualAlt": "Distinct paper bundles contain remembered working context in separate tool-specific enclosures.",
+      "strength": "Convenient continuity and relevant context inside the environment where you already work.",
+      "question": "Which facts need an explicit history and a common basis across your tools?",
+      "offerings": [
+        {
+          "name": "Claude memory",
+          "summary": "Topic memory, project memory, chat search, review/edit controls and data export.",
+          "url": "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context",
+          "additionalUrl": null
+        },
+        {
+          "name": "ChatGPT Memory and Projects",
+          "summary": "Remembered context and project-scoped chats, files and instructions; controls vary by account and plan.",
+          "url": "https://help.openai.com/en/articles/8590148-memory-in-chatgpt",
+          "additionalUrl": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt"
+        },
+        {
+          "name": "Claude Code memory",
+          "summary": "Project instructions and auto memory carry working context between coding sessions.",
+          "url": "https://code.claude.com/docs/en/memory",
+          "additionalUrl": null
+        },
+        {
+          "name": "Cursor Rules",
+          "summary": "Reusable project, user and team instructions; instruction delivery is distinct from a structured factual record.",
+          "url": "https://cursor.com/docs/rules",
+          "additionalUrl": null
+        }
+      ]
+    },
+    {
+      "key": "files-document-retrieval",
+      "title": "Files and document retrieval",
+      "asset": "N-files-retrieval",
+      "linkLabel": "file and retrieval approaches",
+      "intro": "Keep readable sources and retrieve the passages relevant to a task.",
+      "takeaway": "Keep the sources. Make the current basis explicit.",
+      "relationship": "Source files and retrieval can remain valuable alongside Neotoma’s structured records and field histories.",
+      "visualAlt": "Paper source sheets and excerpts are indexed into readable grouped passages.",
+      "strength": "Readable source material and retrieval of useful passages from a larger corpus.",
+      "question": "When two sources disagree, where does the corrected fact and its lineage live?",
+      "offerings": [
+        {
+          "name": "Claude memory tool",
+          "summary": "Client-controlled persistent file operations across conversations.",
+          "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/memory-tool",
+          "additionalUrl": null
+        },
+        {
+          "name": "LlamaIndex RAG",
+          "summary": "Document loading, indexing and retrieval; nodes retain metadata and relationships.",
+          "url": "https://developers.llamaindex.ai/python/framework/understanding/rag/",
+          "additionalUrl": "https://developers.llamaindex.ai/python/framework/module_guides/indexing/vector_store_index/"
+        },
+        {
+          "name": "AutoGen Memory and RAG",
+          "summary": "A memory protocol with vector stores and document indexing/retrieval examples.",
+          "url": "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/memory.html",
+          "additionalUrl": null
+        }
+      ]
+    },
+    {
+      "key": "memory-services",
+      "title": "Memory services and stateful agents",
+      "asset": "N-memory-services",
+      "linkLabel": "memory services",
+      "intro": "Purpose-built memory systems offer different persistence, graph and recall contracts.",
+      "takeaway": "Compare the actual contract.",
+      "relationship": "Inspect the configured service rather than assuming every memory product behaves alike. Neotoma offers a structured, revisable context record.",
+      "visualAlt": "A stable collection of distinct paper records connects to several shaped reader tabs.",
+      "strength": "Purpose-built memory and context infrastructure for agent applications.",
+      "question": "What does the service preserve, how are corrections resolved, and what can you inspect or reconstruct?",
+      "offerings": [
+        {
+          "name": "Mem0",
+          "summary": "Long-term memory across sessions, tools and runs, with managed and self-hosted paths.",
+          "url": "https://docs.mem0.ai/introduction",
+          "additionalUrl": null
+        },
+        {
+          "name": "Zep",
+          "summary": "Governed shared context from business data, documents and conversations in temporal graphs.",
+          "url": "https://help.getzep.com/overview",
+          "additionalUrl": null
+        },
+        {
+          "name": "Letta",
+          "summary": "Persisted agent state and editable memory blocks, including shared blocks.",
+          "url": "https://docs.letta.com/v1-sdk/concepts/stateful-agents",
+          "additionalUrl": null
+        }
+      ]
+    },
+    {
+      "key": "workflow-custom-state",
+      "title": "Workflow and custom state",
+      "asset": "N-custom-state",
+      "linkLabel": "workflow and custom state",
+      "intro": "Build persistence around the state model your application needs.",
+      "takeaway": "Choose what you want to own.",
+      "relationship": "Application state can implement substantial context behavior. Neotoma supplies a maintained record layer instead of requiring you to build that layer yourself.",
+      "visualAlt": "Paper fields sit in a deliberately bounded custom record structure with separate retained amendments.",
+      "strength": "Application-defined state, persistence and transactional storage that you can shape for a particular workflow.",
+      "question": "Which history, identity, correction and access contracts will your application supply?",
+      "offerings": [
+        {
+          "name": "LangGraph persistence",
+          "summary": "Checkpoints within a thread and stores across threads for application-defined information.",
+          "url": "https://docs.langchain.com/oss/python/langgraph/persistence",
+          "additionalUrl": null
+        },
+        {
+          "name": "SQLite",
+          "summary": "Local transactional storage for an application-defined data model.",
+          "url": "https://www.sqlite.org/lang_transaction.html",
+          "additionalUrl": null
+        },
+        {
+          "name": "PostgreSQL",
+          "summary": "Transactional database infrastructure with concurrency controls.",
+          "url": "https://www.postgresql.org/docs/current/mvcc.html",
+          "additionalUrl": null
+        }
+      ]
+    }
+  ]
+}

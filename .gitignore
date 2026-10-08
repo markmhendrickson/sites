@@ -1,0 +1,11 @@
+node_modules/
+.build/
+shared/site/generator/dist/*.html
+shared/site/generator/dist/*-routes.json
+.env
+.env.*
+!.env.example
+.openai/
+wrangler.toml
+.DS_Store
+*.log

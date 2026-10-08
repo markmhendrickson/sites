@@ -1,0 +1,10 @@
+{
+  "prepared": true,
+  "registrationLive": false,
+  "retentionTriggerVerified": false,
+  "privacyRemovalVerified": false,
+  "publicRelease": false,
+  "syntheticOnly": true,
+  "workerEntry": "server/index.js",
+  "staticDelegate": "env.ASSETS.fetch"
+}

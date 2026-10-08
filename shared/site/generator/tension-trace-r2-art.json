@@ -1,0 +1,158 @@
+{
+  "A-hero": {
+    "src": "images/tension-trace-r2/A-hero.jpg",
+    "width": 1672,
+    "height": 941,
+    "sha256": "100137c46d9d1bbd953910a6fb6c7d8abeb08d33261d75be230cfa6d5181b14d"
+  },
+  "N-hero": {
+    "src": "images/tension-trace-r2/N-hero.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "8eee3947a65ac16fd41b359e558a6f4839c5c679cd6c8c1dcc0d4b115572476f"
+  },
+  "A-purpose": {
+    "src": "images/tension-trace-r2/A-purpose.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "fdd7343008474c653324bcc0a5bef9d88114dd0e2802aff041564b5189e0d7f6"
+  },
+  "A-contributors": {
+    "src": "images/tension-trace-r2/A-contributors.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "9fcb564508f1f0197a305bc681db1eaa1e90823708ef662cd9173329433d8473"
+  },
+  "A-authority": {
+    "src": "images/tension-trace-r2/A-authority.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "72b9928e0a334dce2bb946bf0d242c4c8c6348fdeb8e6d7169b7a1526659e5d4"
+  },
+  "A-outcomes": {
+    "src": "images/tension-trace-r2/A-outcomes.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "c40421a9ebb37e30e3c047c017a7fb59bb4e63e0e5b4a168749701b5b65e52e1"
+  },
+  "A-continuity": {
+    "src": "images/tension-trace-r2/A-continuity.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "e1769890e07421e3f4a388574e64a00626b08fd71f86a423d2a9e7b8feee4d56"
+  },
+  "A-extension": {
+    "src": "images/tension-trace-r2/A-extension.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "d2effc679777ef7ba5f05a54adefc91a703f68263f8e72059d6d40afc5f4dcd3"
+  },
+  "N-capture": {
+    "src": "images/tension-trace-r2/N-capture.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "68e222c80789e028f26a34dde5c6f2516bb10a7254dc39b1bebe307e735ee780"
+  },
+  "N-structure": {
+    "src": "images/tension-trace-r2/N-structure.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "95b5bd126f1ef9bbbbf26587a6050f7233e8f4c0251e8aca0fd5ef2b7a8e683c"
+  },
+  "N-current": {
+    "src": "images/tension-trace-r2/N-current.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "4c2aeba330bdbfcb264b6fa78cd4e3e93b2a0cbc1fb86fee81e26da30535ccea"
+  },
+  "N-basis": {
+    "src": "images/tension-trace-r2/N-basis.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "c15eab5ca13db42f5ea398687463f0038a12ca57a75998e3be714920dde925bd"
+  },
+  "N-history": {
+    "src": "images/tension-trace-r2/N-history.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "32b686dc793e254867f7419c3cdbc406744b600f7f9b21ed3e8fe11b6c88d088"
+  },
+  "N-change": {
+    "src": "images/tension-trace-r2/N-change.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "232f91ea4ab30aa24f8965ded511da44acacdce54b7e2fa78b757828c1c2ca9c"
+  },
+  "A-purpose-detail": {
+    "src": "images/tension-trace-r2/A-purpose-detail.jpg",
+    "width": 1672,
+    "height": 941,
+    "sha256": "b43a6cd12576b36cce316d59f6cf61c4e92e958acd3fa34bbd4a02ee43ef6cca"
+  },
+  "A-contributors-detail": {
+    "src": "images/tension-trace-r2/A-contributors-detail.jpg",
+    "width": 1672,
+    "height": 941,
+    "sha256": "c6d1f07042d198a0a1ee7e097f6488aa28ed02a67dee2f34176f3d1234421061"
+  },
+  "A-authority-detail": {
+    "src": "images/tension-trace-r2/A-authority-detail.jpg",
+    "width": 1672,
+    "height": 941,
+    "sha256": "6f88c3ad24f73dcbb680a89696ce40b23dd0f3aa83ba38f1cea99eaa79f1fed0"
+  },
+  "A-outcomes-detail": {
+    "src": "images/tension-trace-r2/A-outcomes-detail.jpg",
+    "width": 1672,
+    "height": 941,
+    "sha256": "1ea8e221d4dd20bac6241b35daa78d449ffb6f6570de2e1fec40f66b5b482ad4"
+  },
+  "A-continuity-detail": {
+    "src": "images/tension-trace-r2/A-continuity-detail.jpg",
+    "width": 1672,
+    "height": 941,
+    "sha256": "edf2c93b9c55accba9351435dbd7ffdf0aaa9f7516700807254c71e9b0f9aff8"
+  },
+  "A-extension-detail": {
+    "src": "images/tension-trace-r2/A-extension-detail.jpg",
+    "width": 1672,
+    "height": 941,
+    "sha256": "1443e59a43fce2ea41eb3aca768c4fe67a7f46ff9d4ffb8405b54a8ec7c8ed32"
+  },
+  "N-capture-detail": {
+    "src": "images/tension-trace-r2/N-capture-detail.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "7790a20b1e267011c4cfe3de5cd016d8b4612afcca915240efc0af99b8cab588"
+  },
+  "N-structure-detail": {
+    "src": "images/tension-trace-r2/N-structure-detail.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "2c01f1eacbd5c9c76494c5bc997b9f7f41df67e7acd153bd1b3a80eff6fa633a"
+  },
+  "N-current-detail": {
+    "src": "images/tension-trace-r2/N-current-detail.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "8859a91849e2a042c78e44593c1069942780da29e0af08af933dad8d8506ee72"
+  },
+  "N-basis-detail": {
+    "src": "images/tension-trace-r2/N-basis-detail.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "a784daa0240d94c9c818077da70438061929a128c0820ea214bd66e7756db8a1"
+  },
+  "N-history-detail": {
+    "src": "images/tension-trace-r2/N-history-detail.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "e23e57a80edd21aee624789ee04db31679d8acb5ff350fedaf5d6d5b9dab48b7"
+  },
+  "N-change-detail": {
+    "src": "images/tension-trace-r2/N-change-detail.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "b37b00eb976f7a6c36fcb816a3cbdf73607a57ebec168fb48e574812bad0c3ac"
+  }
+}

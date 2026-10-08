@@ -1,0 +1,260 @@
+{
+  "tension": {
+    "A1": {
+      "src": "images/concise-2026-10-05/tension-A1.jpg",
+      "alt": "Translucent blue and ivory textile membranes held in directed tension.",
+      "width": 1672,
+      "height": 941
+    },
+    "A2": {
+      "src": "images/concise-2026-10-05/tension-A2.jpg",
+      "alt": "Five linked blue textile strips descend from a broad parent strip into progressively focused work.",
+      "width": 1672,
+      "height": 941
+    },
+    "A3": {
+      "src": "images/concise-2026-10-05/tension-A3.jpg",
+      "alt": "Two airy blue lanes carry a navy rectangular patch and rust round excerpt into one finished textile deliverable containing both.",
+      "width": 1672,
+      "height": 941
+    },
+    "A4": {
+      "src": "images/concise-2026-10-05/tension-A4.jpg",
+      "alt": "Prepared invoice and evidence ribbons stop before a rust fabric boundary; an untouched remittance sheet rests beyond it.",
+      "width": 1672,
+      "height": 941
+    },
+    "A5": {
+      "src": "images/concise-2026-10-05/tension-A5.jpg",
+      "alt": "One continuous blue textile ribbon crosses two separate ivory record leaves.",
+      "width": 1672,
+      "height": 941
+    },
+    "A6": {
+      "src": "images/concise-2026-10-05/tension-A6.jpg",
+      "alt": "Three distinct evidence swatches thread directly into one navy reviewed patch under a translucent revision leaf.",
+      "width": 1672,
+      "height": 941
+    },
+    "A7": {
+      "src": "images/concise-2026-10-05/tension-A7.jpg",
+      "alt": "Blue and ivory translucent textile planes meet at one gathered seam above fine blue threads.",
+      "width": 1672,
+      "height": 941
+    },
+    "N1": {
+      "src": "images/concise-2026-10-05/tension-N1.jpg",
+      "alt": "Sea-green and navy woven surfaces sit firmly on an ivory fiber-paper ground.",
+      "width": 1672,
+      "height": 941
+    },
+    "N2": {
+      "src": "images/concise-2026-10-05/tension-N2.jpg",
+      "alt": "A small contact folio and narrow follow-up slip attach with navy ties to one larger green project folder.",
+      "width": 1672,
+      "height": 941
+    },
+    "N3": {
+      "src": "images/concise-2026-10-05/tension-N3.jpg",
+      "alt": "A local ivory correction patch with one navy dash sits beside a preserved older two-dash impression beneath a lifted green fabric edge.",
+      "width": 1672,
+      "height": 941
+    },
+    "N4": {
+      "src": "images/concise-2026-10-05/tension-N4.jpg",
+      "alt": "A faded earlier record and pale recommendation remain beneath a crisp current leaf with a saturated navy recommendation, each attached to its clause region.",
+      "width": 1672,
+      "height": 941
+    },
+    "N5": {
+      "src": "images/concise-2026-10-05/tension-N5.jpg",
+      "alt": "Two equal ivory source leaves carry conflicting positions and attach symmetrically to the same central green event record, with neither favored.",
+      "width": 1672,
+      "height": 941
+    },
+    "N6": {
+      "src": "images/concise-2026-10-05/tension-N6.jpg",
+      "alt": "A local one-dash correction on a green source record reaches a ruled document and a tabbed record, both carrying the matching local revision over older two-dash impressions.",
+      "width": 1672,
+      "height": 941
+    },
+    "N7": {
+      "src": "images/concise-2026-10-05/tension-N7.jpg",
+      "alt": "One broad sea-green working cloth links to three separate business record folios while two airy blue lanes touch its edges.",
+      "width": 1672,
+      "height": 941
+    }
+  },
+  "printed": {
+    "A1": {
+      "src": "images/concise-2026-10-05/printed-A1.jpg",
+      "alt": "Ruled work proofs advance from retained oxide impressions to registered cobalt revisions.",
+      "width": 1672,
+      "height": 941
+    },
+    "A2": {
+      "src": "images/concise-2026-10-05/printed-A2.jpg",
+      "alt": "Five nested printed fields decrease in scope from black to forest, ochre, oxide and cobalt.",
+      "width": 1672,
+      "height": 941
+    },
+    "A3": {
+      "src": "images/concise-2026-10-05/printed-A3.jpg",
+      "alt": "Code revision with a precisely aligned review overlay and separate test checklist.",
+      "width": 1672,
+      "height": 941
+    },
+    "A4": {
+      "src": "images/concise-2026-10-05/printed-A4.jpg",
+      "alt": "Reconciled invoice and three preparation checks above an empty authorization field.",
+      "width": 1672,
+      "height": 941
+    },
+    "A5": {
+      "src": "images/concise-2026-10-05/printed-A5.jpg",
+      "alt": "Earlier checked work and a new impression continue across a folded editorial proof.",
+      "width": 1672,
+      "height": 941
+    },
+    "A6": {
+      "src": "images/concise-2026-10-05/printed-A6.jpg",
+      "alt": "Editorial revision with source quotation slips and a review proof overlay.",
+      "width": 1672,
+      "height": 941
+    },
+    "A7": {
+      "src": "images/concise-2026-10-05/printed-A7.jpg",
+      "alt": "Forest memory proof and cobalt execution proof joined by a registered vellum impression.",
+      "width": 1672,
+      "height": 941
+    },
+    "N1": {
+      "src": "images/concise-2026-10-05/printed-N1.jpg",
+      "alt": "A crisp forest record impression registered over retained oxide and ochre evidence layers.",
+      "width": 1672,
+      "height": 941
+    },
+    "N2": {
+      "src": "images/concise-2026-10-05/printed-N2.jpg",
+      "alt": "A contact field card links to a project folio, which links to a follow-up calendar slip.",
+      "width": 1672,
+      "height": 941
+    },
+    "N3": {
+      "src": "images/concise-2026-10-05/printed-N3.jpg",
+      "alt": "Current dark 1 sec impression over retained pale 2 sec and a source measurement strip.",
+      "width": 1672,
+      "height": 941
+    },
+    "N4": {
+      "src": "images/concise-2026-10-05/printed-N4.jpg",
+      "alt": "A source contract field, earlier and current evidence, a renewal recommendation and blank signature rules.",
+      "width": 1672,
+      "height": 941
+    },
+    "N5": {
+      "src": "images/concise-2026-10-05/printed-N5.jpg",
+      "alt": "Tuesday and Wednesday remain distinct source observations beneath shared identity vellum.",
+      "width": 1672,
+      "height": 941
+    },
+    "N6": {
+      "src": "images/concise-2026-10-05/printed-N6.jpg",
+      "alt": "A corrected publication-date impression repeats from one source brief into a draft and publication schedule.",
+      "width": 1672,
+      "height": 941
+    },
+    "N7": {
+      "src": "images/concise-2026-10-05/printed-N7.jpg",
+      "alt": "Persistent context overlaps separate ledger, schedule and change proofs, each with its own empty authority field.",
+      "width": 1672,
+      "height": 941
+    }
+  },
+  "field": {
+    "A1": {
+      "src": "images/concise-2026-10-05/field-A1.jpg",
+      "alt": "Three different lightweight research, draft and review sheets tethered to one open project folio across a green desk.",
+      "width": 1672,
+      "height": 941
+    },
+    "A2": {
+      "src": "images/concise-2026-10-05/field-A2.jpg",
+      "alt": "Five progressively smaller planning documents descend toward a clipped task slip connected to a customer-insight sheet.",
+      "width": 1672,
+      "height": 941
+    },
+    "A3": {
+      "src": "images/concise-2026-10-05/field-A3.jpg",
+      "alt": "A software implementation sheet and translucent review checklist flank a common indexed revision folder.",
+      "width": 1672,
+      "height": 941
+    },
+    "A4": {
+      "src": "images/concise-2026-10-05/field-A4.jpg",
+      "alt": "Receipt and contract evidence sit beside an invoice and a sealed payment envelope marked Hold for Review.",
+      "width": 1672,
+      "height": 941
+    },
+    "A5": {
+      "src": "images/concise-2026-10-05/field-A5.jpg",
+      "alt": "One supplier contract folio connects an earlier evaluation packet numbered 01 and a later renewal proposal numbered 02 with a pending-decision tab.",
+      "width": 1672,
+      "height": 941
+    },
+    "A6": {
+      "src": "images/concise-2026-10-05/field-A6.jpg",
+      "alt": "Current reviewed manuscript v2 sits above retained v1; two separate source passages connect to the orange-highlighted revision.",
+      "width": 1672,
+      "height": 941
+    },
+    "A7": {
+      "src": "images/concise-2026-10-05/field-A7.jpg",
+      "alt": "An open contact, contract and project context folio connects an outgoing work packet and a completed evidence slip with different ribbons.",
+      "width": 1672,
+      "height": 941
+    },
+    "N1": {
+      "src": "images/concise-2026-10-05/field-N1.jpg",
+      "alt": "A green working surface holds a ready contact index, project plan, weekly calendar, contract and ledger with a recent marked entry.",
+      "width": 1672,
+      "height": 941
+    },
+    "N2": {
+      "src": "images/concise-2026-10-05/field-N2.jpg",
+      "alt": "A contact card, larger project record and calendar follow-up card are connected by cotton index ties.",
+      "width": 1672,
+      "height": 941
+    },
+    "N3": {
+      "src": "images/concise-2026-10-05/field-N3.jpg",
+      "alt": "A current benchmark card marked 1 sec overlaps a previous card marked 2 sec, with separate retained source sheets.",
+      "width": 1672,
+      "height": 941
+    },
+    "N4": {
+      "src": "images/concise-2026-10-05/field-N4.jpg",
+      "alt": "A contract clause sits between THEN evidence with an attached decision-basis slip and a separate NOW amendment.",
+      "width": 1672,
+      "height": 941
+    },
+    "N5": {
+      "src": "images/concise-2026-10-05/field-N5.jpg",
+      "alt": "Two source folders identify the same meeting M01 but claim Tuesday and Wednesday; the central M01 record has an empty date and question tab.",
+      "width": 1672,
+      "height": 941
+    },
+    "N6": {
+      "src": "images/concise-2026-10-05/field-N6.jpg",
+      "alt": "One publication date changes from crossed-out 12 OCT to 14 OCT; two connected reader documents have the identical correction and a third remains unconnected.",
+      "width": 1673,
+      "height": 940
+    },
+    "N7": {
+      "src": "images/concise-2026-10-05/field-N7.jpg",
+      "alt": "A removable indexed context binder, portable matching context packet and reader notebook sit beside a separate bound business ledger.",
+      "width": 1672,
+      "height": 941
+    }
+  }
+}

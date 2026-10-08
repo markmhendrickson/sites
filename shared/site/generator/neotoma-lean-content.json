@@ -1,0 +1,436 @@
+{
+  "schemaVersion": 1,
+  "shared": {
+    "exampleLabel": "Synthetic example — not a customer result or a real agent capture.",
+    "interactionLabel": "Illustrative expected agent interaction. The result assumes the stated writes and independent readback succeed in a configured test instance.",
+    "sourceTitle": "Pilot guide review — synthetic meeting note",
+    "sourceText": "Pilot guide meeting · 7 October 2026\nDecision: test the short guide before publishing.\nFollow-up: Review the Pilot guide by 8 October 2026.\nReason: resolve unclear setup instructions first.",
+    "correctionTitle": "Pilot guide review — synthetic correction",
+    "correctionText": "Correction · 9 October 2026\nThe meeting note had the review deadline wrong: it should read 13 October 2026, not 8 October. The decision to test before publication is unchanged.",
+    "recordTitle": "Review the Pilot guide",
+    "projectTitle": "Pilot guide",
+    "initialDeadline": "8 October 2026",
+    "revisedDeadline": "13 October 2026",
+    "sourceNote": "The note, correction and responses are illustrative. Use your own non-sensitive source in a separate test instance to check what your configuration actually records.",
+    "noUploadNotice": "This page is an example, not an upload form or a connected Neotoma instance."
+  },
+  "chapters": [
+    {
+      "key": "capture-structure",
+      "legacyKeys": [
+        "capture",
+        "structure"
+      ],
+      "eyebrow": "Capture + structure",
+      "title": "Give a commitment a record.",
+      "intro": "Keep a supplied source, the observations drawn from it and the things your agents need to work with distinct.",
+      "sections": [
+        {
+          "id": "capture",
+          "heading": "Start with the source.",
+          "paragraphs": [
+            "The meeting note records a decision, its rationale and a follow-up. Your agent can turn that supplied context into a decision record and a task without treating its interpretation as the original note."
+          ]
+        },
+        {
+          "id": "structure",
+          "heading": "Give each thing an identity.",
+          "paragraphs": [
+            "“Review the Pilot guide” is one task, related to the Pilot guide project. Its deadline and status belong to that identified record. A source supports a statement; a relationship connects records. Those links answer different questions."
+          ]
+        }
+      ],
+      "visual": {
+        "title": "One note. Distinct records.",
+        "caption": "Synthetic meeting note → recorded observations → decision and follow-up. The follow-up is related to the Pilot guide project.",
+        "nodes": [
+          "Supplied meeting note",
+          "Decision and rationale",
+          "Review the Pilot guide · task",
+          "Pilot guide · project"
+        ],
+        "edges": [
+          {
+            "from": "Supplied meeting note",
+            "to": "Decision and rationale",
+            "label": "supports"
+          },
+          {
+            "from": "Supplied meeting note",
+            "to": "Review the Pilot guide · task",
+            "label": "supports the recorded deadline"
+          },
+          {
+            "from": "Review the Pilot guide · task",
+            "to": "Pilot guide · project",
+            "label": "belongs to"
+          }
+        ],
+        "avoid": "Do not draw the project relationship as a source citation or imply background scanning. Show an observation between each field and its available source."
+      },
+      "prompts": [
+        {
+          "key": "record",
+          "label": "Try recording the commitment",
+          "text": "Use only the synthetic meeting note below in a separate test instance. Check the available schemas and existing records first. Record the decision, its rationale and the “Review the Pilot guide” follow-up, related to the Pilot guide project. Preserve the supplied note and link supporting observations where the configured path allows it. Do not invent a reviewer. Read the records back and show which fields are in current state; identify any missing fields or values retained only outside the validated snapshot.\n\nPilot guide meeting · 7 October 2026\nDecision: test the short guide before publishing.\nFollow-up: Review the Pilot guide by 8 October 2026.\nReason: resolve unclear setup instructions first."
+        }
+      ],
+      "interaction": {
+        "label": "Illustrative expected agent interaction — synthetic data, not a real capture.",
+        "turns": [
+          {
+            "role": "visitor",
+            "text": "Keep this meeting decision and follow-up, then show me what landed."
+          },
+          {
+            "role": "agent",
+            "text": "Expected after a successful verified write: the task is “Review the Pilot guide”, its recorded status is pending and its deadline is 8 October 2026. It is related to the Pilot guide project. The reviewer remains unspecified. I would show the actual readback and supporting observation, including whether the original note is linked."
+          }
+        ]
+      },
+      "readback": {
+        "heading": "Check what landed.",
+        "items": [
+          "The decision and follow-up are individually identifiable.",
+          "The task's deadline, status and project relationship match the supplied note.",
+          "Missing fields and absent source links are reported rather than filled in."
+        ]
+      },
+      "limit": "Capture depends on deliberate writes and the configured ingestion path. A successful request does not prove every supplied field appears in current state; schema validity also does not prove the interpretation is correct.",
+      "evidenceLinks": [
+        {
+          "label": "Schemas and field handling — GitHub",
+          "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/subsystems/schema.md"
+        },
+        {
+          "label": "Agent recording guidance — GitHub",
+          "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/developer/agent_instructions.md"
+        }
+      ],
+      "next": {
+        "label": "See what happens when the deadline changes",
+        "key": "current-change"
+      }
+    },
+    {
+      "key": "current-change",
+      "legacyKeys": [
+        "current",
+        "change"
+      ],
+      "eyebrow": "Current + change",
+      "title": "Read the commitment as it stands.",
+      "intro": "Record a change against the same task, then let another configured reader retrieve the maintained view.",
+      "sections": [
+        {
+          "id": "current",
+          "heading": "Amend the identified task.",
+          "paragraphs": [
+            "The supplied deadline was wrong: correct 8 October to 13 October. The agent records that correction against “Review the Pilot guide”. The field's merge policy determines the current recorded value; the change is not a new, unrelated task."
+          ]
+        },
+        {
+          "id": "change",
+          "heading": "Give the next reader the updated basis.",
+          "paragraphs": [
+            "A second connected session can retrieve the task's current deadline and project relationship. A changed source elsewhere does not update Neotoma by itself. A reader must reread the record before using it; a configured change signal does not, by itself, review a guide or publish it."
+          ]
+        }
+      ],
+      "visual": {
+        "title": "One task. A revised field. A fresh read.",
+        "caption": "Earlier deadline + recorded correction → current task → a second configured reader.",
+        "nodes": [
+          "8 October · earlier observation",
+          "13 October · correction",
+          "Review the Pilot guide · current record",
+          "Second configured reader"
+        ],
+        "edges": [
+          {
+            "from": "8 October · earlier observation",
+            "to": "Review the Pilot guide · current record",
+            "label": "retained contribution"
+          },
+          {
+            "from": "13 October · correction",
+            "to": "Review the Pilot guide · current record",
+            "label": "field policy selects current value"
+          },
+          {
+            "from": "Review the Pilot guide · current record",
+            "to": "Second configured reader",
+            "label": "explicit retrieval"
+          }
+        ],
+        "avoid": "Do not animate an external note automatically changing the store, or a read automatically scheduling/reviewing/publishing work."
+      },
+      "prompts": [
+        {
+          "key": "amend",
+          "label": "Try revising the deadline",
+          "text": "In the same test instance, find the identified “Review the Pilot guide” task under the Pilot guide project. Inspect its declared deadline field and merge policy. Record this correction through the supported correction or write path: the supplied review deadline was wrong: correct 8 October to 13 October 2026; scope and pending status are unchanged. Preserve the correction as source evidence where supported. Read back the same task and show the actual current deadline and contributing observation. If the value did not change, explain the result rather than claiming success."
+        },
+        {
+          "key": "reread",
+          "label": "Try a second connected session",
+          "text": "From this connected session, retrieve the existing “Review the Pilot guide” task under the Pilot guide project. Show its current recorded deadline, status and project relationship from Neotoma, not from this conversation. Show which observation contributes the deadline. If the instance or record is unavailable, report that; do not invent a result or create a replacement task."
+        }
+      ],
+      "interaction": {
+        "label": "Illustrative expected agent interaction — synthetic data, not a real capture.",
+        "turns": [
+          {
+            "role": "visitor",
+            "text": "The review is now due on 13 October. Update the same task and check it."
+          },
+          {
+            "role": "agent",
+            "text": "Expected if the correction wins the field policy and readback succeeds: the same task shows 13 October 2026 as its current deadline. The earlier observation remains available."
+          },
+          {
+            "role": "visitor",
+            "text": "In another connected session: what is the current deadline?"
+          },
+          {
+            "role": "agent",
+            "text": "Expected from a verified fresh retrieval: 13 October 2026 for “Review the Pilot guide”. This is a recorded deadline, not confirmation that the review happened or that a calendar changed."
+          }
+        ]
+      },
+      "readback": {
+        "heading": "Check the same record.",
+        "items": [
+          "The correction targets the existing task rather than an unintended duplicate.",
+          "The actual current deadline agrees with the field's policy and contributing observation.",
+          "The second session retrieves the record; any external action requires its own configuration and verification."
+        ]
+      },
+      "limit": "Connected sessions need access to a running configured instance and deliberate reads and writes. Shared recorded state does not make every agent ask the same question, receive identical answers or react automatically.",
+      "evidenceLinks": [
+        {
+          "label": "Current-state reduction — GitHub",
+          "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/subsystems/reducer.md"
+        },
+        {
+          "label": "Configured change signals — GitHub",
+          "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/subsystems/subscriptions.md"
+        }
+      ],
+      "next": {
+        "label": "Inspect the deadline's basis and earlier value",
+        "key": "basis-history"
+      }
+    },
+    {
+      "key": "basis-history",
+      "legacyKeys": [
+        "basis",
+        "history"
+      ],
+      "eyebrow": "Basis + history",
+      "title": "See why the date changed.",
+      "intro": "Start with one recorded field. Inspect the observation that contributes it, the available source and the earlier value.",
+      "sections": [
+        {
+          "id": "basis",
+          "heading": "Follow the deadline's basis.",
+          "paragraphs": [
+            "The current deadline is 13 October. Its contributing observation is more specific evidence than a citation to the whole meeting. Where the correction is linked, inspect the part that revised the review deadline. If the original source is not linked, show that gap."
+          ]
+        },
+        {
+          "id": "history",
+          "heading": "Keep the earlier date inspectable.",
+          "paragraphs": [
+            "The original meeting note supplied 8 October; the correction supplied 13 October. Retained observations let you review that difference without treating the earlier date as current. The recorded value follows the field's policy, not a claim that a disagreement has been formally settled."
+          ]
+        },
+        {
+          "id": "time",
+          "heading": "Ask the right time question.",
+          "paragraphs": [
+            "“What was observed by then?” and “What had the system received by then?” differ when evidence arrives late. Check the stored observation and receipt times before answering either question. A date written in a note is not automatically either of those timestamps."
+          ]
+        }
+      ],
+      "visual": {
+        "title": "A field with an inspectable path.",
+        "caption": "Current deadline → contributing observation → available correction. The earlier 8 October observation remains separate.",
+        "nodes": [
+          "13 October · current deadline",
+          "Contributing observation",
+          "Available correction excerpt",
+          "8 October · earlier observation"
+        ],
+        "edges": [
+          {
+            "from": "13 October · current deadline",
+            "to": "Contributing observation",
+            "label": "contributed by"
+          },
+          {
+            "from": "Contributing observation",
+            "to": "Available correction excerpt",
+            "label": "source link, if present"
+          }
+        ],
+        "avoid": "Do not fabricate an original-source link, erase the earlier value or use a provenance line as a correctness/authority badge."
+      },
+      "prompts": [
+        {
+          "key": "inspect",
+          "label": "Try inspecting the basis",
+          "text": "Retrieve the identified “Review the Pilot guide” task under the Pilot guide project. Inspect the current deadline's contributing observation and retained deadline history. Follow the original meeting note and correction links if they are present; explicitly identify any missing source linkage. Explain how the field's merge policy selected the current value. Distinguish the dates written in the sources from stored observation time and receipt time. Do not claim that provenance proves the decision is correct or that the review was completed."
+        }
+      ],
+      "interaction": {
+        "label": "Illustrative expected agent interaction — synthetic data, not a real capture.",
+        "turns": [
+          {
+            "role": "visitor",
+            "text": "Why does the deadline say 13 October rather than 8 October?"
+          },
+          {
+            "role": "agent",
+            "text": "Expected from verified field provenance and history: the current field is contributed by the deadline correction; the earlier observation records 8 October. I would show the actual contributing observation and field policy, then the correction excerpt if its source link exists. Missing linkage would remain visible."
+          }
+        ]
+      },
+      "readback": {
+        "heading": "Check the evidence, not just the explanation.",
+        "items": [
+          "The contributing observation actually supports the current deadline.",
+          "The earlier deadline is present in retained history where available.",
+          "Source links and time boundaries are shown as they are stored, including gaps."
+        ]
+      },
+      "limit": "Provenance makes a recorded interpretation reviewable; it does not certify factual correctness, source completeness or formal authority. History depends on the observations and source material actually retained.",
+      "evidenceLinks": [
+        {
+          "label": "Reducer policies and provenance — GitHub",
+          "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/subsystems/reducer.md"
+        },
+        {
+          "label": "Data model and architecture — GitHub",
+          "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/architecture/architecture.md"
+        }
+      ],
+      "next": {
+        "label": "Try one record in your own setup",
+        "key": "start"
+      }
+    }
+  ],
+  "docs": {
+    "key": "docs",
+    "eyebrow": "Documentation",
+    "title": "Understand it. Try it. Check the record.",
+    "intro": "Follow one meeting commitment through the model, then use the maintained setup and reference guides for your configuration.",
+    "groups": [
+      {
+        "heading": "Understand the record",
+        "copy": "Three chapters follow the same synthetic meeting note and review task.",
+        "links": [
+          {
+            "label": "Capture + structure",
+            "key": "capture-structure",
+            "description": "Turn supplied context into distinct, related records."
+          },
+          {
+            "label": "Current + change",
+            "key": "current-change",
+            "description": "Revise one task and retrieve its maintained view."
+          },
+          {
+            "label": "Basis + history",
+            "key": "basis-history",
+            "description": "Inspect the current field, its source and the earlier value."
+          }
+        ]
+      },
+      {
+        "heading": "Make the first result small",
+        "copy": "Use a non-sensitive source in a separate test instance. Check a write, a correction and a fresh retrieval before widening the scope.",
+        "links": [
+          {
+            "label": "Get started",
+            "key": "start"
+          },
+          {
+            "label": "Install and connect — GitHub",
+            "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/developer/getting_started.md"
+          },
+          {
+            "label": "Import meeting notes — GitHub",
+            "href": "https://github.com/markmhendrickson/neotoma/blob/main/skills/remember-meetings/SKILL.md"
+          },
+          {
+            "label": "Import earlier conversations — GitHub",
+            "href": "https://github.com/markmhendrickson/neotoma/blob/main/skills/remember-conversations/SKILL.md"
+          }
+        ]
+      },
+      {
+        "heading": "Use the maintained reference",
+        "copy": "Commands, client setup, schemas and operating procedures stay with the repository sources. Follow the guide for your version and configuration.",
+        "links": [
+          {
+            "label": "MCP guide — GitHub",
+            "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/developer/mcp_overview.md"
+          },
+          {
+            "label": "CLI reference — GitHub",
+            "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/developer/cli_reference.md"
+          },
+          {
+            "label": "REST API reference — GitHub",
+            "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/api/rest_api.md"
+          },
+          {
+            "label": "Schemas — GitHub",
+            "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/subsystems/schema.md"
+          },
+          {
+            "label": "Inspector guide — GitHub",
+            "href": "https://github.com/markmhendrickson/neotoma/blob/main/inspector/README.md"
+          },
+          {
+            "label": "Repository and troubleshooting paths",
+            "href": "https://github.com/markmhendrickson/neotoma"
+          }
+        ]
+      },
+      {
+        "heading": "Before you rely on it",
+        "copy": "Check fit, data boundaries and the terms of the software or service you choose.",
+        "links": [
+          {
+            "label": "Compare approaches",
+            "key": "compare"
+          },
+          {
+            "label": "Questions before you start",
+            "key": "faq"
+          },
+          {
+            "label": "Privacy and data boundaries",
+            "key": "privacy"
+          },
+          {
+            "label": "Software licence and site use",
+            "key": "terms"
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "heading": "Verify one useful record.",
+      "paragraph": "A stored commitment, a checked correction and a traceable current field are a practical first test.",
+      "cta": {
+        "label": "Get started",
+        "key": "start"
+      }
+    }
+  }
+}

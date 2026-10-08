@@ -1,0 +1,300 @@
+{
+  "ateles": {
+    "accepted": true,
+    "medium": "authored-photographic-layers",
+    "review_status": "passed",
+    "asset_review_entity_id": "ent_61ac79b7c3e14aa2196f5eb1",
+    "visual_id": "A-contributors",
+    "static_mode": "composed",
+    "poster": "media/authored-motion/ateles-reference.png",
+    "poster_sha256": "e3ad17796e8aeff69722e1cf0f95a8a94c7d6b505a9acac41e3b9ad833bd60e9",
+    "plate": "media/authored-motion/ateles-plate.png",
+    "plate_sha256": "ad5793ec55947c456393530a33f75392a5fcbc1a58d05d9e954fadd878421cb0",
+    "packet": "media/authored-motion/ateles-object.png",
+    "packet_sha256": "37fe59af0c5cdf63455e86d1ea24bfb7e7348a5086d54358e8486d63e29635af",
+    "poster_alt": "Contributor, the same shared work packet, and unchanged evidence beside a review form.",
+    "legend": [
+      {
+        "number": 1,
+        "label": "Contributor",
+        "x_percent": 22,
+        "y_percent": 41
+      },
+      {
+        "number": 2,
+        "label": "Shared work",
+        "x_percent": 21,
+        "y_percent": 66
+      },
+      {
+        "number": 3,
+        "label": "Evidence",
+        "x_percent": 75,
+        "y_percent": 60
+      }
+    ],
+    "cues": [
+      {
+        "from_seconds": 0,
+        "to_seconds": 8,
+        "active_number": 2,
+        "phase": "The same shared work moves toward review; evidence stays fixed."
+      }
+    ],
+    "plan": {
+      "duration_seconds": 8,
+      "easing": "linear",
+      "width": 1672,
+      "height": 941,
+      "object_layout": {
+        "left_percent": 5.610047846889953,
+        "top_percent": 23.974495217853345,
+        "scale_percent": 60,
+        "clip_rect": {
+          "left": 11.004784688995215,
+          "top": 56.11052072263549,
+          "width": 29.665071770334933,
+          "height": 32.51859723698193
+        }
+      },
+      "translation": {
+        "x_percent": 28.70813397129187,
+        "y_percent": 0
+      },
+      "keep_clear_regions": [
+        {
+          "left": 63.93540669856459,
+          "top": 0,
+          "width": 36.06459330143541,
+          "height": 100
+        }
+      ]
+    },
+    "qa_review_entity_id": "ent_af3f4baaf2f10ef4faa89f50"
+  },
+  "neotoma": {
+    "accepted": true,
+    "medium": "authored-photographic-layers",
+    "review_status": "passed",
+    "visual_id": "N-history",
+    "static_mode": "composed",
+    "poster": "media/authored-motion/neotoma-reference.png",
+    "poster_sha256": "b7b07cf10802f3f06796190c3b528b648c9e1e1e607f2961977cb3985dcb7f4b",
+    "plate": "media/authored-motion/neotoma-plate.png",
+    "plate_sha256": "ac5e810553ee6d5f121c5406598ce308368969bb88c1e340ec050e2912913223",
+    "packet": "media/authored-motion/neotoma-object.png",
+    "packet_sha256": "65492785856922210dbc23803cccc89a95476d0a0663ee3073705a15c7a064da",
+    "polygon_guard_source_sha256": "24c76499a039003551e60e28056826594b14209d2341033faf2c361b327064ee",
+    "poster_alt": "A retained deadline, one revised deadline paper, and the earlier observation retained beside it.",
+    "legend": [
+      {
+        "number": 1,
+        "label": "Retained deadline",
+        "x_percent": 65,
+        "y_percent": 38
+      },
+      {
+        "number": 2,
+        "label": "Revised deadline",
+        "x_percent": 26,
+        "y_percent": 66
+      },
+      {
+        "number": 3,
+        "label": "Earlier observation",
+        "x_percent": 25,
+        "y_percent": 34
+      }
+    ],
+    "cues": [
+      {
+        "from_seconds": 0,
+        "to_seconds": 8,
+        "active_number": 2,
+        "phase": "The revised deadline moves into place; the retained deadline and earlier observation remain visible."
+      }
+    ],
+    "plan": {
+      "duration_seconds": 8,
+      "easing": "linear",
+      "width": 1672,
+      "height": 941,
+      "object_layout": {
+        "left_percent": -32.29665071770335,
+        "top_percent": 6.376195536663125,
+        "scale_percent": 100,
+        "clip_rect": {
+          "left": 43.301435406698566,
+          "top": 43.676939426142404,
+          "width": 30.681818181818183,
+          "height": 31.562167906482465
+        }
+      },
+      "object_hull": [
+        [
+          43.301435406698566,
+          61.742826780021254
+        ],
+        [
+          43.48086124401914,
+          60.786397449521786
+        ],
+        [
+          47.30861244019139,
+          47.92773645058448
+        ],
+        [
+          48.26555023923445,
+          45.16471838469713
+        ],
+        [
+          48.74401913875598,
+          44.10201912858661
+        ],
+        [
+          49.22248803827751,
+          43.676939426142404
+        ],
+        [
+          49.760765550239235,
+          43.676939426142404
+        ],
+        [
+          70.63397129186603,
+          51.85972369819341
+        ],
+        [
+          73.32535885167464,
+          53.56004250797024
+        ],
+        [
+          73.68421052631578,
+          53.985122210414445
+        ],
+        [
+          73.92344497607655,
+          54.41020191285866
+        ],
+        [
+          73.98325358851675,
+          55.04782146652497
+        ],
+        [
+          73.98325358851675,
+          55.57917109458024
+        ],
+        [
+          73.92344497607655,
+          56.00425079702445
+        ],
+        [
+          73.68421052631578,
+          57.59829968119023
+        ],
+        [
+          73.44497607655502,
+          59.086078639744954
+        ],
+        [
+          72.30861244019138,
+          66.09989373007438
+        ],
+        [
+          71.05263157894737,
+          73.53878852284804
+        ],
+        [
+          70.8732057416268,
+          74.38894792773645
+        ],
+        [
+          70.69377990430623,
+          74.81402763018066
+        ],
+        [
+          70.45454545454545,
+          75.02656748140276
+        ],
+        [
+          70.09569377990431,
+          75.23910733262487
+        ],
+        [
+          69.61722488038278,
+          75.23910733262487
+        ],
+        [
+          68.18181818181817,
+          74.70775770456962
+        ],
+        [
+          64.95215311004785,
+          73.32624867162593
+        ],
+        [
+          48.983253588516746,
+          66.41870350690755
+        ],
+        [
+          45.633971291866025,
+          64.93092454835282
+        ],
+        [
+          43.66028708133971,
+          63.76195536663124
+        ],
+        [
+          43.36124401913876,
+          63.33687566418703
+        ],
+        [
+          43.301435406698566,
+          62.69925611052072
+        ]
+      ],
+      "translation": {
+        "x_percent": 32.29665071770335,
+        "y_percent": -6.376195536663125
+      },
+      "keep_clear_polygons": [
+        [
+          [
+            53.70813397129187,
+            26.567481402763015
+          ],
+          [
+            76.91387559808612,
+            34.21891604675877
+          ],
+          [
+            74.16267942583733,
+            50.690754516471834
+          ],
+          [
+            49.282296650717704,
+            41.87035069075451
+          ]
+        ],
+        [
+          [
+            11.722488038277511,
+            29.75557917109458
+          ],
+          [
+            34.80861244019139,
+            21.891604675876728
+          ],
+          [
+            38.696172248803826,
+            35.7066950053135
+          ],
+          [
+            13.935406698564593,
+            45.377258235919236
+          ]
+        ]
+      ]
+    },
+    "qa_review_entity_id": "ent_af3f4baaf2f10ef4faa89f50"
+  }
+}

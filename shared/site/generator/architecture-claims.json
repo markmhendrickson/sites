@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-07",
+  "scope": "Conceptual Architecture tours; not production readiness, launch, universal enforcement or accuracy claims.",
+  "sources": [
+    {
+      "id": "ateles-charter",
+      "brand": "ateles",
+      "commit": "cc831f38c495f22df6fa5be6d2deb79b80525606",
+      "path": "docs/foundation/charter.md",
+      "sha256": "c4aa38fa183aa7bf789d8cf2892ecafd1fac08558a13264a3384d9b25378f609"
+    },
+    {
+      "id": "ateles-planning_model",
+      "brand": "ateles",
+      "commit": "cc831f38c495f22df6fa5be6d2deb79b80525606",
+      "path": "docs/foundation/planning_model.md",
+      "sha256": "0b50177c5872ab9f635efe53cadab94698cf301cffb5014879ecf839fca39cc6"
+    },
+    {
+      "id": "ateles-authority_model",
+      "brand": "ateles",
+      "commit": "cc831f38c495f22df6fa5be6d2deb79b80525606",
+      "path": "docs/foundation/authority_model.md",
+      "sha256": "551d55ebf3832299cfdc4c0b7880f3c529a05adf3373386731c02fd08d859988"
+    },
+    {
+      "id": "neotoma-core_identity",
+      "brand": "neotoma",
+      "commit": "47be1c3d069f3bebbd8f8939ef103e881ebb2c10",
+      "path": "docs/foundation/core_identity.md",
+      "sha256": "e7fca47e4fd558bf76a60fe6e8a352bda6b83526ab884f2680dcf40c8d8ea435"
+    },
+    {
+      "id": "neotoma-data_models",
+      "brand": "neotoma",
+      "commit": "47be1c3d069f3bebbd8f8939ef103e881ebb2c10",
+      "path": "docs/foundation/data_models.md",
+      "sha256": "bc4d995516bde71427b01ff9e11d3e38fe38cc106cb4478bd884ff7421ab48a0"
+    },
+    {
+      "id": "neotoma-layered_architecture",
+      "brand": "neotoma",
+      "commit": "47be1c3d069f3bebbd8f8939ef103e881ebb2c10",
+      "path": "docs/foundation/layered_architecture.md",
+      "sha256": "545c527e71549587036b96e08a1269d0a663c7f93a14cf2f970af4688e3f549a"
+    },
+    {
+      "id": "ateles-work_model",
+      "brand": "ateles",
+      "commit": "cc831f38c495f22df6fa5be6d2deb79b80525606",
+      "path": "docs/foundation/work_model.md",
+      "sha256": "4bdc855b1609670381d960893f360a2dde3f257bd135732a9d783d293ddec4a5"
+    },
+    {
+      "id": "ateles-failure_posture",
+      "brand": "ateles",
+      "commit": "cc831f38c495f22df6fa5be6d2deb79b80525606",
+      "path": "docs/foundation/failure_posture.md",
+      "sha256": "2c46b02bbd12e98f520fb605c71b17b47543e13af75a607b778af14fcae3e389"
+    },
+    {
+      "id": "ateles-data_model",
+      "brand": "ateles",
+      "commit": "cc831f38c495f22df6fa5be6d2deb79b80525606",
+      "path": "docs/foundation/data_model.md",
+      "sha256": "0bffc7a354df669dd1fdb7e9353995a087382b8eef00f2f2fab2cf659d3e630b"
+    },
+    {
+      "id": "ateles-status",
+      "brand": "ateles",
+      "commit": "cc831f38c495f22df6fa5be6d2deb79b80525606",
+      "path": "docs/foundation/status.md",
+      "sha256": "a305665ac3dfc5dbb4b7d83dddbb088f3728b385c2a385dcd1d77aae1a4018e3"
+    }
+  ],
+  "claims": [
+    {
+      "id": "n-source",
+      "source": "neotoma-data_models",
+      "anchor": "observation",
+      "meaning": "Source-derived observations remain distinct from supplied basis.",
+      "status": "foundation_design"
+    },
+    {
+      "id": "n-records",
+      "source": "neotoma-data_models",
+      "anchor": "core-entities",
+      "meaning": "Entities, graph relationships and evidence links have distinct roles.",
+      "status": "foundation_design"
+    },
+    {
+      "id": "n-current",
+      "source": "neotoma-data_models",
+      "anchor": "entity-snapshot",
+      "meaning": "Current snapshots compose recorded observations.",
+      "status": "foundation_design"
+    },
+    {
+      "id": "n-history",
+      "source": "neotoma-data_models",
+      "anchor": "observation",
+      "meaning": "Observations preserve contributing history and support amendment.",
+      "status": "foundation_design"
+    },
+    {
+      "id": "n-boundary",
+      "source": "neotoma-core_identity",
+      "anchor": "what-the-authority-covers-and-what-it-does-not",
+      "meaning": "State authority does not replace business-system authority.",
+      "status": "foundation_design"
+    },
+    {
+      "id": "n-readers",
+      "source": "neotoma-layered_architecture",
+      "anchor": "4-layer-boundary-single-invariant",
+      "meaning": "Operational layers read/write state; consumers own action.",
+      "status": "foundation_design"
+    },
+    {
+      "id": "a-planning",
+      "source": "ateles-planning_model",
+      "anchor": "the-hierarchy-is-edges-and-a-task-has-one-line-upward",
+      "meaning": "Declared ancestry is not execution workflow order.",
+      "status": "foundation_design"
+    },
+    {
+      "id": "a-work",
+      "source": "ateles-work_model",
+      "anchor": "assignment-restricts-eligibility-it-never-creates-a-lease",
+      "meaning": "Assignment, lease and contributions are distinct.",
+      "status": "foundation_design"
+    },
+    {
+      "id": "a-authority",
+      "source": "ateles-authority_model",
+      "anchor": "approval",
+      "meaning": "Approval does not substitute for action authority.",
+      "status": "foundation_design"
+    },
+    {
+      "id": "a-outcomes",
+      "source": "ateles-charter",
+      "anchor": "the-objectives",
+      "meaning": "Outcome requires evidence of intended result, not attempted execution.",
+      "status": "foundation_design"
+    },
+    {
+      "id": "a-continuity",
+      "source": "ateles-failure_posture",
+      "anchor": "refuse-resume-by-replay-where-actions-are-consent-gated",
+      "meaning": "Resume from retained evidence without replaying gated effects.",
+      "status": "foundation_design"
+    },
+    {
+      "id": "a-overlay",
+      "source": "ateles-data_model",
+      "anchor": "concepts",
+      "meaning": "Neotoma is the shared record for Ateles entities and relationships.",
+      "status": "foundation_design"
+    },
+    {
+      "id": "a-status",
+      "source": "ateles-status",
+      "anchor": "purpose",
+      "meaning": "Dated foundation status reports design/checkout gaps, not fresh deployment proof.",
+      "status": "dated_implementation_reference"
+    }
+  ]
+}

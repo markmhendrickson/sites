@@ -1,0 +1,26 @@
+{
+  "ateles": {
+    "approved": true,
+    "video": "media/tension-trace-motion/ateles.mp4",
+    "video_sha256": "3595a979aa45b1feade0aa096bfc828e90256ba37662eff1443997ef158d64b8",
+    "poster": "media/tension-trace-motion/ateles.jpg",
+    "poster_sha256": "e9ff6dee14a7c159ffe189e4d76ce85dc762789bd887a068eec2058832afe256",
+    "generation_record": "ent_76b21751ab70fa80a5d801d1",
+    "raw_sha256": "c28089bba4326f59cf4c408883f41f0ee54abcc3571641f1497692193de41783",
+    "raw_source_id": "c2e55016-286a-7f12-739c-39198883e082",
+    "web_source_id": "acac345b-1dcc-1f4d-472e-3c3456b79bde",
+    "edit": "Keep successful joining action through 5.5s, clone accepted final frame to 8s; remove only empty 100px pillarboxes, preserving all semantic objects. No changed state or new action."
+  },
+  "neotoma": {
+    "approved": true,
+    "video": "media/tension-trace-motion/neotoma.mp4",
+    "video_sha256": "81f1dd7a56542d418eb534f0f6b5ab6882d2f58c2ca54429ad94112a3901d3e8",
+    "poster": "media/tension-trace-motion/neotoma.jpg",
+    "poster_sha256": "c9ddff4567f43c0ed629b42463ca01af5be42c55b7a741c8588154f45e1f2db6",
+    "generation_record": "ent_d8c85c4b26e40eb5e5ac7809",
+    "raw_sha256": "254eba0153494d63bb78575c1339ece180e82fc7d78c985569aa999fea486791",
+    "raw_source_id": "86207552-7b0f-d8c8-5a70-c739b6e6602a",
+    "endpoint_source_id": "f95c3257-8065-7407-059e-f016f0d54c3d",
+    "edit": "Keep source through exact 5.0s frame (trim end 5.041666667), clone that seated-current and distinct-history tableau to 8s; crop only empty 100px pillarboxes. Stabilizes outline emphasis without changing any record identity or state."
+  }
+}

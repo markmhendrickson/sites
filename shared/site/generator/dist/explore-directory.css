@@ -1,0 +1,27 @@
+.explore-directory{max-width:80rem;margin:auto}
+.explore-directory .topic-heading{padding-bottom:3rem;max-width:none}
+.explore-directory .topic-heading h1{max-width:16ch}
+.explore-directory .topic-heading .intro{max-width:44rem}
+.explore-directory>section{padding:3.5rem var(--pad);border-top:1px solid var(--line)}
+.directory-start{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(2rem,6vw,6rem);background:var(--wash);align-items:center}
+.directory-start h2,.directory-heading h2{font-size:clamp(2rem,3.5vw,3.1rem);margin:0 0 1rem}
+.directory-start p:not(.eyebrow){max-width:30em;line-height:1.6}
+.directory-start .button{margin-top:1rem}
+.directory-heading{margin-bottom:2rem}
+.directory-link{display:grid;grid-template-columns:1fr auto;column-gap:1rem;row-gap:.5rem;padding:1.1rem 0;border-bottom:1px solid var(--line);text-decoration:none;position:relative;min-height:44px}
+.directory-link>span:first-child{font-weight:600;text-decoration:underline;text-underline-offset:.2em}
+.directory-link small{grid-column:1;font-size:.95rem;line-height:1.5;color:var(--muted)}
+.directory-arrow{grid-column:2;grid-row:1}
+.directory-chapters ol{list-style:none;margin:0;padding:0;display:grid;gap:2rem}
+.directory-chapter{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:center;text-decoration:none;padding:1.5rem 0;border-top:1px solid var(--line)}
+.directory-chapter-image img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.directory-chapter-copy{display:flex;align-items:flex-start;flex-direction:column;gap:1rem}
+.directory-chapter-copy .eyebrow{font-size:.8rem;margin:0}
+.directory-chapter h3{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.15;margin:0;max-width:20ch}
+.directory-description{line-height:1.6;color:var(--muted);max-width:38em}
+.directory-chapter .textlink{font-size:1rem}
+.directory-link:hover>span:first-child,.directory-chapter:hover .textlink{color:var(--accent)}
+.directory-link:focus-visible,.directory-chapter:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+.directory-columns{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem)}
+.directory-resources>nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:3rem}
+@media(max-width:760px){.explore-directory>section{padding-block:2.5rem}.directory-start,.directory-columns,.directory-chapter,.directory-resources>nav{grid-template-columns:1fr}.directory-chapter{gap:1.5rem;padding:1.5rem 0}.directory-chapter-image{max-width:36rem}.directory-chapter h3{max-width:24ch}}

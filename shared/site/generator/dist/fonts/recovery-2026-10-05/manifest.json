@@ -1,0 +1,99 @@
+{
+  "retrieved": "2026-10-05",
+  "cssSource": "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif&family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:wght@500;600&display=swap",
+  "files": [
+    {
+      "filename": "font-0.ttf",
+      "source": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873_3E.ttf",
+      "bytes": 86636,
+      "sha256": "0d85af813fc3ed87db0c6265515689b2eef5cbaf7aab17922528dfc95a2cd73f"
+    },
+    {
+      "filename": "font-1.ttf",
+      "source": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2_3E.ttf",
+      "bytes": 87120,
+      "sha256": "7dde307fa887fc65ff5830cfada77a7decc5dae8d3c816c9d39ba3f1af1c4ed7"
+    },
+    {
+      "filename": "font-2.ttf",
+      "source": "https://fonts.gstatic.com/s/instrumentsans/v4/pximypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr-yp2JGEJOH9npSTF-Qf1.ttf",
+      "bytes": 48616,
+      "sha256": "01689ad055025ff1891607b077513c9389f73360d471dcffa036e326af179b00"
+    },
+    {
+      "filename": "font-3.ttf",
+      "source": "https://fonts.gstatic.com/s/instrumentsans/v4/pximypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr-yp2JGEJOH9npST3-Qf1.ttf",
+      "bytes": 48732,
+      "sha256": "a7bcb84cb01f6e33eecdd2cbff3f97ff1674c0e8e37c6921b6cd717b8c854d98"
+    },
+    {
+      "filename": "font-4.ttf",
+      "source": "https://fonts.gstatic.com/s/instrumentsans/v4/pximypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr-yp2JGEJOH9npSQb_gf1.ttf",
+      "bytes": 48732,
+      "sha256": "5e39a358a65a72b6b74b56b384bbe17a61d8899d33cc255d49112e6522e3df0d"
+    },
+    {
+      "filename": "font-5.ttf",
+      "source": "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-2zI.ttf",
+      "bytes": 62284,
+      "sha256": "a99e3db50076202713812ed541feeb23ffeebb61db1fa6b1cf48fe590d37ef18"
+    },
+    {
+      "filename": "font-6.ttf",
+      "source": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Ky461EN.ttf",
+      "bytes": 234708,
+      "sha256": "20ab9752bd19a373dba627393b6c142e6cf8fc2f219119a8e0cb1442ef679ec5"
+    },
+    {
+      "filename": "font-7.ttf",
+      "source": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8KyK61EN.ttf",
+      "bytes": 234496,
+      "sha256": "bec4ffe926595df756b5a1e39a9f704debfab88055d9a157f978eb500444dd28"
+    },
+    {
+      "filename": "font-8.ttf",
+      "source": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kxm7FEN.ttf",
+      "bytes": 234680,
+      "sha256": "950e66c48e5e60c9407421d0fa601047176f17e0d22a598bbd084dde45a98be2"
+    },
+    {
+      "filename": "font-9.ttf",
+      "source": "https://fonts.gstatic.com/s/sourceserif4/v15/vEFy2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6OAVIJmeUDygwjiiVqrhw.ttf",
+      "bytes": 194716,
+      "sha256": "2e76f944e209d9af33d2420ec5b03db8676375aa73f55be489c6e5a8d0eabeff"
+    },
+    {
+      "filename": "font-10.ttf",
+      "source": "https://fonts.gstatic.com/s/sourceserif4/v15/vEFy2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6OAVIJmeUDygwjisltrhw.ttf",
+      "bytes": 194800,
+      "sha256": "0b03b227d7edf5addbf0094b88c3aa1d66d9448b2b501ed686eb4818b691c247"
+    }
+  ],
+  "licenses": [
+    {
+      "family": "barlowcondensed",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/barlowcondensed/OFL.txt",
+      "license": "SIL OFL 1.1"
+    },
+    {
+      "family": "instrumentsans",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/instrumentsans/OFL.txt",
+      "license": "SIL OFL 1.1"
+    },
+    {
+      "family": "instrumentserif",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/instrumentserif/OFL.txt",
+      "license": "SIL OFL 1.1"
+    },
+    {
+      "family": "sourcesans3",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/sourcesans3/OFL.txt",
+      "license": "SIL OFL 1.1"
+    },
+    {
+      "family": "sourceserif4",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/sourceserif4/OFL.txt",
+      "license": "SIL OFL 1.1"
+    }
+  ]
+}

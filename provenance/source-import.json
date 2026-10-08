@@ -1,0 +1,2012 @@
+{
+  "schemaVersion": 1,
+  "sourceRevision": "5e2a239723276eb9e5c6811af16e88fc7e2d7159",
+  "method": "pinned tracked byte import; no hosting identity",
+  "referencePages": [
+    {
+      "path": "tension-trace-ateles-2026-10-06-r4.html",
+      "sha256": "3f5b1332fecaa2d57fc70ddfe8c36a8e28499f087327d9615970677637985cac"
+    },
+    {
+      "path": "tension-trace-ateles-purpose-2026-10-06-r4.html",
+      "sha256": "78bbd9489c94abb1e1cbdce493b44fb4ba6797c5dd9276e80a9a71c445743836"
+    },
+    {
+      "path": "tension-trace-ateles-contributors-2026-10-06-r4.html",
+      "sha256": "1d676fce3acfe0e4f5b568f47d6a760b8c7da78268688a6fa0855f0543a04ac2"
+    },
+    {
+      "path": "tension-trace-ateles-workflows-2026-10-06-r4.html",
+      "sha256": "feb5966474ed8285d5d3acd6e4e7cf277bb97438cb9edf2a5734aeea3186ce44"
+    },
+    {
+      "path": "tension-trace-ateles-authority-2026-10-06-r4.html",
+      "sha256": "1a4eea5ecaef68f402cd1fd56d03fd58ae916801c8891e775d9d23d9638ec3a4"
+    },
+    {
+      "path": "tension-trace-ateles-outcomes-2026-10-06-r4.html",
+      "sha256": "e43ef228d3c0c38576ff14d68bc9a5195df90536371dfcfdf500c222796b2c6e"
+    },
+    {
+      "path": "tension-trace-ateles-continuity-2026-10-06-r4.html",
+      "sha256": "0d15a04b2dba7f5e7194b84e916a35b74d34b50aa0da5221b7328150b76b4f6d"
+    },
+    {
+      "path": "tension-trace-ateles-extension-2026-10-06-r4.html",
+      "sha256": "cd92fc8930f22cf4fc48178fb96826a81687e747a19f6effad2f37c124c1462c"
+    },
+    {
+      "path": "tension-trace-ateles-start-2026-10-06-r4.html",
+      "sha256": "de8a2af1cf2bea83572b83432907138fcf09226392cd2e137efaa91e9ec3c228"
+    },
+    {
+      "path": "tension-trace-ateles-cloud-2026-10-06-r4.html",
+      "sha256": "08f3c558be5d01b1717b92c8385979736294b9b30497967b760db2f9dade61fe"
+    },
+    {
+      "path": "tension-trace-ateles-self-host-2026-10-06-r4.html",
+      "sha256": "9b9d5a96b4e6b27e2c46e8cf0d5716faf984b9cbba86ddfaa18f8796a1c6ffe6"
+    },
+    {
+      "path": "tension-trace-ateles-managed-2026-10-06-r4.html",
+      "sha256": "20d982924a74dd1b38e3f08067fec95a952240011ed5eb1acdff0348b45b366f"
+    },
+    {
+      "path": "tension-trace-ateles-compare-2026-10-06-r4.html",
+      "sha256": "ed679f1111f1185a2daba463e3a72f037f1563a2285f699ae318a4412e489571"
+    },
+    {
+      "path": "tension-trace-ateles-audience-2026-10-06-r4.html",
+      "sha256": "4d2c65e613dacdeffc3b1c828d391ea400a0b1747b31689922a78c303daf56ef"
+    },
+    {
+      "path": "tension-trace-neotoma-2026-10-06-r4.html",
+      "sha256": "1cf31ece3458852a15692ac2f7573b4ee3a56776c4702f41de02ebb299f8b30e"
+    },
+    {
+      "path": "tension-trace-neotoma-capture-2026-10-06-r4.html",
+      "sha256": "9715d872fd1c075a389812d0294fa63ce6351e7ee547bdce43d32fadae8848eb"
+    },
+    {
+      "path": "tension-trace-neotoma-structure-2026-10-06-r4.html",
+      "sha256": "61e11a6cbcf2955b3ce0abe3f65a4d4364923cdb0ba25783e9fc6d1edf7b83f5"
+    },
+    {
+      "path": "tension-trace-neotoma-current-2026-10-06-r4.html",
+      "sha256": "9f677892e7a8192d546eff067082170c517125570374f67c3a277306c300f9d1"
+    },
+    {
+      "path": "tension-trace-neotoma-basis-2026-10-06-r4.html",
+      "sha256": "9cd4be10bc8db8dd66f07deb9c7e1a42389978c54c1fa5fcde13256a2a983c2f"
+    },
+    {
+      "path": "tension-trace-neotoma-history-2026-10-06-r4.html",
+      "sha256": "b4a866b3f502f5573791cecaf8ccec53bb0afb8de3c9a23bdb5d61fb118ef117"
+    },
+    {
+      "path": "tension-trace-neotoma-change-2026-10-06-r4.html",
+      "sha256": "967b44733de7bcefdad1495a8e14409f449cb4b2ae7c192a04c8e2802cb7f2a5"
+    },
+    {
+      "path": "tension-trace-neotoma-start-2026-10-06-r4.html",
+      "sha256": "a53ee151b939ad62a43ac25d4c5b383be1e4b256914697605683c5f9b85149f9"
+    },
+    {
+      "path": "tension-trace-neotoma-cloud-2026-10-06-r4.html",
+      "sha256": "67883fa4a4ad01642fafaffedd2abe0e7bb28a44ed4ec02b70b9a1222c7b885c"
+    },
+    {
+      "path": "tension-trace-neotoma-self-host-2026-10-06-r4.html",
+      "sha256": "a461140b796f55d1860ee91f52e10d3d60ceeeb09b3e941de1f18d284550c2d0"
+    },
+    {
+      "path": "tension-trace-neotoma-managed-2026-10-06-r4.html",
+      "sha256": "d1118018751d82e0c7dbf026f77d002489b2a8c4b66a95a5e70c9fca2bb45f0f"
+    },
+    {
+      "path": "tension-trace-neotoma-compare-2026-10-06-r4.html",
+      "sha256": "7c362e29c1fb0c7234999f4adf047b9ecc023830c6498197abfc585bc31acee3"
+    },
+    {
+      "path": "tension-trace-neotoma-audience-2026-10-06-r4.html",
+      "sha256": "070db6312547e6e0144db5cd9e728eac6fd320836f7e612980b41a17616a0f9b"
+    },
+    {
+      "path": "tension-trace-neotoma-faq-2026-10-06-r4.html",
+      "sha256": "4d85a0d2f8c1724244072935145f4c39c94202e60b0063ba869a6401b45905d4"
+    },
+    {
+      "path": "tension-trace-neotoma-privacy-2026-10-06-r4.html",
+      "sha256": "0d18461e08002e47d3b58fcf71f3e87ce1331f7bfa6e6d5d0bc572f567b4e5fc"
+    },
+    {
+      "path": "tension-trace-neotoma-terms-2026-10-06-r4.html",
+      "sha256": "9933169ccf44ebe7f1f4b16dc3673bb35cc3f7ebcfae6e7359e5e33db6eb5981"
+    },
+    {
+      "path": "tension-trace-neotoma-capture-structure-2026-10-06-r4.html",
+      "sha256": "5792eba294806716528794f9f59d142113157faec0b3a198483fc80a21456f81"
+    },
+    {
+      "path": "tension-trace-neotoma-current-change-2026-10-06-r4.html",
+      "sha256": "2e4008090ccb227bc9eff9cb1f11df09e9cb9013ca7945aff609b2e2551d468c"
+    },
+    {
+      "path": "tension-trace-neotoma-basis-history-2026-10-06-r4.html",
+      "sha256": "d616345675bea1b1e6ec555f9b279d8c9ff6cead902ced35c87c924e6d0622c6"
+    },
+    {
+      "path": "tension-trace-neotoma-docs-2026-10-06-r4.html",
+      "sha256": "8dd8ffac45b40ca9d703593d903b392a54750667ca50d2104b0ebc5874a27a39"
+    },
+    {
+      "path": "tension-trace-ateles-alternatives-agent-harnesses-2026-10-06-r4.html",
+      "sha256": "4ed749a00f54ac0192dfde216db4107ecb8a1ea7931a351290c451c8b6abf92d"
+    },
+    {
+      "path": "tension-trace-ateles-alternatives-workflow-frameworks-2026-10-06-r4.html",
+      "sha256": "58b0679ce0d6943e8a98f703202b8255f9c8a313d7c0dd5e00bfd6fec24b62b2"
+    },
+    {
+      "path": "tension-trace-neotoma-alternatives-session-project-platform-memory-2026-10-06-r4.html",
+      "sha256": "7be6ac80312f0adebcf2f9f3a2b5b42baf86f246c70f626c9000380f4f476bee"
+    },
+    {
+      "path": "tension-trace-neotoma-alternatives-files-document-retrieval-2026-10-06-r4.html",
+      "sha256": "faeb9433916d628b341f121f8b249166eda4cee996bbb3f5810618056734b0b4"
+    },
+    {
+      "path": "tension-trace-neotoma-alternatives-memory-services-2026-10-06-r4.html",
+      "sha256": "867bde4d5d6ab399badad799733f5209e0c2b4881f5c9c9a4f8f1939653450d7"
+    },
+    {
+      "path": "tension-trace-neotoma-alternatives-workflow-custom-state-2026-10-06-r4.html",
+      "sha256": "6945c0b7f0265ce12f3cac98bb1b8a1ab7749823121310d37b3eca95cc9ef5a2"
+    },
+    {
+      "path": "tension-trace-ateles-explore-2026-10-06-r4.html",
+      "sha256": "58570322956a2e973e13a0ea76c568006f729d2a8e9a1f1b1f94f714529332bc"
+    },
+    {
+      "path": "tension-trace-neotoma-explore-2026-10-06-r4.html",
+      "sha256": "cdfd383df9fc790fd3ae4841010b16a17a0102fdfd96cb28175a46667655c06b"
+    },
+    {
+      "path": "tension-trace-ateles-architecture-2026-10-06-r4.html",
+      "sha256": "3d6b2aedabc1b4af7acb42c035d8810875b9e9e0a1721a869ead1822c6ef172e"
+    },
+    {
+      "path": "tension-trace-neotoma-architecture-2026-10-06-r4.html",
+      "sha256": "3a9d0c739ae10c963f75d8ca458fab9600c96fdd8553bd8dd154208015dadb64"
+    },
+    {
+      "path": "tension-trace-neotoma-interfaces-2026-10-06-r4.html",
+      "sha256": "ec9b3a5f9072a3a00c673ee42841d278335877093cfa42db5e835d36c2d6b3a6"
+    },
+    {
+      "path": "tension-trace-neotoma-operate-2026-10-06-r4.html",
+      "sha256": "2b6a7ce315f637470e1ef8237ebb8d586612e327408c44f321f057f30e339264"
+    },
+    {
+      "path": "tension-trace-ateles-runtime-2026-10-06-r4.html",
+      "sha256": "e7db1a1bac72710133da516beb017514e9db5fc7e81233962ca73bdcfeda2558"
+    },
+    {
+      "path": "tension-trace-neotoma-sandbox-2026-10-06-r4.html",
+      "sha256": "f99ba088f2171ef85522a6d07dd3cf9bb05bec1f2208f244791e3bf90a55da0b"
+    },
+    {
+      "path": "tension-trace-neotoma-cloud-waitlist-2026-10-06-r4.html",
+      "sha256": "a49efff64cabba731d162095a372818c42f59d962bddb3c0265b49911916cc36"
+    },
+    {
+      "path": "tension-trace-ateles-updates-2026-10-06-r4.html",
+      "sha256": "c48bd4860e557061ec460930d15f6ef01716e395ece88cc9c4272093402cdbd4"
+    },
+    {
+      "path": "tension-trace-neotoma-updates-2026-10-06-r4.html",
+      "sha256": "8df60efae825492a0d865c7d4f39ae1662ec32a62ce8e17ad99840cf88b5e4a2"
+    },
+    {
+      "path": "tension-trace-ateles-update-dev-short-note-2026-10-06-r4.html",
+      "sha256": "061493a42ec62657ca2b10aea17d339b66f5b0285bfd9ffaf661e6e5b96fb2b4"
+    },
+    {
+      "path": "tension-trace-ateles-update-dev-technical-article-2026-10-06-r4.html",
+      "sha256": "639bf04d8e85c038c85d99514a6fdead7cca9565e11ed0ecff1c247a197564c1"
+    },
+    {
+      "path": "tension-trace-ateles-update-dev-image-gallery-2026-10-06-r4.html",
+      "sha256": "2ddc6606b80cf6ef15492ba72d7ae8c2525560605a87c9d9ae87e233f3ebbac6"
+    },
+    {
+      "path": "tension-trace-ateles-update-dev-release-note-2026-10-06-r4.html",
+      "sha256": "b08aafb1f416cf9fb51555ff8bdd7194ef030fd7a2b76fd6a8ecb5ab2de7e2c4"
+    },
+    {
+      "path": "tension-trace-ateles-update-dev-video-audio-2026-10-06-r4.html",
+      "sha256": "9f8fec272d17209f5f44fd78093f8061049284274ea7ece68842ab18092d8986"
+    },
+    {
+      "path": "tension-trace-neotoma-update-dev-short-note-2026-10-06-r4.html",
+      "sha256": "f6950646d26b0142c97b620369c390d9d9279f767fbea125c7ab33f5cb90f0ae"
+    },
+    {
+      "path": "tension-trace-neotoma-update-dev-technical-article-2026-10-06-r4.html",
+      "sha256": "abd4f6a9b26b442e62dee3100da45b8d887c312bb9e89d9c03a6a76b706a3082"
+    },
+    {
+      "path": "tension-trace-neotoma-update-dev-image-gallery-2026-10-06-r4.html",
+      "sha256": "74f941196ad7d6368785a5bed973415ae11d3886b45c65e9b86e7b042a41ba66"
+    },
+    {
+      "path": "tension-trace-neotoma-update-dev-release-note-2026-10-06-r4.html",
+      "sha256": "8a3d663fbf96d2191dc23f642d0f03ac8f35f316ac9ff05291cbe35880ae292a"
+    },
+    {
+      "path": "tension-trace-neotoma-update-dev-video-audio-2026-10-06-r4.html",
+      "sha256": "9ca7d874b1383e8acd04183063d27b8b0b71ef6366246d7777da7a30ef4eb054"
+    }
+  ],
+  "files": [
+    {
+      "source": "architecture-claims.json",
+      "path": "shared/site/generator/architecture-claims.json",
+      "sha256": "5a3973f2a9974d04da7ce318cb03296015d5feb49f88b079ab7f0fd0ef036773",
+      "bytes": 6016
+    },
+    {
+      "source": "architecture-ia-2026-10-07-check.mjs",
+      "path": "shared/site/generator/architecture-ia-2026-10-07-check.mjs",
+      "sha256": "e290d4b98bae6ea824441758bbff77c4ff4b99b290f61583fb6da1a061d9c7e9",
+      "bytes": 8127
+    },
+    {
+      "source": "architecture-ia.css",
+      "path": "shared/site/generator/architecture-ia.css",
+      "sha256": "e010a727bb1445c3197d3c4ac273435ac0e87c784827673bf12510b674b63ee2",
+      "bytes": 4554
+    },
+    {
+      "source": "architecture-ia.mjs",
+      "path": "shared/site/generator/architecture-ia.mjs",
+      "sha256": "a9adecfa7d03422d5a02ac25e2f5703afcaacb80f5582a2854b09ed39313c833",
+      "bytes": 17751
+    },
+    {
+      "source": "archive-unused-review-images.mjs",
+      "path": "shared/site/generator/archive-unused-review-images.mjs",
+      "sha256": "5ca811ce3dfc2c124f28d7bedb2c2deeddcd6f86bd6393a5b7d7742b43c7371a",
+      "bytes": 2284
+    },
+    {
+      "source": "authored-integration.test.mjs",
+      "path": "shared/site/generator/authored-integration.test.mjs",
+      "sha256": "a77a26e66dfe4154fb89918bde920b9f91b37fe8a2eb884336bc67ea81b16278",
+      "bytes": 2366
+    },
+    {
+      "source": "authored-layer-boot.mjs",
+      "path": "shared/site/generator/authored-layer-boot.mjs",
+      "sha256": "ec8e3b893c8d135f441040417785dd410e0d055d273d4abec62547e67d5ac6ee",
+      "bytes": 112
+    },
+    {
+      "source": "authored-layer-player.css",
+      "path": "shared/site/generator/authored-layer-player.css",
+      "sha256": "c753f856d088dc5ca1bdeeed9babb56470e0593da9e9c971e1d53ff06302cd17",
+      "bytes": 1512
+    },
+    {
+      "source": "authored-layer-player.mjs",
+      "path": "shared/site/generator/authored-layer-player.mjs",
+      "sha256": "18cdd7f0978daf44e695472e2e1532ff7d9a7a8f4465ac9cc807cbd16612090c",
+      "bytes": 14645
+    },
+    {
+      "source": "authored-layer-scene.mjs",
+      "path": "shared/site/generator/authored-layer-scene.mjs",
+      "sha256": "03530d4762de995c536cdf447982e865d10a74720f2c4b218c8850f095706ad2",
+      "bytes": 6788
+    },
+    {
+      "source": "authored-layer-scene.test.mjs",
+      "path": "shared/site/generator/authored-layer-scene.test.mjs",
+      "sha256": "4ee07527f349dc2a72675b19b54bff228781d739b4027f6931b2a68d78a60dd7",
+      "bytes": 3445
+    },
+    {
+      "source": "authored-motion-art.json",
+      "path": "shared/site/generator/authored-motion-art.json",
+      "sha256": "3b1de06cbc06045285856695d596ee57c251927621f76b88922942ee607de7f3",
+      "bytes": 7407
+    },
+    {
+      "source": "authored-motion-assets.mjs",
+      "path": "shared/site/generator/authored-motion-assets.mjs",
+      "sha256": "ba639a6ac3aa62cbc034473733f7cd3337598709e2e6e320fa45383d291132aa",
+      "bytes": 1619
+    },
+    {
+      "source": "build-concise-pages.mjs",
+      "path": "shared/site/generator/build-concise-pages.mjs",
+      "sha256": "8d1c6282da13a95506a20a7d3dac942c09e9ca0ca7949ea4d039619671de6d47",
+      "bytes": 7455
+    },
+    {
+      "source": "build-current-authored-motion.mjs",
+      "path": "shared/site/generator/build-current-authored-motion.mjs",
+      "sha256": "5478c98f8a51c5efea2b966770bdcd0021e70deae5a74fb1e3a1eb578268d31d",
+      "bytes": 4516
+    },
+    {
+      "source": "build-grounded-pages.mjs",
+      "path": "shared/site/generator/build-grounded-pages.mjs",
+      "sha256": "12b4d83489d9ec0fb1256498f5961a06f19a0f709e1a6de1b388ef06795e94b3",
+      "bytes": 21719
+    },
+    {
+      "source": "build-immersive-review.mjs",
+      "path": "shared/site/generator/build-immersive-review.mjs",
+      "sha256": "27d023efd64fb91a4b92be07023dbadd8c0ea717feaaca086eb64389a6659a5a",
+      "bytes": 21745
+    },
+    {
+      "source": "build-integrated-review.mjs",
+      "path": "shared/site/generator/build-integrated-review.mjs",
+      "sha256": "366d0f68868dc88452530a6af6d9eef1fdd5fbd8061de0bdda5e2cc06ec50711",
+      "bytes": 26059
+    },
+    {
+      "source": "build-logo-typography.mjs",
+      "path": "shared/site/generator/build-logo-typography.mjs",
+      "sha256": "6a699e526d4f150f6c2c1e9c34e1d65fe5a0a99f97cf2abd2f52ef5c1f0d3cda",
+      "bytes": 14774
+    },
+    {
+      "source": "build-motion-pilots.mjs",
+      "path": "shared/site/generator/build-motion-pilots.mjs",
+      "sha256": "c74d4d722ae5f6d80f6694bf9340278056933a5a531eb4d1485dd65618ab0b6e",
+      "bytes": 10576
+    },
+    {
+      "source": "build-paired-review.mjs",
+      "path": "shared/site/generator/build-paired-review.mjs",
+      "sha256": "2537dff37cccb977e065f698aa7bca1ae5a185e50316e25450189c37a1a291fe",
+      "bytes": 13491
+    },
+    {
+      "source": "build-recovery-review.mjs",
+      "path": "shared/site/generator/build-recovery-review.mjs",
+      "sha256": "6d46deddd61d66d31c20eea9c930fad2705fcf1a14778f7fe9c9b188a06c3046",
+      "bytes": 31965
+    },
+    {
+      "source": "build-selected-logos.mjs",
+      "path": "shared/site/generator/build-selected-logos.mjs",
+      "sha256": "920a9e80d6c09bb736dfe65e8c8e7a8ea9f47166386c856922f75c055f25803f",
+      "bytes": 4912
+    },
+    {
+      "source": "build-tension-trace-r2.mjs",
+      "path": "shared/site/generator/build-tension-trace-r2.mjs",
+      "sha256": "1c21759194d69852040f564639eb137d55774b0404568eac2fe2d980a08df101",
+      "bytes": 13329
+    },
+    {
+      "source": "build-tension-trace-r3.mjs",
+      "path": "shared/site/generator/build-tension-trace-r3.mjs",
+      "sha256": "220043ced86beb01ccbe4c59d53d06ee9febbb7291f08a1755a23a163d25af12",
+      "bytes": 30561
+    },
+    {
+      "source": "build-waitlist-runtime.mjs",
+      "path": "shared/site/generator/build-waitlist-runtime.mjs",
+      "sha256": "dabe0dd1693a0c644d19d10054300348124030c8599379f7279829d74c5f039c",
+      "bytes": 1592
+    },
+    {
+      "source": "check-concise-pages.mjs",
+      "path": "shared/site/generator/check-concise-pages.mjs",
+      "sha256": "4eaf520daebf4f96dc8c861d77a62be0b6750a1a7e01f5327f1cf90b43191e5b",
+      "bytes": 2670
+    },
+    {
+      "source": "check-current-authored-motion.mjs",
+      "path": "shared/site/generator/check-current-authored-motion.mjs",
+      "sha256": "ea4a9db0a1f008aec17df15c064b69274d3f097cb2ea51924f789478126b51cf",
+      "bytes": 1907
+    },
+    {
+      "source": "check-immersive-review.mjs",
+      "path": "shared/site/generator/check-immersive-review.mjs",
+      "sha256": "6a37a6c62e430ba971ae9d664bcf57406737713e22756ea456c5b1c75d134591",
+      "bytes": 1799
+    },
+    {
+      "source": "check-integrated-review.mjs",
+      "path": "shared/site/generator/check-integrated-review.mjs",
+      "sha256": "66b9d2250d8beb72e62e43bc55fb50d379ca92779cbf281ed493491bc58cfc0a",
+      "bytes": 2345
+    },
+    {
+      "source": "check-landing-feedback.mjs",
+      "path": "shared/site/generator/check-landing-feedback.mjs",
+      "sha256": "b58342eee8e57ad77e0af4d770581f93de98e6b8eb362e1a16febd1287d35716",
+      "bytes": 7060
+    },
+    {
+      "source": "check-logo-typography.mjs",
+      "path": "shared/site/generator/check-logo-typography.mjs",
+      "sha256": "552d831909f63015930f007b0ff3d60129c6878b167034c8680d54e1219859fe",
+      "bytes": 2983
+    },
+    {
+      "source": "check-motion-pilots.mjs",
+      "path": "shared/site/generator/check-motion-pilots.mjs",
+      "sha256": "7abd6ee883a62f989b8c2f77d949da19a788ad00cc35debda41ce3e0669108f1",
+      "bytes": 4199
+    },
+    {
+      "source": "check-neotoma-consolidation.mjs",
+      "path": "shared/site/generator/check-neotoma-consolidation.mjs",
+      "sha256": "9e86586058f45214ffdecc434cee393b45d5b1870280bf036f6d92c1d1344b5d",
+      "bytes": 4743
+    },
+    {
+      "source": "check-selected-logos.mjs",
+      "path": "shared/site/generator/check-selected-logos.mjs",
+      "sha256": "340c17a0b7b32d5a8c08ab349e759f28b56b32b49951bd3ba953e671964ecdbd",
+      "bytes": 933
+    },
+    {
+      "source": "check-tension-trace-r2-hosted.mjs",
+      "path": "shared/site/generator/check-tension-trace-r2-hosted.mjs",
+      "sha256": "c2ac6f94c2289cd8e629621b4f13c0e88c51802d76b98c37d705e80dfe597003",
+      "bytes": 1571
+    },
+    {
+      "source": "check-tension-trace-r2.mjs",
+      "path": "shared/site/generator/check-tension-trace-r2.mjs",
+      "sha256": "a38f36420c61deb04071fb313efb71f68e7823f23cf9645978f8ba69cb97b949",
+      "bytes": 2294
+    },
+    {
+      "source": "check-tension-trace-r3.mjs",
+      "path": "shared/site/generator/check-tension-trace-r3.mjs",
+      "sha256": "a891314c6ddb85b84b2e20053a9d5bbffb7c2179e3c3c46c73c6eeb16b380f62",
+      "bytes": 10175
+    },
+    {
+      "source": "collect-tension-trace-r2-prompts.mjs",
+      "path": "shared/site/generator/collect-tension-trace-r2-prompts.mjs",
+      "sha256": "0ef63ff7ddc48c238b6b9f7fedacd022d0f5cf8a523d87eba356758e25be924c",
+      "bytes": 763
+    },
+    {
+      "source": "collect-tension-trace-r3-briefs.mjs",
+      "path": "shared/site/generator/collect-tension-trace-r3-briefs.mjs",
+      "sha256": "1a5c3801f6ac77323df382e6d87159eaac9ea3bf8c23cbbe2c19f0a6d9d2e09d",
+      "bytes": 1854
+    },
+    {
+      "source": "concise-art-manifest.json",
+      "path": "shared/site/generator/concise-art-manifest.json",
+      "sha256": "8a4bde00ac910f831eac0a74b1bfd500f93a6ae67873417cec938173dfe680f2",
+      "bytes": 10280
+    },
+    {
+      "source": "concise-page-data.mjs",
+      "path": "shared/site/generator/concise-page-data.mjs",
+      "sha256": "8799506cb434009b65976433221d837439da2be8a90fbb14223d987597acfce2",
+      "bytes": 16984
+    },
+    {
+      "source": "development-layout.test.mjs",
+      "path": "shared/site/generator/development-layout.test.mjs",
+      "sha256": "2038d017c5edc336f0d990f66b403da25b89dfec97fc65a80c34b9f3bd8b4cf4",
+      "bytes": 1177
+    },
+    {
+      "source": "development-media-manifest.json",
+      "path": "shared/site/generator/development-media-manifest.json",
+      "sha256": "6b0b3123e12e36e4e4d7243a1dfa9509927de05d717f0ec7d60cc557ce6c234c",
+      "bytes": 1092
+    },
+    {
+      "source": "development-updates.css",
+      "path": "shared/site/generator/development-updates.css",
+      "sha256": "089dac5178b4a189c9fc92c4e60edd0322d34f7f0c61e6e65b0881cd3cbec69d",
+      "bytes": 3396
+    },
+    {
+      "source": "development-updates.mjs",
+      "path": "shared/site/generator/development-updates.mjs",
+      "sha256": "031589564d91921faa9c29164a27bac75be8c26e7de427cf8e5f27341cd13dfc",
+      "bytes": 15797
+    },
+    {
+      "source": "development-updates.test.mjs",
+      "path": "shared/site/generator/development-updates.test.mjs",
+      "sha256": "9f65e1ae4f6f6f59a6d4795a3d9a9b9793d1c3273195e0c8c6551b3d53143a3a",
+      "bytes": 11244
+    },
+    {
+      "source": "email-copy.mjs",
+      "path": "shared/site/generator/email-copy.mjs",
+      "sha256": "c1448a20fba556eadd1487e45bb4b80b922018e7689a01e7f52e19e82aca200a",
+      "bytes": 4300
+    },
+    {
+      "source": "explore-directory.mjs",
+      "path": "shared/site/generator/explore-directory.mjs",
+      "sha256": "2db2d5867f0ebefdbf17ead10f042cd57b89278944498e2fae4344c7b82c2fe4",
+      "bytes": 6321
+    },
+    {
+      "source": "harness-integration.mjs",
+      "path": "shared/site/generator/harness-integration.mjs",
+      "sha256": "4244e10eadfb90dee348bc8df34730cda4cb2b11ea865e772ece7ef20fca25a7",
+      "bytes": 3203
+    },
+    {
+      "source": "import-adoption-feedback.mjs",
+      "path": "shared/site/generator/import-adoption-feedback.mjs",
+      "sha256": "249395323d540156e6054e6f6409d5abdc6909d052d4bb9158119e539d6a5ccf",
+      "bytes": 1935
+    },
+    {
+      "source": "import-concise-art.mjs",
+      "path": "shared/site/generator/import-concise-art.mjs",
+      "sha256": "cdac1303047988513c7fd7e6c48d380eb9953d001c24372de3d337c8428d2059",
+      "bytes": 1677
+    },
+    {
+      "source": "import-landing-motion-drafts.mjs",
+      "path": "shared/site/generator/import-landing-motion-drafts.mjs",
+      "sha256": "e025cafc3026660b403f958fe9ddd88d1a297d6de256ed23e4031abeed5670dd",
+      "bytes": 1407
+    },
+    {
+      "source": "import-tension-trace-r2.mjs",
+      "path": "shared/site/generator/import-tension-trace-r2.mjs",
+      "sha256": "e6c67afddf4ecd210ae98cc16a6e58a31cbd5382ef7716102c4a76c89574271b",
+      "bytes": 1392
+    },
+    {
+      "source": "import-tension-trace-r3.mjs",
+      "path": "shared/site/generator/import-tension-trace-r3.mjs",
+      "sha256": "1a9a91cb6dbf6b61feadcd820060c177248d3e0acfb235e4482351a838a7f240",
+      "bytes": 2018
+    },
+    {
+      "source": "integrated-diagrams.mjs",
+      "path": "shared/site/generator/integrated-diagrams.mjs",
+      "sha256": "5261881f982b32586f4a346123b6b6430ef0def51369653f6559bbd943d7bfb2",
+      "bytes": 7573
+    },
+    {
+      "source": "integration-regression.mjs",
+      "path": "shared/site/generator/integration-regression.mjs",
+      "sha256": "5f7df56f0555e78450a649b39b5d139a14eac714a3866fee81b844b6026e5aad",
+      "bytes": 13854
+    },
+    {
+      "source": "landing-motion-drafts.json",
+      "path": "shared/site/generator/landing-motion-drafts.json",
+      "sha256": "92efe7cc84dd098c07d644ff8c40fd9060743dc3df87cd40a8afece6f78d5cfe",
+      "bytes": 1330
+    },
+    {
+      "source": "metadata-catalog.mjs",
+      "path": "shared/site/generator/metadata-catalog.mjs",
+      "sha256": "97a19892d34c7de8833ae3ffac88c7c5f33ddfe4aeeab1237b4aa3c73eb9f9ff",
+      "bytes": 5503
+    },
+    {
+      "source": "motion-pilots-art.json",
+      "path": "shared/site/generator/motion-pilots-art.json",
+      "sha256": "5544a01d6c4f60f8d8132c658f6269dde9333bbd4ad7517e725c741216ca8bea",
+      "bytes": 1637
+    },
+    {
+      "source": "motion-pilots.css",
+      "path": "shared/site/generator/motion-pilots.css",
+      "sha256": "0079989c945380eb445b393d9d2885cef47a699617e85415de3999b9a4295e71",
+      "bytes": 1584
+    },
+    {
+      "source": "motion-player.css",
+      "path": "shared/site/generator/motion-player.css",
+      "sha256": "ac09131790c031559d39204edf8a6fb96d03caaabbd23a6f5091146de925c68a",
+      "bytes": 1174
+    },
+    {
+      "source": "motion-player.mjs",
+      "path": "shared/site/generator/motion-player.mjs",
+      "sha256": "6efccac500686ca03bee2e18c950bc5a13354db9882f16c0a0a63afbbf3e1c8d",
+      "bytes": 14197
+    },
+    {
+      "source": "motion-player.test.mjs",
+      "path": "shared/site/generator/motion-player.test.mjs",
+      "sha256": "f1dce7fe838c6c64384e9c9ed6044107331f05886f1036a751088931b8534a0f",
+      "bytes": 15893
+    },
+    {
+      "source": "motion-repair-reviews.json",
+      "path": "shared/site/generator/motion-repair-reviews.json",
+      "sha256": "e1e68184cf8425873c05489d274301e608f2b1aaec8caea32e7f827cdc2d02db",
+      "bytes": 855
+    },
+    {
+      "source": "motion-semantic.test.mjs",
+      "path": "shared/site/generator/motion-semantic.test.mjs",
+      "sha256": "80b475cdf003573abf77ec9d6edd9ee4f42c31a570338043b4e7e0206dc79255",
+      "bytes": 5716
+    },
+    {
+      "source": "neotoma-lean-content.json",
+      "path": "shared/site/generator/neotoma-lean-content.json",
+      "sha256": "06e5d64467daab9de8e24c09f93ea71f29eef916043a1f98ee67c1699f4313ee",
+      "bytes": 21095
+    },
+    {
+      "source": "neotoma-site-consolidation.mjs",
+      "path": "shared/site/generator/neotoma-site-consolidation.mjs",
+      "sha256": "0ce9bbb03c3cb734e1c88af38639669e0dcbc9d783b122c4ba9ef94a3f8aba4b",
+      "bytes": 9810
+    },
+    {
+      "source": "oct8-publication-integration.mjs",
+      "path": "shared/site/generator/oct8-publication-integration.mjs",
+      "sha256": "9561dac9cfe1f16520eb915d7fd6820791a173b14570a051e040470a3105ca00",
+      "bytes": 13495
+    },
+    {
+      "source": "oct8-refinement.mjs",
+      "path": "shared/site/generator/oct8-refinement.mjs",
+      "sha256": "9f4f3da5c9445ac13fc96d2e0067c51705be2aebddd0a505805b15a41c6fc62c",
+      "bytes": 5086
+    },
+    {
+      "source": "og-photo-inventory.mjs",
+      "path": "shared/site/generator/og-photo-inventory.mjs",
+      "sha256": "6e360ba7d7302e99a1d819cfafd2931b9962e00080b7ee6e89dc86e2f0f92147",
+      "bytes": 1313
+    },
+    {
+      "source": "paired-review-assessment.json",
+      "path": "shared/site/generator/paired-review-assessment.json",
+      "sha256": "f74111e07598a6db88fd04a10eabe341d235d99a8544d535d0de725c2da5b7d2",
+      "bytes": 796
+    },
+    {
+      "source": "prepare-recovery-fonts.mjs",
+      "path": "shared/site/generator/prepare-recovery-fonts.mjs",
+      "sha256": "16bc2c0ecd51c664e1d7e08223670a05f9e8df16cc6043c9e26a7ccb60575df4",
+      "bytes": 1706
+    },
+    {
+      "source": "publication.mjs",
+      "path": "shared/site/generator/publication.mjs",
+      "sha256": "9fb76ff75642ce59fa2ad455a90a5051e1f688b5ef8efb72eb47bae8eed8bb63",
+      "bytes": 10188
+    },
+    {
+      "source": "quick-start-setup.mjs",
+      "path": "shared/site/generator/quick-start-setup.mjs",
+      "sha256": "05dfb3285077804f0e5d1d5ef67f46af4c24dd261e7e1bc9f11c7e93c52ed873",
+      "bytes": 1399
+    },
+    {
+      "source": "section-reveals.test.mjs",
+      "path": "shared/site/generator/section-reveals.test.mjs",
+      "sha256": "fee37a4af040588595fecd0676332a45cc0dd0f4fed092f954a41554e693b98d",
+      "bytes": 1863
+    },
+    {
+      "source": "selected-site-identity.mjs",
+      "path": "shared/site/generator/selected-site-identity.mjs",
+      "sha256": "fca354fb6a4c19985d95227ed6d6dda371b81bf89f337f72abbecb49699537b7",
+      "bytes": 2404
+    },
+    {
+      "source": "semantic-cues.css",
+      "path": "shared/site/generator/semantic-cues.css",
+      "sha256": "a1ede91ca80da6cec84b8e4d1415efbc375de1910ee79324483a9093138feada",
+      "bytes": 266
+    },
+    {
+      "source": "semantic-visuals.mjs",
+      "path": "shared/site/generator/semantic-visuals.mjs",
+      "sha256": "167dcc271d7f1b998080f6190a2f8f3e08d1377d6b886689276ee33fe0a09b34",
+      "bytes": 8547
+    },
+    {
+      "source": "source-contracts.mjs",
+      "path": "shared/site/generator/source-contracts.mjs",
+      "sha256": "713cb99b9e84b08a71e7c1236b19660dd0800a9ee83dd701d65272b818cedd79",
+      "bytes": 2911
+    },
+    {
+      "source": "technical-ia.mjs",
+      "path": "shared/site/generator/technical-ia.mjs",
+      "sha256": "b83d88cb625bbfca655552fec6cfa472b49935118db12f94d96c89cdacb22d8e",
+      "bytes": 31563
+    },
+    {
+      "source": "technical-ia.test.mjs",
+      "path": "shared/site/generator/technical-ia.test.mjs",
+      "sha256": "d211ffa8917e2111ef23b29de605ef3b0e88b2933dfa4063f13e4b71fcd4ce55",
+      "bytes": 1351
+    },
+    {
+      "source": "tension-trace-r2-art.json",
+      "path": "shared/site/generator/tension-trace-r2-art.json",
+      "sha256": "86b7e941379840df4d434b5cc7e0d48efbe5cebd418c70a909e55a6107f10a7f",
+      "bytes": 5244
+    },
+    {
+      "source": "tension-trace-r2-data.mjs",
+      "path": "shared/site/generator/tension-trace-r2-data.mjs",
+      "sha256": "1323cdf41832ae340a68bc4804e9c8bf74e92049899b2f98b22ed5f18c3e5c11",
+      "bytes": 21132
+    },
+    {
+      "source": "tension-trace-r2-labels.mjs",
+      "path": "shared/site/generator/tension-trace-r2-labels.mjs",
+      "sha256": "5d4a63374a94e91f6733d5d914effb69c775296be45b416c847c05046d914fe2",
+      "bytes": 3197
+    },
+    {
+      "source": "tension-trace-r3-art.json",
+      "path": "shared/site/generator/tension-trace-r3-art.json",
+      "sha256": "dfb6e07bd272f21cfd8411ce57b6089418fda3c336f02d61f38fc12ee06bf248",
+      "bytes": 10467
+    },
+    {
+      "source": "tension-trace-r3-data.mjs",
+      "path": "shared/site/generator/tension-trace-r3-data.mjs",
+      "sha256": "fea290088e88f0e633de004fdaf6fc878a62cbb0bf3afeb483dc1f417912dfd1",
+      "bytes": 15611
+    },
+    {
+      "source": "tension-trace-r4-art.json",
+      "path": "shared/site/generator/tension-trace-r4-art.json",
+      "sha256": "8d9385a908b372b241c39fa64377a4a31974fd4177fba8b2aed8a46d2770a3d7",
+      "bytes": 5177
+    },
+    {
+      "source": "tension-trace-r4-inventory.json",
+      "path": "shared/site/generator/tension-trace-r4-inventory.json",
+      "sha256": "16e443a568870d28b43f70ad5db0e998466aea83c50960ca00ab4b959eef20a2",
+      "bytes": 10794
+    },
+    {
+      "source": "tension-trace-r4-object-regions.json",
+      "path": "shared/site/generator/tension-trace-r4-object-regions.json",
+      "sha256": "fdebf48aa18a9608ccab69cdc800c8c4f0fc1a40a1047e1fd8ab6619613bc26f",
+      "bytes": 15238
+    },
+    {
+      "source": "tension-trace-r4.mjs",
+      "path": "shared/site/generator/tension-trace-r4.mjs",
+      "sha256": "0862ab3257df1aa492aa0c9ff960b1ae5e381add4378e02e6f1faa6e3cc36d47",
+      "bytes": 14441
+    },
+    {
+      "source": "tension-trace-resources.json",
+      "path": "shared/site/generator/tension-trace-resources.json",
+      "sha256": "a10b32cbed9957da85535fdb09346ca1487bd9712909241f0e68bdae0971eda3",
+      "bytes": 18010
+    },
+    {
+      "source": "verify-architecture-bindings.mjs",
+      "path": "shared/site/generator/verify-architecture-bindings.mjs",
+      "sha256": "6c8ada3f3995701912d96182df27d2c79d7a281029cc6de5ebc50fc349b5da6b",
+      "bytes": 2541
+    },
+    {
+      "source": "development-updates-assets/ateles-development-film.mp4",
+      "path": "shared/site/generator/development-updates-assets/ateles-development-film.mp4",
+      "sha256": "725e4752a14030f13f339fb4f470a989c749c11a67cdf843795f5fa5ed7fb587",
+      "bytes": 461110
+    },
+    {
+      "source": "development-updates-assets/ateles-hero.jpg",
+      "path": "shared/site/generator/development-updates-assets/ateles-hero.jpg",
+      "sha256": "100137c46d9d1bbd953910a6fb6c7d8abeb08d33261d75be230cfa6d5181b14d",
+      "bytes": 332265
+    },
+    {
+      "source": "development-updates-assets/ateles-purpose.jpg",
+      "path": "shared/site/generator/development-updates-assets/ateles-purpose.jpg",
+      "sha256": "fdd7343008474c653324bcc0a5bef9d88114dd0e2802aff041564b5189e0d7f6",
+      "bytes": 511513
+    },
+    {
+      "source": "development-updates-assets/development-captions.vtt",
+      "path": "shared/site/generator/development-updates-assets/development-captions.vtt",
+      "sha256": "7972d806dd81c47a4efe2dc8d20db502ac18d4ad59fa2fc3f4f9bd71afaa8628",
+      "bytes": 331
+    },
+    {
+      "source": "development-updates-assets/development-narration.mp3",
+      "path": "shared/site/generator/development-updates-assets/development-narration.mp3",
+      "sha256": "c92d7a75e895c5d09ea7ca2924940a9f5a59aba2b508727e84670f2f74d0caf1",
+      "bytes": 188543
+    },
+    {
+      "source": "development-updates-assets/neotoma-development-film.mp4",
+      "path": "shared/site/generator/development-updates-assets/neotoma-development-film.mp4",
+      "sha256": "52321f6416ec0ad2be370c4efb537013718063f281a4343ca4b6cf8a929780be",
+      "bytes": 378557
+    },
+    {
+      "source": "development-updates-assets/neotoma-hero.jpg",
+      "path": "shared/site/generator/development-updates-assets/neotoma-hero.jpg",
+      "sha256": "8eee3947a65ac16fd41b359e558a6f4839c5c679cd6c8c1dcc0d4b115572476f",
+      "bytes": 316482
+    },
+    {
+      "source": "development-updates-assets/neotoma-history.jpg",
+      "path": "shared/site/generator/development-updates-assets/neotoma-history.jpg",
+      "sha256": "32b686dc793e254867f7419c3cdbc406744b600f7f9b21ed3e8fe11b6c88d088",
+      "bytes": 324872
+    },
+    {
+      "source": "harness/email-demo.mjs",
+      "path": "shared/site/generator/harness/email-demo.mjs",
+      "sha256": "b07fa9850307ce3645f876d834bd173c91a4cd2b3ea787fdfeb359611e8615db",
+      "bytes": 21133
+    },
+    {
+      "source": "harness/email-story.mjs",
+      "path": "shared/site/generator/harness/email-story.mjs",
+      "sha256": "6a706226b8453360cc12e34d4243d6113529dde73b23259260c7cd9bc1608488",
+      "bytes": 6333
+    },
+    {
+      "source": "harness/fixture.mjs",
+      "path": "shared/site/generator/harness/fixture.mjs",
+      "sha256": "218a407c6e24e891a1879f04df6924394bf20bdd716b32aeff05ebe8b61bc4ee",
+      "bytes": 5181
+    },
+    {
+      "source": "harness/planned-workflow.mjs",
+      "path": "shared/site/generator/harness/planned-workflow.mjs",
+      "sha256": "64ffd115613cdc2b0fff7fb16d4e0ee18c6681e3304a76f0f910a96d754964bb",
+      "bytes": 10509
+    },
+    {
+      "source": "media/authored-motion/ateles-object.png",
+      "path": "shared/site/generator/media/authored-motion/ateles-object.png",
+      "sha256": "37fe59af0c5cdf63455e86d1ea24bfb7e7348a5086d54358e8486d63e29635af",
+      "bytes": 310328
+    },
+    {
+      "source": "media/authored-motion/ateles-plate.png",
+      "path": "shared/site/generator/media/authored-motion/ateles-plate.png",
+      "sha256": "ad5793ec55947c456393530a33f75392a5fcbc1a58d05d9e954fadd878421cb0",
+      "bytes": 1851087
+    },
+    {
+      "source": "media/authored-motion/ateles-reference.png",
+      "path": "shared/site/generator/media/authored-motion/ateles-reference.png",
+      "sha256": "e3ad17796e8aeff69722e1cf0f95a8a94c7d6b505a9acac41e3b9ad833bd60e9",
+      "bytes": 670844
+    },
+    {
+      "source": "media/authored-motion/neotoma-object.png",
+      "path": "shared/site/generator/media/authored-motion/neotoma-object.png",
+      "sha256": "65492785856922210dbc23803cccc89a95476d0a0663ee3073705a15c7a064da",
+      "bytes": 253456
+    },
+    {
+      "source": "media/authored-motion/neotoma-plate.png",
+      "path": "shared/site/generator/media/authored-motion/neotoma-plate.png",
+      "sha256": "ac5e810553ee6d5f121c5406598ce308368969bb88c1e340ec050e2912913223",
+      "bytes": 1682188
+    },
+    {
+      "source": "media/authored-motion/neotoma-reference.png",
+      "path": "shared/site/generator/media/authored-motion/neotoma-reference.png",
+      "sha256": "b7b07cf10802f3f06796190c3b528b648c9e1e1e607f2961977cb3985dcb7f4b",
+      "bytes": 680258
+    },
+    {
+      "source": "waitlist-runtime/build-assets/ready-state.json",
+      "path": "shared/runtime/build-assets/ready-state.json",
+      "sha256": "6e58713d0698fcc5553ccf10487b6ace6a8ac8bd2b82113bfae663cdd875bf66",
+      "bytes": 250
+    },
+    {
+      "source": "waitlist-runtime/build-assets/server/index.js",
+      "path": "shared/runtime/build-assets/server/index.js",
+      "sha256": "20e2ac1272f77dd5785b32e4959d2f6d1d0ff995acb18f82cff5fa9808060487",
+      "bytes": 11849
+    },
+    {
+      "source": "waitlist-runtime/build-assets/server/synthetic-index.js",
+      "path": "shared/runtime/build-assets/server/synthetic-index.js",
+      "sha256": "a66f19ebb84a4ffd9ebbdf9b1319f3e910a6f28c2e4c0be8e270f568312ae659",
+      "bytes": 16110
+    },
+    {
+      "source": "waitlist-runtime/build-assets/waitlist-client.mjs",
+      "path": "shared/runtime/build-assets/waitlist-client.mjs",
+      "sha256": "d7642c6031987ee999ae85cef4e35302ede53a63ac22bd245b12bf9b780c0fca",
+      "bytes": 3838
+    },
+    {
+      "source": "waitlist-runtime/build-assets/waitlist-form.css",
+      "path": "shared/runtime/build-assets/waitlist-form.css",
+      "sha256": "753bcb6c927e15cd439b1e5cfa608b5564b8b7132d44981e2c2a12aa64c6fba8",
+      "bytes": 658
+    },
+    {
+      "source": "waitlist-runtime/build-assets/waitlist-verification-client.mjs",
+      "path": "shared/runtime/build-assets/waitlist-verification-client.mjs",
+      "sha256": "4936545d8dc4efec171145c80cdeec74d2c4e572e61be41b75d1229ece4685cc",
+      "bytes": 5171
+    },
+    {
+      "source": "waitlist-runtime/build.mjs",
+      "path": "shared/runtime/build.mjs",
+      "sha256": "4f47567ec2c3b9d28124ac2e00d5adcaa971bf4688c6316e76e5827a71ed647f",
+      "bytes": 1200
+    },
+    {
+      "source": "waitlist-runtime/client-entry.mjs",
+      "path": "shared/runtime/client-entry.mjs",
+      "sha256": "62e98de18efbd74922cf05249ba796fad1ba47968bbfea8c1c64747282979553",
+      "bytes": 171
+    },
+    {
+      "source": "waitlist-runtime/client.mjs",
+      "path": "shared/runtime/client.mjs",
+      "sha256": "24c309c700236dc2dee92db1bfd2740c978a2c9033904ebd56a0c53fd4b97159",
+      "bytes": 3122
+    },
+    {
+      "source": "waitlist-runtime/client.test.mjs",
+      "path": "shared/runtime/client.test.mjs",
+      "sha256": "1928e7882f40c6fed477a7051e4ead97ac79afa1f00b4c6513574441ebd2052b",
+      "bytes": 4755
+    },
+    {
+      "source": "waitlist-runtime/db/schema.ts",
+      "path": "shared/runtime/db/schema.ts",
+      "sha256": "415578355090d3dd7a6342ceb2626080fce876e347086f7b4ebee3f8990474d6",
+      "bytes": 1425
+    },
+    {
+      "source": "waitlist-runtime/drizzle.config.ts",
+      "path": "shared/runtime/drizzle.config.ts",
+      "sha256": "b8f434e1a6e2b36f7a309a3ca558a6d1474639056345906fe41db2ba1b82133e",
+      "bytes": 131
+    },
+    {
+      "source": "waitlist-runtime/drizzle/0000_cloud_interest.sql",
+      "path": "shared/runtime/drizzle/0000_cloud_interest.sql",
+      "sha256": "743ec391e42c67619fe751a8160298cbf54230e5cf8485df81e80e276d3467dd",
+      "bytes": 1472
+    },
+    {
+      "source": "waitlist-runtime/drizzle/meta/0000_snapshot.json",
+      "path": "shared/runtime/drizzle/meta/0000_snapshot.json",
+      "sha256": "5d69719b07870a40acb2bdc08cdf9ec152b6230df84dd249f68accba629c081f",
+      "bytes": 5646
+    },
+    {
+      "source": "waitlist-runtime/drizzle/meta/_journal.json",
+      "path": "shared/runtime/drizzle/meta/_journal.json",
+      "sha256": "a45ea1440e8c205b06fcc639142ae605248a7b95717648bc4c1c1b3ab50c30ee",
+      "bytes": 205
+    },
+    {
+      "source": "waitlist-runtime/form.css",
+      "path": "shared/runtime/form.css",
+      "sha256": "753bcb6c927e15cd439b1e5cfa608b5564b8b7132d44981e2c2a12aa64c6fba8",
+      "bytes": 658
+    },
+    {
+      "source": "waitlist-runtime/form.mjs",
+      "path": "shared/runtime/form.mjs",
+      "sha256": "56a091d9865b32f14bcc47f71ecd60d2488e694bbc29fc9a9cd5b824a9a09656",
+      "bytes": 1606
+    },
+    {
+      "source": "waitlist-runtime/maintenance.mjs",
+      "path": "shared/runtime/maintenance.mjs",
+      "sha256": "6d17ce895ae9857cbfb95530e2383f3f32e895d4886951d64162e8bb8a137a86",
+      "bytes": 1976
+    },
+    {
+      "source": "waitlist-runtime/package-lock.json",
+      "path": "shared/runtime/package-lock.json",
+      "sha256": "f2a4b14a76779746150705b3f1d7124099b865caa3166254ee417cd7c984c4ce",
+      "bytes": 50813
+    },
+    {
+      "source": "waitlist-runtime/package.json",
+      "path": "shared/runtime/package.json",
+      "sha256": "51044ff270f08511ed3afeb7c0e49b8b4b68f03e3255987b50bf8859bcafe28a",
+      "bytes": 439
+    },
+    {
+      "source": "waitlist-runtime/policy.mjs",
+      "path": "shared/runtime/policy.mjs",
+      "sha256": "435b77cd253484d1f38ccb39590291dda0dd5dc9cc1e247483e182164939efdc",
+      "bytes": 228
+    },
+    {
+      "source": "waitlist-runtime/publication.mjs",
+      "path": "shared/runtime/publication.mjs",
+      "sha256": "f4f61ac5ad2617664bbc8dca51604ca09f6aeb4364e9e56499b0043e0e056dc8",
+      "bytes": 10189
+    },
+    {
+      "source": "waitlist-runtime/runtime.test.mjs",
+      "path": "shared/runtime/runtime.test.mjs",
+      "sha256": "f70987a623ed7fb3e7702185fcc856d1dd0a1c49c118944eb0057e65ec806f73",
+      "bytes": 7652
+    },
+    {
+      "source": "waitlist-runtime/service.mjs",
+      "path": "shared/runtime/service.mjs",
+      "sha256": "d4c2c85e8d6d29e068bde165284641dcd8e1fedf63e7bff0f8f788e6d62daa26",
+      "bytes": 8485
+    },
+    {
+      "source": "waitlist-runtime/service.test.mjs",
+      "path": "shared/runtime/service.test.mjs",
+      "sha256": "a59d5c827d046ace203d7db60a8220a987ecf47141eed29b5b2290e8434c4a32",
+      "bytes": 10157
+    },
+    {
+      "source": "waitlist-runtime/verification-client-entry.mjs",
+      "path": "shared/runtime/verification-client-entry.mjs",
+      "sha256": "92157df36df3873920041eeade2adfe57487b19b2bf5ab4f2006587791d1f7c1",
+      "bytes": 1481
+    },
+    {
+      "source": "waitlist-runtime/verification-html.mjs",
+      "path": "shared/runtime/verification-html.mjs",
+      "sha256": "9bfa5b6822f16f1519ae45ddaa1557acf5f90f8ea91c154e4abcf1a681745313",
+      "bytes": 1591
+    },
+    {
+      "source": "waitlist-runtime/verification-worker.mjs",
+      "path": "shared/runtime/verification-worker.mjs",
+      "sha256": "7ad3289dafed9586b8b7367ac49d6daa10c89b36e00202660acda9e6d8ab7196",
+      "bytes": 2451
+    },
+    {
+      "source": "waitlist-runtime/verification.test.mjs",
+      "path": "shared/runtime/verification.test.mjs",
+      "sha256": "4dd485420f5060c1aa73245cac633ab22cca462e047b421c3852f5d78afaa1dc",
+      "bytes": 6603
+    },
+    {
+      "source": "waitlist-runtime/worker.mjs",
+      "path": "shared/runtime/worker.mjs",
+      "sha256": "b48d297233978153363de5f2b99d77fcc20c4633f3a5a6792e8b3c54ea69c441",
+      "bytes": 674
+    },
+    {
+      "source": "dist/architecture-ia.css",
+      "path": "shared/site/generator/dist/architecture-ia.css",
+      "sha256": "e010a727bb1445c3197d3c4ac273435ac0e87c784827673bf12510b674b63ee2",
+      "bytes": 4554
+    },
+    {
+      "source": "dist/authored-layer-boot.mjs",
+      "path": "shared/site/generator/dist/authored-layer-boot.mjs",
+      "sha256": "ec8e3b893c8d135f441040417785dd410e0d055d273d4abec62547e67d5ac6ee",
+      "bytes": 112
+    },
+    {
+      "source": "dist/authored-layer-player.css",
+      "path": "shared/site/generator/dist/authored-layer-player.css",
+      "sha256": "c753f856d088dc5ca1bdeeed9babb56470e0593da9e9c971e1d53ff06302cd17",
+      "bytes": 1512
+    },
+    {
+      "source": "dist/authored-layer-player.mjs",
+      "path": "shared/site/generator/dist/authored-layer-player.mjs",
+      "sha256": "18cdd7f0978daf44e695472e2e1532ff7d9a7a8f4465ac9cc807cbd16612090c",
+      "bytes": 14645
+    },
+    {
+      "source": "dist/concise-2026-10-05.css",
+      "path": "shared/site/generator/dist/concise-2026-10-05.css",
+      "sha256": "31c2de3a8f52535e375cb088566f5c44ae51136f078b02740dbaa30fd9b59ac6",
+      "bytes": 7292
+    },
+    {
+      "source": "dist/development-updates.css",
+      "path": "shared/site/generator/dist/development-updates.css",
+      "sha256": "089dac5178b4a189c9fc92c4e60edd0322d34f7f0c61e6e65b0881cd3cbec69d",
+      "bytes": 3396
+    },
+    {
+      "source": "dist/email-demo-client.mjs",
+      "path": "shared/site/generator/dist/email-demo-client.mjs",
+      "sha256": "29f52cd939ddb7662cd3c4365c5daec8f9038cc3c49c55def2ca32a01982a752",
+      "bytes": 8917
+    },
+    {
+      "source": "dist/email-demo-controller.mjs",
+      "path": "shared/site/generator/dist/email-demo-controller.mjs",
+      "sha256": "8471e3588955ef389b3273dacefc7b81fb9896d350503c603a70f108bda3b605",
+      "bytes": 1920
+    },
+    {
+      "source": "dist/email-demo.css",
+      "path": "shared/site/generator/dist/email-demo.css",
+      "sha256": "177ad3200d94bd7a64d6d3ccdb7feb4508ca9e95f564a5d57f5e66e8ce34b8b9",
+      "bytes": 10740
+    },
+    {
+      "source": "dist/explore-directory.css",
+      "path": "shared/site/generator/dist/explore-directory.css",
+      "sha256": "03f66e5a4cde2e4a0258f048e5bc7aca49467d8c9f956d9c6946dfa225a26e3b",
+      "bytes": 2632
+    },
+    {
+      "source": "dist/grounded-2026-10-05.css",
+      "path": "shared/site/generator/dist/grounded-2026-10-05.css",
+      "sha256": "6589a8543b5bdb81f1383c0f2e908837f6968e605f1fdb7ae8ae790dc265bfe0",
+      "bytes": 19762
+    },
+    {
+      "source": "dist/immersive-2026-10-05.css",
+      "path": "shared/site/generator/dist/immersive-2026-10-05.css",
+      "sha256": "46155a29f4158225745869d3ab76edc8688c0fb517687f06b44abf1e2759dc9e",
+      "bytes": 8663
+    },
+    {
+      "source": "dist/immersive-2026-10-05.js",
+      "path": "shared/site/generator/dist/immersive-2026-10-05.js",
+      "sha256": "e1286fcebb25b4756fd5f5cfac12699861c7caaf6d92776ca48c0f6b4bccc9d0",
+      "bytes": 490
+    },
+    {
+      "source": "dist/integrated-review-2026-10-05.css",
+      "path": "shared/site/generator/dist/integrated-review-2026-10-05.css",
+      "sha256": "0facd1a4802c679f577be25b9125cb7739af2333a0820fad5c43723a4ecc749d",
+      "bytes": 10329
+    },
+    {
+      "source": "dist/motion-pilots.css",
+      "path": "shared/site/generator/dist/motion-pilots.css",
+      "sha256": "0079989c945380eb445b393d9d2885cef47a699617e85415de3999b9a4295e71",
+      "bytes": 1584
+    },
+    {
+      "source": "dist/motion-player.css",
+      "path": "shared/site/generator/dist/motion-player.css",
+      "sha256": "ac09131790c031559d39204edf8a6fb96d03caaabbd23a6f5091146de925c68a",
+      "bytes": 1174
+    },
+    {
+      "source": "dist/motion-player.mjs",
+      "path": "shared/site/generator/dist/motion-player.mjs",
+      "sha256": "6efccac500686ca03bee2e18c950bc5a13354db9882f16c0a0a63afbbf3e1c8d",
+      "bytes": 14197
+    },
+    {
+      "source": "dist/oct8-refinement.css",
+      "path": "shared/site/generator/dist/oct8-refinement.css",
+      "sha256": "6a62816e4d7f08d7565687bc375864340cd4ac5683789690c2f5414d2a4a3263",
+      "bytes": 6381
+    },
+    {
+      "source": "dist/planned-workflow-client.mjs",
+      "path": "shared/site/generator/dist/planned-workflow-client.mjs",
+      "sha256": "6a2fd9172cb818f56a17e222b58a3affdffff6f832b5f88c616a624e456eed3d",
+      "bytes": 4536
+    },
+    {
+      "source": "dist/planned-workflow.css",
+      "path": "shared/site/generator/dist/planned-workflow.css",
+      "sha256": "a67e70bba57c928ca7a8a8b7f56097548e25547746ae20b877398d94eedf86a2",
+      "bytes": 3896
+    },
+    {
+      "source": "dist/quick-start-setup.css",
+      "path": "shared/site/generator/dist/quick-start-setup.css",
+      "sha256": "61cf287afc0a6bd04ab490c36f151e67c3bf147a8ed4f16655a7bdc2e5e3d8c8",
+      "bytes": 2054
+    },
+    {
+      "source": "dist/quick-start-setup.js",
+      "path": "shared/site/generator/dist/quick-start-setup.js",
+      "sha256": "85954584acdecc2f1aea01771cbc22e1f9a800a142347b50f71d33ed8b729897",
+      "bytes": 1135
+    },
+    {
+      "source": "dist/recovery-2026-10-05.css",
+      "path": "shared/site/generator/dist/recovery-2026-10-05.css",
+      "sha256": "2f35d944504849350b65208d83a231de43eb3f5b7f2259ae738f39940c1c7fa0",
+      "bytes": 17875
+    },
+    {
+      "source": "dist/replay-controller.mjs",
+      "path": "shared/site/generator/dist/replay-controller.mjs",
+      "sha256": "2b9d9f34fdc2b647f3d8c24b59a121d1beb079af453b9d682e87d707de77b24e",
+      "bytes": 1102
+    },
+    {
+      "source": "dist/selected-site-identity.css",
+      "path": "shared/site/generator/dist/selected-site-identity.css",
+      "sha256": "f9c3470220dac21498425b105f4dc5aadfb53f9ecc91b51f521a53bab0af96fc",
+      "bytes": 1791
+    },
+    {
+      "source": "dist/selected-site-identity.js",
+      "path": "shared/site/generator/dist/selected-site-identity.js",
+      "sha256": "f9bcaf97e6f85da578cdd5d9651110c48436766fabc1aed580d7ef0d3356b6e0",
+      "bytes": 1633
+    },
+    {
+      "source": "dist/semantic-cues.css",
+      "path": "shared/site/generator/dist/semantic-cues.css",
+      "sha256": "a1ede91ca80da6cec84b8e4d1415efbc375de1910ee79324483a9093138feada",
+      "bytes": 266
+    },
+    {
+      "source": "dist/semantic-visuals.css",
+      "path": "shared/site/generator/dist/semantic-visuals.css",
+      "sha256": "6028c048dd4af300356c76f11320cabf3c01921ea622f32c4771d2b77ec4a58d",
+      "bytes": 980
+    },
+    {
+      "source": "dist/technical-ia.css",
+      "path": "shared/site/generator/dist/technical-ia.css",
+      "sha256": "ac82934af78223dd31229429775bf633ce61278863f598436c7ee9c863eafaf2",
+      "bytes": 5202
+    },
+    {
+      "source": "dist/tension-interactions.css",
+      "path": "shared/site/generator/dist/tension-interactions.css",
+      "sha256": "d46ca9f101e8066df9d6626a15513306851760a58c46efce3d9d56671d1d1f9b",
+      "bytes": 2646
+    },
+    {
+      "source": "dist/tension-interactions.mjs",
+      "path": "shared/site/generator/dist/tension-interactions.mjs",
+      "sha256": "224065e2f5d5d031f04279471c94723c38c462da22e4b612d2c647eab94f8ba0",
+      "bytes": 6034
+    },
+    {
+      "source": "dist/tension-trace-r2.css",
+      "path": "shared/site/generator/dist/tension-trace-r2.css",
+      "sha256": "a4dbc3d9e644aba73be32030506b71a24a6571607b42f1b33292fb54cda3c635",
+      "bytes": 9110
+    },
+    {
+      "source": "dist/tension-trace-r3.css",
+      "path": "shared/site/generator/dist/tension-trace-r3.css",
+      "sha256": "d8977a47a70ecc74d0a44e7fe0fb9cf6f919fdc185adde147bd9d42a596faecc",
+      "bytes": 8113
+    },
+    {
+      "source": "dist/tension-trace-r3.js",
+      "path": "shared/site/generator/dist/tension-trace-r3.js",
+      "sha256": "07fa34b9704bead4d5a8cfc7eeec7c143d72a70af49bb3e6d641ee7e76303dab",
+      "bytes": 2115
+    },
+    {
+      "source": "dist/tension-trace-r4.css",
+      "path": "shared/site/generator/dist/tension-trace-r4.css",
+      "sha256": "202630ccd2fa41632343aff8c298b603f9277086ab7d605ad31a186862708ffd",
+      "bytes": 10025
+    },
+    {
+      "source": "dist/tension-trace-r4.js",
+      "path": "shared/site/generator/dist/tension-trace-r4.js",
+      "sha256": "bab066e50477f4426317b745b7d4add1515d78294f3aa81a0a534a8c6ab78ab7",
+      "bytes": 3376
+    },
+    {
+      "source": "dist/updates.css",
+      "path": "shared/site/generator/dist/updates.css",
+      "sha256": "e8f5bb139173639f9d85ef80316d81066dc1740fe3a3c0492cc91df818cc8a53",
+      "bytes": 650
+    },
+    {
+      "source": "dist/images/logo-typography-2026-10-06/exports/a2-nav-light.svg",
+      "path": "shared/site/generator/dist/images/logo-typography-2026-10-06/exports/a2-nav-light.svg",
+      "sha256": "08c6f3811913d037d0ac243d661bb06e54f9dc3644641b39840e4f1770e27332",
+      "bytes": 3131
+    },
+    {
+      "source": "dist/images/logo-typography-2026-10-06/exports/ateles-symbol-selected-light.svg",
+      "path": "shared/site/generator/dist/images/logo-typography-2026-10-06/exports/ateles-symbol-selected-light.svg",
+      "sha256": "ab236c3c156a3548c528acc8a49194dc46b8abeb6c5ba84b310f1bcb4f65191f",
+      "bytes": 380
+    },
+    {
+      "source": "dist/images/logo-typography-2026-10-06/exports/a2-nav-dark.svg",
+      "path": "shared/site/generator/dist/images/logo-typography-2026-10-06/exports/a2-nav-dark.svg",
+      "sha256": "2bf9e96ec5dd56b01c7e8f05783d5c62e3e1c773fc3ca0054c2b7ef6a33eedf1",
+      "bytes": 3131
+    },
+    {
+      "source": "dist/images/logo-typography-2026-10-06/exports/ateles-symbol-selected-dark.svg",
+      "path": "shared/site/generator/dist/images/logo-typography-2026-10-06/exports/ateles-symbol-selected-dark.svg",
+      "sha256": "1ecc8910bb96305eed60803a32759a2fc7f71b8b7c405f7655c37dd5e9012dcb",
+      "bytes": 380
+    },
+    {
+      "source": "dist/images/logo-typography-2026-10-06/exports/n2-nav-light.svg",
+      "path": "shared/site/generator/dist/images/logo-typography-2026-10-06/exports/n2-nav-light.svg",
+      "sha256": "49109046da1e12f583208e16ad0d2d67c6e95c12fa74682925a80c6d15e48624",
+      "bytes": 14923
+    },
+    {
+      "source": "dist/images/logo-typography-2026-10-06/exports/neotoma-symbol-selected-light.svg",
+      "path": "shared/site/generator/dist/images/logo-typography-2026-10-06/exports/neotoma-symbol-selected-light.svg",
+      "sha256": "5c81775ed43cdd32f03130408cacf9cb1fe015d06f236a918b86bbb15e45275d",
+      "bytes": 607
+    },
+    {
+      "source": "dist/images/logo-typography-2026-10-06/exports/n2-nav-dark.svg",
+      "path": "shared/site/generator/dist/images/logo-typography-2026-10-06/exports/n2-nav-dark.svg",
+      "sha256": "dd0c9e14cca3a7780c6b3a28221165791c97ddd87264c9e46220a4ef710cb890",
+      "bytes": 14923
+    },
+    {
+      "source": "dist/images/logo-typography-2026-10-06/exports/neotoma-symbol-selected-dark.svg",
+      "path": "shared/site/generator/dist/images/logo-typography-2026-10-06/exports/neotoma-symbol-selected-dark.svg",
+      "sha256": "9511db0450cb833169411ba8430d0bc630ef64bbb07b5be15d082414ad15abd9",
+      "bytes": 607
+    },
+    {
+      "source": "dist/images/tension-trace-r2/A-hero.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/A-hero.jpg",
+      "sha256": "100137c46d9d1bbd953910a6fb6c7d8abeb08d33261d75be230cfa6d5181b14d",
+      "bytes": 332265
+    },
+    {
+      "source": "dist/images/tension-trace-r2/N-hero.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/N-hero.jpg",
+      "sha256": "8eee3947a65ac16fd41b359e558a6f4839c5c679cd6c8c1dcc0d4b115572476f",
+      "bytes": 316482
+    },
+    {
+      "source": "dist/images/tension-trace-r2/A-purpose.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/A-purpose.jpg",
+      "sha256": "fdd7343008474c653324bcc0a5bef9d88114dd0e2802aff041564b5189e0d7f6",
+      "bytes": 511513
+    },
+    {
+      "source": "dist/images/tension-trace-r2/A-contributors.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/A-contributors.jpg",
+      "sha256": "9fcb564508f1f0197a305bc681db1eaa1e90823708ef662cd9173329433d8473",
+      "bytes": 332109
+    },
+    {
+      "source": "dist/images/tension-trace-r2/A-authority.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/A-authority.jpg",
+      "sha256": "72b9928e0a334dce2bb946bf0d242c4c8c6348fdeb8e6d7169b7a1526659e5d4",
+      "bytes": 393174
+    },
+    {
+      "source": "dist/images/tension-trace-r2/A-outcomes.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/A-outcomes.jpg",
+      "sha256": "c40421a9ebb37e30e3c047c017a7fb59bb4e63e0e5b4a168749701b5b65e52e1",
+      "bytes": 373118
+    },
+    {
+      "source": "dist/images/tension-trace-r2/A-continuity.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/A-continuity.jpg",
+      "sha256": "e1769890e07421e3f4a388574e64a00626b08fd71f86a423d2a9e7b8feee4d56",
+      "bytes": 332887
+    },
+    {
+      "source": "dist/images/tension-trace-r2/A-extension.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/A-extension.jpg",
+      "sha256": "d2effc679777ef7ba5f05a54adefc91a703f68263f8e72059d6d40afc5f4dcd3",
+      "bytes": 308328
+    },
+    {
+      "source": "dist/images/tension-trace-r2/N-capture.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/N-capture.jpg",
+      "sha256": "68e222c80789e028f26a34dde5c6f2516bb10a7254dc39b1bebe307e735ee780",
+      "bytes": 383054
+    },
+    {
+      "source": "dist/images/tension-trace-r2/N-structure.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/N-structure.jpg",
+      "sha256": "95b5bd126f1ef9bbbbf26587a6050f7233e8f4c0251e8aca0fd5ef2b7a8e683c",
+      "bytes": 198104
+    },
+    {
+      "source": "dist/images/tension-trace-r2/N-current.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/N-current.jpg",
+      "sha256": "4c2aeba330bdbfcb264b6fa78cd4e3e93b2a0cbc1fb86fee81e26da30535ccea",
+      "bytes": 294241
+    },
+    {
+      "source": "dist/images/tension-trace-r2/N-basis.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/N-basis.jpg",
+      "sha256": "c15eab5ca13db42f5ea398687463f0038a12ca57a75998e3be714920dde925bd",
+      "bytes": 349721
+    },
+    {
+      "source": "dist/images/tension-trace-r2/N-history.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/N-history.jpg",
+      "sha256": "32b686dc793e254867f7419c3cdbc406744b600f7f9b21ed3e8fe11b6c88d088",
+      "bytes": 324872
+    },
+    {
+      "source": "dist/images/tension-trace-r2/N-change.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/N-change.jpg",
+      "sha256": "232f91ea4ab30aa24f8965ded511da44acacdce54b7e2fa78b757828c1c2ca9c",
+      "bytes": 320463
+    },
+    {
+      "source": "dist/images/tension-trace-r2/A-purpose-detail.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/A-purpose-detail.jpg",
+      "sha256": "b43a6cd12576b36cce316d59f6cf61c4e92e958acd3fa34bbd4a02ee43ef6cca",
+      "bytes": 533473
+    },
+    {
+      "source": "dist/images/tension-trace-r2/A-contributors-detail.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/A-contributors-detail.jpg",
+      "sha256": "c6d1f07042d198a0a1ee7e097f6488aa28ed02a67dee2f34176f3d1234421061",
+      "bytes": 507768
+    },
+    {
+      "source": "dist/images/tension-trace-r2/A-authority-detail.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/A-authority-detail.jpg",
+      "sha256": "6f88c3ad24f73dcbb680a89696ce40b23dd0f3aa83ba38f1cea99eaa79f1fed0",
+      "bytes": 471788
+    },
+    {
+      "source": "dist/images/tension-trace-r2/A-outcomes-detail.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/A-outcomes-detail.jpg",
+      "sha256": "1ea8e221d4dd20bac6241b35daa78d449ffb6f6570de2e1fec40f66b5b482ad4",
+      "bytes": 544994
+    },
+    {
+      "source": "dist/images/tension-trace-r2/A-continuity-detail.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/A-continuity-detail.jpg",
+      "sha256": "edf2c93b9c55accba9351435dbd7ffdf0aaa9f7516700807254c71e9b0f9aff8",
+      "bytes": 338278
+    },
+    {
+      "source": "dist/images/tension-trace-r2/A-extension-detail.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/A-extension-detail.jpg",
+      "sha256": "1443e59a43fce2ea41eb3aca768c4fe67a7f46ff9d4ffb8405b54a8ec7c8ed32",
+      "bytes": 450435
+    },
+    {
+      "source": "dist/images/tension-trace-r2/N-capture-detail.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/N-capture-detail.jpg",
+      "sha256": "7790a20b1e267011c4cfe3de5cd016d8b4612afcca915240efc0af99b8cab588",
+      "bytes": 382517
+    },
+    {
+      "source": "dist/images/tension-trace-r2/N-structure-detail.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/N-structure-detail.jpg",
+      "sha256": "2c01f1eacbd5c9c76494c5bc997b9f7f41df67e7acd153bd1b3a80eff6fa633a",
+      "bytes": 320318
+    },
+    {
+      "source": "dist/images/tension-trace-r2/N-current-detail.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/N-current-detail.jpg",
+      "sha256": "8859a91849e2a042c78e44593c1069942780da29e0af08af933dad8d8506ee72",
+      "bytes": 453625
+    },
+    {
+      "source": "dist/images/tension-trace-r2/N-basis-detail.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/N-basis-detail.jpg",
+      "sha256": "a784daa0240d94c9c818077da70438061929a128c0820ea214bd66e7756db8a1",
+      "bytes": 439230
+    },
+    {
+      "source": "dist/images/tension-trace-r2/N-history-detail.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/N-history-detail.jpg",
+      "sha256": "e23e57a80edd21aee624789ee04db31679d8acb5ff350fedaf5d6d5b9dab48b7",
+      "bytes": 399677
+    },
+    {
+      "source": "dist/images/tension-trace-r2/N-change-detail.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r2/N-change-detail.jpg",
+      "sha256": "b37b00eb976f7a6c36fcb816a3cbdf73607a57ebec168fb48e574812bad0c3ac",
+      "bytes": 315720
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-workflows.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-workflows.jpg",
+      "sha256": "ac0cd452419dcd727b6e7b048fa2824c443d9d9faffa2b0a708e12e91d1faf69",
+      "bytes": 298175
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-workflows-detail.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-workflows-detail.jpg",
+      "sha256": "023f921a3d7b1fa0eed9d288644fda3c9804c11c6e2f6e18511a96e13e740652",
+      "bytes": 382288
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-audience.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-audience.jpg",
+      "sha256": "63379c8aa2e77617fc29ba7b733a94760eab2627bdb3f55852ed07c3d2e246a0",
+      "bytes": 354130
+    },
+    {
+      "source": "dist/images/tension-trace-r3/N-audience.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/N-audience.jpg",
+      "sha256": "cd59d38f2691a16d7f9fceacedd1eedcbef741afec04ed7318bc67bb93782b82",
+      "bytes": 466527
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-audience-detail.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-audience-detail.jpg",
+      "sha256": "e108c3b7e2b0b6327cad99018d0aa5c176b09caba4554ed29f085193303f8b8d",
+      "bytes": 351512
+    },
+    {
+      "source": "dist/images/tension-trace-r3/N-audience-detail.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/N-audience-detail.jpg",
+      "sha256": "6afd87efe9f1de2005575d9ec8784756e55e084cf765576553380be326cf4bab",
+      "bytes": 369276
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-purpose-step-1.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-purpose-step-1.jpg",
+      "sha256": "3a308c83212b54247c5a16c2fb2727ff880edb28747663dab7130d1e78180c05",
+      "bytes": 480042
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-purpose-step-2.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-purpose-step-2.jpg",
+      "sha256": "5068ce466f2d497dffff595e6e900217a048c508a69a138be26d7072370b95e0",
+      "bytes": 446437
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-contributors-step-1.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-contributors-step-1.jpg",
+      "sha256": "642d1c524b11423215be52c8f1bf9e0eb3277cb1c99a49d2bfdbcbc38fe64e85",
+      "bytes": 399946
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-contributors-step-2.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-contributors-step-2.jpg",
+      "sha256": "d64bd1e45e2eddd9bd0390ce1be6af01a83fb7cff004f75b48fdb95947d3e59d",
+      "bytes": 417340
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-workflows-step-1.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-workflows-step-1.jpg",
+      "sha256": "65fed87a1f208de038649e4b4b5c89f1b2eddefda629ecd5b8d31255507ef6ff",
+      "bytes": 410564
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-workflows-step-2.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-workflows-step-2.jpg",
+      "sha256": "b99cd548573de4288e375b5ff4affe32751f528858de2735fc9ef7bd15d2faa0",
+      "bytes": 389540
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-authority-step-1.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-authority-step-1.jpg",
+      "sha256": "4b513ea7c3d864707f647d5cd5312eea31f4d84b97f36aac14869c92a0904ef5",
+      "bytes": 554078
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-authority-step-2.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-authority-step-2.jpg",
+      "sha256": "a53456270fd1e6619a01892f9685872fb10307b5e82543bab46124c4ea074b2d",
+      "bytes": 520570
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-outcomes-step-1.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-outcomes-step-1.jpg",
+      "sha256": "9166c2a929c2566aa7e84a84d2d0bd97533971694c856f439f785b1ce415fade",
+      "bytes": 460870
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-outcomes-step-2.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-outcomes-step-2.jpg",
+      "sha256": "28093cc40f9b4c57ef1792bf9e1561cee343ff8a5ad0fa70d19e8a92528d950a",
+      "bytes": 409204
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-continuity-step-1.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-continuity-step-1.jpg",
+      "sha256": "6ea18f070bff45ff0ac2c1ca489438dfbb4178f1d2e6fa3825ec2b2a4e2e026c",
+      "bytes": 354822
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-continuity-step-2.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-continuity-step-2.jpg",
+      "sha256": "5c46c3468e0fa27df16256fe6d3062e7c4a37ad5b61d4fa862ec48b1d94c8df2",
+      "bytes": 431444
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-extension-step-1.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-extension-step-1.jpg",
+      "sha256": "cae3b3df782230dec9be9879b28a7954fd9ebdfbf5883781e3e0c77f8dfc87e9",
+      "bytes": 339207
+    },
+    {
+      "source": "dist/images/tension-trace-r3/A-extension-step-2.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/A-extension-step-2.jpg",
+      "sha256": "e141ebf6dbe60f3d83525448356b44e150905df3affb4ab75b9d0cef0b8d22fc",
+      "bytes": 370461
+    },
+    {
+      "source": "dist/images/tension-trace-r3/N-capture-step-1.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/N-capture-step-1.jpg",
+      "sha256": "b6cb757cc58292e0fadf452b166d63db57271feb7ae4b469dd593a23c6fa0082",
+      "bytes": 320425
+    },
+    {
+      "source": "dist/images/tension-trace-r3/N-capture-step-2.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/N-capture-step-2.jpg",
+      "sha256": "fb7dfd920e78c44893f915dc8f1c8b507ecaae313b7d3591a81be42ece83be70",
+      "bytes": 269835
+    },
+    {
+      "source": "dist/images/tension-trace-r3/N-structure-step-1.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/N-structure-step-1.jpg",
+      "sha256": "017c769e101928da0d43a140fcf6facd514aee78bd4652d0861d327d359bf4f4",
+      "bytes": 301629
+    },
+    {
+      "source": "dist/images/tension-trace-r3/N-structure-step-2.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/N-structure-step-2.jpg",
+      "sha256": "0509bd4949511451add5ca3737ff5a2c4a1c5f19f075209a91dbeaba9c895cb0",
+      "bytes": 280017
+    },
+    {
+      "source": "dist/images/tension-trace-r3/N-current-step-1.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/N-current-step-1.jpg",
+      "sha256": "7378b2b55126a736c1d7aaf875f643b2d58ac1d30e89b28819abade10f912f4e",
+      "bytes": 407500
+    },
+    {
+      "source": "dist/images/tension-trace-r3/N-current-step-2.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/N-current-step-2.jpg",
+      "sha256": "80a80b0b9594df907471c812abac4e1894d7c1181fe9543c5978f568f756f115",
+      "bytes": 381683
+    },
+    {
+      "source": "dist/images/tension-trace-r3/N-basis-step-1.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/N-basis-step-1.jpg",
+      "sha256": "a3e52509c40a58e998b1bbd6153ce71f0dad5d49c44c06c594688a2864f75c2d",
+      "bytes": 299419
+    },
+    {
+      "source": "dist/images/tension-trace-r3/N-basis-step-2.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/N-basis-step-2.jpg",
+      "sha256": "b6e1fe6366949ed338633234c49424799cacb1d3504f9b75ab932e68b346c6ae",
+      "bytes": 329010
+    },
+    {
+      "source": "dist/images/tension-trace-r3/N-history-step-1.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/N-history-step-1.jpg",
+      "sha256": "d18be6d15bba068854b00c68f60680addf3b4a8dbdf86067d32ea2d45216907a",
+      "bytes": 395591
+    },
+    {
+      "source": "dist/images/tension-trace-r3/N-history-step-2.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/N-history-step-2.jpg",
+      "sha256": "0ee3cded8b9abc36ceee3504ea36d1368950c4d33cc1f5f7bebce7802ee8c1df",
+      "bytes": 390584
+    },
+    {
+      "source": "dist/images/tension-trace-r3/N-change-step-1.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/N-change-step-1.jpg",
+      "sha256": "f08b535bfbbb324904eb23aba03564fc2e12e8bd57def6a2f68bd648cf506ab9",
+      "bytes": 362991
+    },
+    {
+      "source": "dist/images/tension-trace-r3/N-change-step-2.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r3/N-change-step-2.jpg",
+      "sha256": "3cbec85e791d579e4e2a8b82203cc8dac46de62c6282f9487f1e9ece712b98ee",
+      "bytes": 420923
+    },
+    {
+      "source": "dist/images/tension-trace-feedback/A-self-host.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-feedback/A-self-host.jpg",
+      "sha256": "fbba1d8270b8fc2eaa861495d8e44adf8fc6d58b0ad363d0277b873e93e05cd5",
+      "bytes": 201868
+    },
+    {
+      "source": "dist/images/tension-trace-feedback/A-cloud.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-feedback/A-cloud.jpg",
+      "sha256": "04d8654cdbe78507e6c77d51c9eb476b9ac20b738a630d793a7721c4adb23779",
+      "bytes": 148401
+    },
+    {
+      "source": "dist/images/tension-trace-feedback/A-managed.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-feedback/A-managed.jpg",
+      "sha256": "ef743d543cdc70d7784f3bc39e986a0f0fc95e04cd8bc89cb566fc1d54801592",
+      "bytes": 192829
+    },
+    {
+      "source": "dist/images/tension-trace-feedback/N-self-host.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-feedback/N-self-host.jpg",
+      "sha256": "0c88b46b9fedf4e9507b4a1e71665c1b027d8b2a18973bcdf5040e2b1ce648d4",
+      "bytes": 164355
+    },
+    {
+      "source": "dist/images/tension-trace-feedback/N-cloud.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-feedback/N-cloud.jpg",
+      "sha256": "91fbf9c8119e9c475bf1c70fa727d662bb60d4822091af8edd49fc07f95d25ad",
+      "bytes": 116502
+    },
+    {
+      "source": "dist/images/tension-trace-feedback/N-managed.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-feedback/N-managed.jpg",
+      "sha256": "18c857797531b75ad9f12910bef3ad23ebc3a70c3e7835cf9d3ecd5887b56b19",
+      "bytes": 153738
+    },
+    {
+      "source": "dist/images/tension-trace-r4/N-platform-memory.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r4/N-platform-memory.jpg",
+      "sha256": "5e821487d165693392f90fd5ba6db1f7eed1602281c8751831b663d04434e4eb",
+      "bytes": 127218
+    },
+    {
+      "source": "dist/images/tension-trace-r4/N-files-retrieval.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r4/N-files-retrieval.jpg",
+      "sha256": "d5b42fdcc94f132761e016147a4ce1fadd61fd65570c14d4e013f72f521df8eb",
+      "bytes": 125723
+    },
+    {
+      "source": "dist/images/tension-trace-r4/N-memory-services.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r4/N-memory-services.jpg",
+      "sha256": "a6a212a59f9e92bf54a09e61702818a261453116bbe1ce8ea700e6c4bc9e7999",
+      "bytes": 132102
+    },
+    {
+      "source": "dist/images/tension-trace-r4/N-custom-state.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r4/N-custom-state.jpg",
+      "sha256": "c9304e64dd6e89c5293c4123fb169354286e7bb214e829c4316cd7098d8e9cca",
+      "bytes": 143500
+    },
+    {
+      "source": "dist/images/tension-trace-r4/A-harness.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r4/A-harness.jpg",
+      "sha256": "4c78ef5abea47486eee41102a4ab7d893478fffb4d86820200095a7a71d36869",
+      "bytes": 165859
+    },
+    {
+      "source": "dist/images/tension-trace-r4/A-framework.jpg",
+      "path": "shared/site/generator/dist/images/tension-trace-r4/A-framework.jpg",
+      "sha256": "a0297347ac178cd09a0e4351f6297961cdde483fdce629789b915baef8448c16",
+      "bytes": 125318
+    },
+    {
+      "source": "dist/images/selected-logo-exports/ateles-icon-32.svg",
+      "path": "shared/site/generator/dist/images/selected-logo-exports/ateles-icon-32.svg",
+      "sha256": "802b84c8ec82028d516368dcd2c9c177d322916b751fc1d10db8157d079d71bf",
+      "bytes": 416
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/fonts.css",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/fonts.css",
+      "sha256": "d81b3dcd57906376bb3084be347c4d7df4d9f42ea2df214cf0c693f44b9e66b4",
+      "bytes": 1784
+    },
+    {
+      "source": "dist/images/feedback-2026-10-08/A-before.png",
+      "path": "shared/site/generator/dist/images/feedback-2026-10-08/A-before.png",
+      "sha256": "65873ef6b97146f27a03ec36ab226aa911ce537b5a0777878b9f7878efe1228c",
+      "bytes": 2727995
+    },
+    {
+      "source": "dist/images/semantic-2026-10-07/A-workflows-step-2-semantic.png",
+      "path": "shared/site/generator/dist/images/semantic-2026-10-07/A-workflows-step-2-semantic.png",
+      "sha256": "c42cd6496600a53990ab55f69892753aa8dee249dbff4c469b5f1ea35e82cb3d",
+      "bytes": 2086276
+    },
+    {
+      "source": "dist/media/authored-motion/ateles-reference.png",
+      "path": "shared/site/generator/dist/media/authored-motion/ateles-reference.png",
+      "sha256": "e3ad17796e8aeff69722e1cf0f95a8a94c7d6b505a9acac41e3b9ad833bd60e9",
+      "bytes": 670844
+    },
+    {
+      "source": "dist/media/authored-motion/ateles-plate.png",
+      "path": "shared/site/generator/dist/media/authored-motion/ateles-plate.png",
+      "sha256": "ad5793ec55947c456393530a33f75392a5fcbc1a58d05d9e954fadd878421cb0",
+      "bytes": 1851087
+    },
+    {
+      "source": "dist/media/authored-motion/ateles-object.png",
+      "path": "shared/site/generator/dist/media/authored-motion/ateles-object.png",
+      "sha256": "37fe59af0c5cdf63455e86d1ea24bfb7e7348a5086d54358e8486d63e29635af",
+      "bytes": 310328
+    },
+    {
+      "source": "dist/images/feedback-2026-10-08/A-audience.png",
+      "path": "shared/site/generator/dist/images/feedback-2026-10-08/A-audience.png",
+      "sha256": "c03f3068c6dce7034392d8a6128f84e5917c047648abecbd6bffd3faafc28a02",
+      "bytes": 2362279
+    },
+    {
+      "source": "dist/images/semantic-2026-10-07/A-harness-semantic.png",
+      "path": "shared/site/generator/dist/images/semantic-2026-10-07/A-harness-semantic.png",
+      "sha256": "4339499ac7dd7a9fdc57b2c25a7e35bb5364095fa795e26cc928a041012aa824",
+      "bytes": 2435564
+    },
+    {
+      "source": "dist/images/selected-logo-exports/neotoma-icon-32.svg",
+      "path": "shared/site/generator/dist/images/selected-logo-exports/neotoma-icon-32.svg",
+      "sha256": "03b41729bad1adef001fdc59cc3d84716a16b3a82dc7912855388a9845254c71",
+      "bytes": 643
+    },
+    {
+      "source": "dist/images/feedback-2026-10-07/N-before.png",
+      "path": "shared/site/generator/dist/images/feedback-2026-10-07/N-before.png",
+      "sha256": "a5b39ad0bdd3b25856e09ba677b5d9421e56110706e9b5576ec62a1caf5a9d38",
+      "bytes": 2533981
+    },
+    {
+      "source": "dist/images/feedback-2026-10-07/N-after.png",
+      "path": "shared/site/generator/dist/images/feedback-2026-10-07/N-after.png",
+      "sha256": "d05eabe66ed6e6527930245dfd959ab7cb325970dadafa01f52464383eba65ea",
+      "bytes": 2614572
+    },
+    {
+      "source": "dist/media/authored-motion/neotoma-reference.png",
+      "path": "shared/site/generator/dist/media/authored-motion/neotoma-reference.png",
+      "sha256": "b7b07cf10802f3f06796190c3b528b648c9e1e1e607f2961977cb3985dcb7f4b",
+      "bytes": 680258
+    },
+    {
+      "source": "dist/media/authored-motion/neotoma-plate.png",
+      "path": "shared/site/generator/dist/media/authored-motion/neotoma-plate.png",
+      "sha256": "ac5e810553ee6d5f121c5406598ce308368969bb88c1e340ec050e2912913223",
+      "bytes": 1682188
+    },
+    {
+      "source": "dist/media/authored-motion/neotoma-object.png",
+      "path": "shared/site/generator/dist/media/authored-motion/neotoma-object.png",
+      "sha256": "65492785856922210dbc23803cccc89a95476d0a0663ee3073705a15c7a064da",
+      "bytes": 253456
+    },
+    {
+      "source": "dist/images/feedback-2026-10-07/N-managed.png",
+      "path": "shared/site/generator/dist/images/feedback-2026-10-07/N-managed.png",
+      "sha256": "f4499c45b61979773485a0b29c1d288e1786279813b63427af8c78472b6dede8",
+      "bytes": 2064238
+    },
+    {
+      "source": "dist/images/feedback-2026-10-07/N-audience.png",
+      "path": "shared/site/generator/dist/images/feedback-2026-10-07/N-audience.png",
+      "sha256": "88181b4020f81ebbfb6574eb29266fed47f2ebbc16f696267e28925884c7c2b0",
+      "bytes": 2476097
+    },
+    {
+      "source": "dist/images/semantic-2026-10-07/N-structure-step-1-semantic.png",
+      "path": "shared/site/generator/dist/images/semantic-2026-10-07/N-structure-step-1-semantic.png",
+      "sha256": "e7da0a1fda7d760423559b8a7577fcc5f40b16be97dd0b02c0ad031d31bbad07",
+      "bytes": 2018279
+    },
+    {
+      "source": "dist/images/semantic-2026-10-07/N-structure-step-2-semantic.png",
+      "path": "shared/site/generator/dist/images/semantic-2026-10-07/N-structure-step-2-semantic.png",
+      "sha256": "30b5332bbddb314fe51534fbbca3d5e55046c8c453abcedb55a1e10ce974f82e",
+      "bytes": 1809733
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/font-0.ttf",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/font-0.ttf",
+      "sha256": "0d85af813fc3ed87db0c6265515689b2eef5cbaf7aab17922528dfc95a2cd73f",
+      "bytes": 86636
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/font-1.ttf",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/font-1.ttf",
+      "sha256": "7dde307fa887fc65ff5830cfada77a7decc5dae8d3c816c9d39ba3f1af1c4ed7",
+      "bytes": 87120
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/font-2.ttf",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/font-2.ttf",
+      "sha256": "01689ad055025ff1891607b077513c9389f73360d471dcffa036e326af179b00",
+      "bytes": 48616
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/font-3.ttf",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/font-3.ttf",
+      "sha256": "a7bcb84cb01f6e33eecdd2cbff3f97ff1674c0e8e37c6921b6cd717b8c854d98",
+      "bytes": 48732
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/font-4.ttf",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/font-4.ttf",
+      "sha256": "5e39a358a65a72b6b74b56b384bbe17a61d8899d33cc255d49112e6522e3df0d",
+      "bytes": 48732
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/font-5.ttf",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/font-5.ttf",
+      "sha256": "a99e3db50076202713812ed541feeb23ffeebb61db1fa6b1cf48fe590d37ef18",
+      "bytes": 62284
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/font-6.ttf",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/font-6.ttf",
+      "sha256": "20ab9752bd19a373dba627393b6c142e6cf8fc2f219119a8e0cb1442ef679ec5",
+      "bytes": 234708
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/font-7.ttf",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/font-7.ttf",
+      "sha256": "bec4ffe926595df756b5a1e39a9f704debfab88055d9a157f978eb500444dd28",
+      "bytes": 234496
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/font-8.ttf",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/font-8.ttf",
+      "sha256": "950e66c48e5e60c9407421d0fa601047176f17e0d22a598bbd084dde45a98be2",
+      "bytes": 234680
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/font-9.ttf",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/font-9.ttf",
+      "sha256": "2e76f944e209d9af33d2420ec5b03db8676375aa73f55be489c6e5a8d0eabeff",
+      "bytes": 194716
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/font-10.ttf",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/font-10.ttf",
+      "sha256": "0b03b227d7edf5addbf0094b88c3aa1d66d9448b2b501ed686eb4818b691c247",
+      "bytes": 194800
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/barlowcondensed-OFL.txt",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/barlowcondensed-OFL.txt",
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+      "bytes": 4377
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/instrumentsans-OFL.txt",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/instrumentsans-OFL.txt",
+      "sha256": "9e27a72ed30eb49a08678f6a5d6ed98ec7ba5368f541637ee0683ec9134ef966",
+      "bytes": 4403
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/instrumentserif-OFL.txt",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/instrumentserif-OFL.txt",
+      "sha256": "129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521",
+      "bytes": 4405
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/manifest.json",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/manifest.json",
+      "sha256": "a10c1fa0af49249df31b96b0bd95225158df7330ba203aed378724c708d5fed3",
+      "bytes": 4155
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/sourcesans3-OFL.txt",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/sourcesans3-OFL.txt",
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+      "bytes": 4579
+    },
+    {
+      "source": "dist/fonts/recovery-2026-10-05/sourceserif4-OFL.txt",
+      "path": "shared/site/generator/dist/fonts/recovery-2026-10-05/sourceserif4-OFL.txt",
+      "sha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9",
+      "bytes": 4400
+    }
+  ],
+  "excluded": [
+    "hosting identity/configuration",
+    "untracked files",
+    "rendered HTML contacts",
+    "unused image archives",
+    "vendored renderer dependencies"
+  ]
+}

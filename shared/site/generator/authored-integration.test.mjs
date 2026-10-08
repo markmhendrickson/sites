@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {authoredReviewPage,archiveRoute} from './build-current-authored-motion.mjs';
+import {checkCurrentAuthored} from './check-current-authored-motion.mjs';
+const fixture=brand=>({accepted:true,medium:'authored-photographic-layers',review_status:'passed',qa_review_entity_id:'ent_f00d',visual_id:brand==='ateles'?'A-contributors':'N-history',static_mode:'composed',poster:'media/authored-motion/fixture-reference.png',plate:'media/authored-motion/fixture-plate.png',packet:'media/authored-motion/fixture-object.png',poster_sha256:'a'.repeat(64),plate_sha256:'b'.repeat(64),packet_sha256:'c'.repeat(64),poster_alt:'Synthetic contract fixture, not actual accepted media',legend:[1,2,3].map(number=>({number,label:`Fixture${number}`,x_percent:number*20,y_percent:30})),cues:[{from_seconds:0,to_seconds:8,active_number:2,phase:'Synthetic fixture transfer'}],plan:{duration_seconds:8,easing:'linear',width:1280,height:720,object_layout:{left_percent:0,top_percent:0,scale_percent:100,clip_rect:{left:10,top:60,width:10,height:12}},translation:{x_percent:55,y_percent:0},keep_clear_regions:[{left:25,top:20,width:30,height:15}]}});
+test('current review uses same accepted scene adapter and exactly ONE authored-only boot, archive retained',()=>{
+  const manifest={ateles:fixture('ateles'),neotoma:fixture('neotoma')},html=authoredReviewPage(manifest,()=>true);assert(checkCurrentAuthored(html,manifest,()=>true));assert(html.includes(archiveRoute));assert(!html.includes('enhanceMotionPlayers'));assert.equal((html.match(/data-authored-layer-player/g)||[]).length,2);
+});
+test('pending, failed review, source/dist hash failure and eager mutation cannot become current accepted review',()=>{
+  const manifest={ateles:fixture('ateles'),neotoma:fixture('neotoma')};assert.throws(()=>authoredReviewPage({...manifest,neotoma:{...manifest.neotoma,accepted:false}},()=>true));assert.throws(()=>authoredReviewPage({...manifest,ateles:{...manifest.ateles,review_status:'pending'}},()=>true));assert.throws(()=>authoredReviewPage(manifest,()=>false));
+  const html=authoredReviewPage(manifest,()=>true);assert.throws(()=>checkCurrentAuthored(html.replace('<img data-layer-plate','<img data-layer-plate src="eager.png"'),manifest,()=>true));assert.throws(()=>checkCurrentAuthored(html,manifest,()=>false));
+});

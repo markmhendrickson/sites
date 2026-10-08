@@ -1,0 +1,358 @@
+{
+  "pages": [
+    {
+      "route": "tension-trace-neotoma-faq-2026-10-06-r4.html",
+      "title": "Neotoma — Questions before you start",
+      "eyebrow": "FAQ",
+      "h1": "Questions before you start.",
+      "intro": "Start small. Check the record, its basis, and what happens when you change it.",
+      "sections": [
+        {
+          "heading": "What does Neotoma keep?",
+          "paragraphs": [
+            "Structured records and their evidence: decisions, tasks, contacts, events and other context your connected agents need. Observations form a retained history; a current snapshot gives agents a maintained view. See how capture and structure work."
+          ],
+          "links": [
+            {
+              "label": "Capture",
+              "href": "tension-trace-neotoma-capture-2026-10-06-r4.html"
+            },
+            {
+              "label": "Structure",
+              "href": "tension-trace-neotoma-structure-2026-10-06-r4.html"
+            }
+          ]
+        },
+        {
+          "heading": "Does it replace my files, business systems or existing agent memory?",
+          "paragraphs": [
+            "Not necessarily. Keep the tools that already serve you. Add Neotoma when work needs an explicit current record with relationships, revisions and a basis you can inspect. Your accounting, CRM and other business systems keep their own authority."
+          ],
+          "links": [
+            {
+              "label": "Compare approaches",
+              "href": "tension-trace-neotoma-compare-2026-10-06-r4.html"
+            }
+          ]
+        },
+        {
+          "heading": "Who decides what to record?",
+          "paragraphs": [
+            "Your agent or application sends the information to store. Neotoma records and resolves that input; it does not decide what work to pursue. Connected agents can capture changes and revise recorded context as they work."
+          ],
+          "links": [
+            {
+              "label": "Current state",
+              "href": "tension-trace-neotoma-current-2026-10-06-r4.html"
+            }
+          ]
+        },
+        {
+          "heading": "Does a deterministic record make the agent's answer true?",
+          "paragraphs": [
+            "No. Deterministic reduction means the same recorded observations produce the same snapshot under the same rules. It does not prove that an observation or an agent's interpretation is correct. Inspect the source and provenance, then record a correction when needed."
+          ],
+          "links": [
+            {
+              "label": "Inspect the basis",
+              "href": "tension-trace-neotoma-basis-2026-10-06-r4.html"
+            },
+            {
+              "label": "Retained history",
+              "href": "tension-trace-neotoma-history-2026-10-06-r4.html"
+            }
+          ]
+        },
+        {
+          "heading": "Can information outgrow its first schema?",
+          "paragraphs": [
+            "Yes. Schemas can evolve. A field not yet declared by an active schema may be retained as a raw fragment rather than appearing in the validated snapshot. Read the result back; do not assume a successful write means every field is available in current state."
+          ],
+          "links": [
+            {
+              "label": "Architecture — GitHub",
+              "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/architecture/architecture.md"
+            }
+          ]
+        },
+        {
+          "heading": "Which agent workspaces can I connect?",
+          "paragraphs": [
+            "Claude Code, Codex and Cursor have existing Neotoma integration paths. Other hosts have their own MCP or hook arrangements. Check the guide for your host and configuration; the illustrative setup conversation on this site is not a recording of a completed installation."
+          ],
+          "links": [
+            {
+              "label": "MCP guide — GitHub",
+              "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/developer/mcp_overview.md"
+            },
+            {
+              "label": "Install guide — GitHub",
+              "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/getting_started/getting_started.md"
+            }
+          ]
+        },
+        {
+          "heading": "Does my data stay local?",
+          "paragraphs": [
+            "The local single-user mode stores its database and files on your machine. Hosted instances, remote connections, peer sync and configured external providers change that boundary. Review the tools and services you enable, including your agent provider's own data practices."
+          ],
+          "links": [
+            {
+              "label": "Privacy and data boundaries",
+              "href": "tension-trace-neotoma-privacy-2026-10-06-r4.html"
+            }
+          ]
+        },
+        {
+          "heading": "Can I evaluate it without migrating everything?",
+          "paragraphs": [
+            "Start with one non-sensitive source in a separate test instance. Record a decision, read it from another connected session, correct one field, and inspect both its current value and history. Compare that result with your existing setup before expanding the scope."
+          ],
+          "links": [
+            {
+              "label": "Get started",
+              "href": "tension-trace-neotoma-start-2026-10-06-r4.html"
+            },
+            {
+              "label": "Whom it’s for",
+              "href": "tension-trace-neotoma-audience-2026-10-06-r4.html"
+            }
+          ]
+        },
+        {
+          "heading": "Is the software open source?",
+          "paragraphs": [
+            "Yes. Neotoma's software is distributed under the MIT licence. The source and licence are on GitHub."
+          ],
+          "links": [
+            {
+              "label": "GitHub",
+              "href": "https://github.com/markmhendrickson/neotoma"
+            },
+            {
+              "label": "Software licence — GitHub",
+              "href": "https://github.com/markmhendrickson/neotoma/blob/main/LICENSE"
+            }
+          ]
+        }
+      ],
+      "closing": {
+        "heading": "Make the first result small enough to verify.",
+        "paragraph": "Choose a record that matters, inspect what was stored, and check a correction before trusting a wider workflow.",
+        "cta": {
+          "label": "Get started",
+          "href": "tension-trace-neotoma-start-2026-10-06-r4.html"
+        }
+      }
+    },
+    {
+      "route": "tension-trace-neotoma-privacy-2026-10-06-r4.html",
+      "title": "Neotoma — Privacy and data boundaries",
+      "eyebrow": "Privacy",
+      "h1": "Know where your data goes.",
+      "intro": "This page explains the data boundaries of this product-information site and Neotoma's deployment modes. It is not a replacement for the privacy notice of an instance operator or a service you choose to connect.",
+      "sections": [
+        {
+          "heading": "This website is not your Neotoma database.",
+          "paragraphs": [
+            "These pages present product information and illustrative examples. They do not provide a form to upload records, an account sign-in, or a running Neotoma data store. Choosing a setup link does not transfer your documents into Neotoma."
+          ],
+          "links": []
+        },
+        {
+          "heading": "Appearance stays in your browser.",
+          "paragraphs": [
+            "When you choose System, Light or Dark, this site's code saves that choice in your browser's local storage under tension-trace-theme. The preference lets subsequent pages use the same appearance. You can clear it through your browser's site-data controls. The preference code does not send this value to a server.",
+            "The inspected page code does not add an analytics script or analytics requests. Hosting infrastructure delivers the pages; its handling of requests is separate from the appearance preference. This page does not assert a provider-specific logging or retention policy."
+          ],
+          "links": []
+        },
+        {
+          "heading": "Local mode and connected services are different boundaries.",
+          "paragraphs": [
+            "In Neotoma's local single-user mode, the database and stored files live in a directory you control. Remote connections, hosted multi-user instances and peer sync are opt-in configurations with different access and sharing boundaries. An agent or an external provider you configure may process information under its own policies. Local storage alone is not a promise that every connected tool keeps data local.",
+            "Optional content encryption does not mean every database field, runtime log or backup is encrypted. Review your deployment and key-management configuration before storing sensitive material."
+          ],
+          "links": [
+            {
+              "label": "Install guide — GitHub",
+              "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/getting_started/getting_started.md"
+            },
+            {
+              "label": "Privacy implementation — GitHub",
+              "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/subsystems/privacy.md"
+            }
+          ]
+        },
+        {
+          "heading": "External destinations have their own policies.",
+          "paragraphs": [
+            "GitHub documentation and any linked meeting or email destination are separate services. Opening a link takes you to that service. An email link opens your mail application; it is not a data-submission form hosted on this website."
+          ],
+          "links": []
+        },
+        {
+          "heading": "Notices for other Neotoma services.",
+          "paragraphs": [
+            "The repository contains a published site privacy notice for the legacy neotoma.io, agent-feedback and sandbox services. Its named hosts, analytics settings and retention descriptions do not describe every deployment of Neotoma or this new site. Read the notice of the service or instance you actually use."
+          ],
+          "links": [
+            {
+              "label": "Published legacy-service notice — GitHub",
+              "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/legal/site_privacy_notice.md"
+            }
+          ]
+        },
+        {
+          "heading": "Questions and data requests.",
+          "paragraphs": [
+            "For this site's publisher contact, use the contact channel listed in the project's published notice. For data held in a Neotoma instance, contact that instance's operator. Do not send credentials, private documents or sensitive records in a public GitHub issue."
+          ],
+          "links": [
+            {
+              "label": "Publisher contact and notice — GitHub",
+              "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/legal/site_privacy_notice.md"
+            },
+            {
+              "label": "Software licence and site use",
+              "href": "tension-trace-neotoma-terms-2026-10-06-r4.html"
+            }
+          ]
+        }
+      ],
+      "sourceNote": "Source and site-code review: 6 October 2026. This is an informational explanation, not a newly effective contractual privacy notice."
+    },
+    {
+      "route": "tension-trace-neotoma-terms-2026-10-06-r4.html",
+      "title": "Neotoma — Software licence and site use",
+      "eyebrow": "Terms",
+      "h1": "Software licence and site use.",
+      "intro": "The open-source software, this information website and any separately operated Neotoma service have different scopes. This page explains those scopes; it does not create a subscription or a service agreement.",
+      "sections": [
+        {
+          "heading": "The software is MIT-licensed.",
+          "paragraphs": [
+            "Neotoma's software is distributed under the MIT licence. That licence permits use, modification and redistribution subject to its conditions, including preservation of the copyright and permission notice. The software is provided without warranty under the licence. Read the complete licence for its permissions, conditions and limitations."
+          ],
+          "links": [
+            {
+              "label": "Software licence — GitHub",
+              "href": "https://github.com/markmhendrickson/neotoma/blob/main/LICENSE"
+            }
+          ]
+        },
+        {
+          "heading": "This site provides product information.",
+          "paragraphs": [
+            "These pages describe the product, explain adoption options and link to technical references. Illustrative scenes and the onboarding preview explain intended use; they are not evidence of a completed installation, a service-level guarantee or an offer of a currently available self-serve cloud service. Check the relevant adoption page before selecting a path."
+          ],
+          "links": [
+            {
+              "label": "Get started",
+              "href": "tension-trace-neotoma-start-2026-10-06-r4.html"
+            },
+            {
+              "label": "Self-serve cloud",
+              "href": "tension-trace-neotoma-cloud-2026-10-06-r4.html"
+            }
+          ]
+        },
+        {
+          "heading": "Hosted services have their own terms.",
+          "paragraphs": [
+            "The published legacy site terms apply to the services they identify at neotoma.io, agent.neotoma.io and sandbox.neotoma.io. They do not replace the MIT software licence, and this summary does not extend them to a different host or a managed deployment. A service you choose to use may have its own applicable terms."
+          ],
+          "links": [
+            {
+              "label": "Published legacy-service terms — GitHub",
+              "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/legal/site_terms_of_use.md"
+            }
+          ]
+        },
+        {
+          "heading": "Use services without interfering with others.",
+          "paragraphs": [
+            "Do not bypass access controls, degrade service for other visitors, or submit unlawful content or content that violates another person's rights. Do not place personal data, credentials or confidential material in a public evaluation environment. Check that environment's own terms before submitting anything.",
+            "These boundaries reflect the project's existing published site-use guidance; this page does not announce a new enforcement or retention policy."
+          ],
+          "links": []
+        },
+        {
+          "heading": "Privacy and third-party destinations.",
+          "paragraphs": [
+            "See this site's data-boundaries page for its appearance preference and the distinction between website visits and Neotoma records. Linked third-party services govern their own content and data handling."
+          ],
+          "links": [
+            {
+              "label": "Privacy and data boundaries",
+              "href": "tension-trace-neotoma-privacy-2026-10-06-r4.html"
+            }
+          ]
+        },
+        {
+          "heading": "Questions.",
+          "paragraphs": [
+            "Use the publisher contact channel listed in the project's published service terms. For an instance operated by someone else, contact that operator about the terms of that instance."
+          ],
+          "links": [
+            {
+              "label": "Publisher contact and terms — GitHub",
+              "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/legal/site_terms_of_use.md"
+            }
+          ]
+        }
+      ],
+      "sourceNote": "Source review: 6 October 2026. This informational page does not amend the published service terms or set a new legal effective date."
+    }
+  ],
+  "footerTechnical": [
+    {
+      "label": "Documentation — GitHub",
+      "href": "https://github.com/markmhendrickson/neotoma/tree/main/docs",
+      "verifiedMain": "36d8ff8162cd5d5f23e235e8fd0449a23e91ef7e",
+      "blobSha": "directory at verified main tree"
+    },
+    {
+      "label": "Install guide — GitHub",
+      "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/getting_started/getting_started.md",
+      "verifiedMain": "36d8ff8162cd5d5f23e235e8fd0449a23e91ef7e",
+      "blobSha": "14b14c0b0710b9426ddd4f146f26c20493374eee"
+    },
+    {
+      "label": "Architecture — GitHub",
+      "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/architecture/architecture.md",
+      "verifiedMain": "36d8ff8162cd5d5f23e235e8fd0449a23e91ef7e",
+      "blobSha": "c661f1158c900ffbf76ec26b45ea0569700b4aca"
+    },
+    {
+      "label": "API specification — GitHub",
+      "href": "https://github.com/markmhendrickson/neotoma/blob/main/openapi.yaml",
+      "verifiedMain": "36d8ff8162cd5d5f23e235e8fd0449a23e91ef7e",
+      "blobSha": "a1a9d7d30bcc29ab388f7fbd25e156123cb7ae21"
+    },
+    {
+      "label": "MCP guide — GitHub",
+      "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/developer/mcp_overview.md",
+      "verifiedMain": "36d8ff8162cd5d5f23e235e8fd0449a23e91ef7e",
+      "blobSha": "61fa7db53e5e755915e3892a20c8ccc9f0c85be6"
+    },
+    {
+      "label": "CLI reference — GitHub",
+      "href": "https://github.com/markmhendrickson/neotoma/blob/main/docs/developer/cli_reference.md",
+      "verifiedMain": "36d8ff8162cd5d5f23e235e8fd0449a23e91ef7e",
+      "blobSha": "b57f24a20374557bd320fcca4c7e3dcd81f33f72"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/markmhendrickson/neotoma",
+      "verifiedMain": "36d8ff8162cd5d5f23e235e8fd0449a23e91ef7e",
+      "blobSha": "verified repository main head"
+    },
+    {
+      "label": "Software licence — GitHub",
+      "href": "https://github.com/markmhendrickson/neotoma/blob/main/LICENSE",
+      "verifiedMain": "36d8ff8162cd5d5f23e235e8fd0449a23e91ef7e",
+      "blobSha": "d211c25b145caf8d34400e3fd3dbce67a39cb129"
+    }
+  ]
+}

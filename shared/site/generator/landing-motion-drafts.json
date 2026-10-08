@@ -1,0 +1,24 @@
+{
+  "ateles": {
+    "video": "media/tension-trace-semantic-drafts/ateles-semantic-REJECTED-review-only.mp4",
+    "poster": "media/tension-trace-semantic-drafts/ateles-semantic-source-poster.jpg",
+    "width": 1080,
+    "height": 720,
+    "approved": false,
+    "review_status": "needs_revision",
+    "review_note": "The bundle stays closed, but covers the revision sheet and returns to its sender. The handoff must finish at review without obscuring the evidence.",
+    "video_sha256": "bc7bfe491cae395629ddad15c0bdf71b1f5f7c7f88cff5ecd1de9c99684a7a28",
+    "poster_sha256": "8bef63cd7d0a0da171a051cae6e667e027d8af1f5654983fd2b92e7c30c66588"
+  },
+  "neotoma": {
+    "video": "media/tension-trace-semantic-drafts/neotoma-semantic-REJECTED-review-only.mp4",
+    "poster": "media/tension-trace-semantic-drafts/neotoma-semantic-source-poster.jpg",
+    "width": 1080,
+    "height": 720,
+    "approved": false,
+    "review_status": "needs_revision",
+    "review_note": "This render duplicates the amendment and adds invented text. It must move the original record, leaving its old position empty. The final repair returned a rate limit and no footage.",
+    "video_sha256": "20dbc1ac96f25efa4a19d97d60583fcdf0bbcf11fe79bc41730fb830e12a8a5e",
+    "poster_sha256": "7cf5fc2d077ac8ccaa5c6c0b917863d68be8c72f42c5c1d6ec723ea52ea34be4"
+  }
+}

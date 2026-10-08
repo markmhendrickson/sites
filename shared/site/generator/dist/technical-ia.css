@@ -1,0 +1,54 @@
+.technical-visitor-page{max-width:72rem;margin-inline:auto}
+.technical-visitor-page>.technical-section,.technical-visitor-page>.path-grid{padding-inline:var(--pad)}
+.technical-section{margin-block:4rem;padding-block:1rem;scroll-margin-top:2rem}
+.technical-section>*+*{margin-top:1.3rem}
+.technical-section h2,.technical-section p{max-width:52rem}
+.technical-call{margin-block:1.5rem;border:1px solid var(--line,#cfd2cd);padding:1.25rem;background:var(--panel,#efeee7)}
+.technical-call figcaption{font-size:.875rem;font-weight:600;margin-bottom:1rem}
+.technical-call pre{overflow:auto;max-width:100%;font-size:.9rem;line-height:1.6;white-space:pre}
+.technical-flow{margin-block:3rem;padding:1.5rem;border-block:1px solid var(--line,#cfd2cd)}
+.technical-flow figcaption{font-weight:600;margin-bottom:1.5rem}
+.technical-flow ol{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1.4rem;list-style:none;padding:0}
+.technical-flow li{border-left:2px solid var(--accent,#ac3c19);padding-left:1rem}
+.technical-flow li p{font-size:.9rem;line-height:1.55;margin-top:.7rem}
+.technical-flow>p{font-size:.9rem;margin-top:1.5rem}
+.technical-record{padding:1.5rem;border-left:2px solid var(--ink,#172b39);background:var(--panel,#efeee7);max-width:40rem}
+.technical-record dl{display:grid;grid-template-columns:1fr 1.4fr;gap:.8rem;margin-block:1.2rem}
+.technical-record dd{margin:0}
+.technical-record>p{font-size:.85rem}
+.goal-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;margin-top:2rem}
+.goal-directory .directory-link{border-top:1px solid var(--line,#cfd2cd);padding:1.3rem 0;text-decoration:none}
+.goal-directory .directory-link span{font-weight:600;text-decoration:underline;text-underline-offset:.25rem}
+.goal-directory .directory-link small{display:block;margin-top:.75rem;font-size:1rem;line-height:1.6}
+.technical-visitor-page .directory-chapters,.technical-visitor-page .directory-reference-group{margin-block:4rem}
+.technical-visitor-page .get-started{margin-top:5rem}
+.technical-visitor-page .cloud-choice{grid-template-columns:repeat(2,minmax(0,1fr))}
+.technical-list{padding-left:1.4rem;line-height:1.7}
+.technical-visitor-page .start-fit{display:block}
+.technical-visitor-page .quickstart-command{margin-block:1rem}
+.technical-visitor-page .command-copy svg{width:1.15rem;fill:none;stroke:currentColor;stroke-width:1.5}
+html[data-theme="dark"] .technical-call,html[data-theme="dark"] .technical-record{background:#263844;border-color:#59666d}
+@media(prefers-color-scheme:dark){html:not([data-theme="light"]) .technical-call,html:not([data-theme="light"]) .technical-record{background:#263844;border-color:#59666d}}
+@media(max-width:720px){.technical-flow ol,.goal-directory,.technical-visitor-page .cloud-choice{grid-template-columns:1fr}.technical-flow ol{gap:1.6rem}.technical-section{margin-block:3rem}.technical-record dl{grid-template-columns:1fr}.technical-record dd{margin-bottom:.6rem}}
+
+/* The Explore surface is a visual chapter directory, not a collapsed technical index. */
+.technical-explore{max-width:80rem}
+.technical-explore .topic-heading{max-width:72rem;margin-inline:auto}
+.technical-explore .directory-chapters,.technical-explore .directory-reference-group{padding:clamp(3rem,6vw,5rem) var(--pad);margin:0;border-top:1px solid var(--line)}
+.technical-explore .directory-reference-group{background:var(--wash)}
+.technical-explore .directory-heading{max-width:52rem}
+.technical-explore .directory-heading h2{margin:.5rem 0 0;font-size:clamp(2rem,4vw,3.5rem)}
+.technical-explore .directory-heading p:not(.eyebrow){max-width:42rem;margin-top:1rem}
+.technical-explore .chapter-directory{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;margin-top:2.5rem}
+.technical-explore .directory-chapter{display:grid;grid-template-columns:minmax(0,1fr);border:1px solid var(--line);background:var(--bg);color:inherit;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease}
+.technical-explore .directory-chapter:hover{transform:translateY(-3px);box-shadow:0 .8rem 2rem color-mix(in srgb,var(--ink) 11%,transparent)}
+.technical-explore .directory-chapter:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.technical-explore .directory-chapter-image{display:block;overflow:hidden;aspect-ratio:3/2;background:var(--wash)}
+.technical-explore .directory-chapter-image img{display:block;width:100%;height:100%;object-fit:cover}
+.technical-explore .directory-chapter-copy{display:block;padding:1.35rem 1.4rem 1.5rem}
+.technical-explore .directory-chapter-copy .eyebrow{display:block;margin:0 0 .7rem}
+.technical-explore .directory-chapter h3{margin:0;font-size:clamp(1.7rem,3vw,2.35rem);line-height:1.05}
+.technical-explore .directory-description,.technical-explore .directory-action{display:block}
+.technical-explore .directory-description{margin-top:.85rem;line-height:1.55;color:var(--muted)}
+.technical-explore .directory-action{margin-top:1.2rem;font-weight:700;text-decoration:underline;text-underline-offset:.25rem}
+@media(max-width:720px){.technical-explore .chapter-directory{grid-template-columns:1fr}.technical-explore .directory-chapters,.technical-explore .directory-reference-group{padding-block:3rem}}

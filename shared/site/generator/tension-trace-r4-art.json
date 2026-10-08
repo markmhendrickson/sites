@@ -1,0 +1,104 @@
+{
+  "A-self-host": {
+    "src": "images/tension-trace-feedback/A-self-host.jpg",
+    "width": 960,
+    "height": 640,
+    "sha256": "fbba1d8270b8fc2eaa861495d8e44adf8fc6d58b0ad363d0277b873e93e05cd5",
+    "sourceSha256": "cb6bf05e8d98d27f9af9545d435e6309a839973365fb0e66f10d74885c56f5fe",
+    "alt": "A navy cloth server and laptop beside an illustrated setup manual and screwdriver.",
+    "method": "Whole-image JPEG delivery derivative of reviewed ImageGen master; composition preserved."
+  },
+  "A-cloud": {
+    "src": "images/tension-trace-feedback/A-cloud.jpg",
+    "width": 960,
+    "height": 640,
+    "sha256": "04d8654cdbe78507e6c77d51c9eb476b9ac20b738a630d793a7721c4adb23779",
+    "sourceSha256": "2654682fbc0d8adb8f674a3cd02454b0c771783842c04f5f96014463f7a6e754",
+    "alt": "A pale blue cloth cloud connected by a cord to a navy laptop.",
+    "method": "Whole-image JPEG delivery derivative of reviewed ImageGen master; composition preserved."
+  },
+  "A-managed": {
+    "src": "images/tension-trace-feedback/A-managed.jpg",
+    "width": 960,
+    "height": 640,
+    "sha256": "ef743d543cdc70d7784f3bc39e986a0f0fc95e04cd8bc89cb566fc1d54801592",
+    "sourceSha256": "ccb62dcca7458b10027e5bb4ff5815ada9a4a7a4c0858232b3f67563a7712081",
+    "alt": "Hands maintaining a cloth server beside a connected laptop and completed service checklist.",
+    "method": "Whole-image JPEG delivery derivative of reviewed ImageGen master; composition preserved."
+  },
+  "N-self-host": {
+    "src": "images/tension-trace-feedback/N-self-host.jpg",
+    "width": 960,
+    "height": 640,
+    "sha256": "0c88b46b9fedf4e9507b4a1e71665c1b027d8b2a18973bcdf5040e2b1ce648d4",
+    "sourceSha256": "bba87b4af3527555706d251e538fd39380253c7cf8c4a1ce4843b61d9a33e195",
+    "alt": "A paper server and laptop connected on a workbench beside a setup manual and screwdriver.",
+    "method": "Whole-image JPEG delivery derivative of reviewed ImageGen master; composition preserved."
+  },
+  "N-cloud": {
+    "src": "images/tension-trace-feedback/N-cloud.jpg",
+    "width": 960,
+    "height": 640,
+    "sha256": "91fbf9c8119e9c475bf1c70fa727d662bb60d4822091af8edd49fc07f95d25ad",
+    "sourceSha256": "9ef3b204db091b7fe0594ef4b346f4cc0f7b00b68d83d9640a0955086dec802d",
+    "alt": "A layered paper cloud connected to a pale blue laptop.",
+    "method": "Whole-image JPEG delivery derivative of reviewed ImageGen master; composition preserved."
+  },
+  "N-managed": {
+    "src": "images/tension-trace-feedback/N-managed.jpg",
+    "width": 960,
+    "height": 640,
+    "sha256": "18c857797531b75ad9f12910bef3ad23ebc3a70c3e7835cf9d3ecd5887b56b19",
+    "sourceSha256": "b598266b05d14ed18b6510dbb99b9059187f8a34e310d5b04ca99dda3e08383a",
+    "alt": "Hands maintaining a paper server beside a connected laptop and completed service checklist.",
+    "method": "Whole-image JPEG delivery derivative of reviewed ImageGen master; composition preserved."
+  },
+  "N-platform-memory": {
+    "src": "images/tension-trace-r4/N-platform-memory.jpg",
+    "width": 960,
+    "height": 640,
+    "sha256": "5e821487d165693392f90fd5ba6db1f7eed1602281c8751831b663d04434e4eb",
+    "sourceSha256": "1ff6a9b6ea901135398f81a849d63338c5dc69a006d62b03d168b4147e41d7c6",
+    "method": "Whole-image JPEG delivery derivative; original composition preserved."
+  },
+  "N-files-retrieval": {
+    "src": "images/tension-trace-r4/N-files-retrieval.jpg",
+    "width": 960,
+    "height": 640,
+    "sha256": "d5b42fdcc94f132761e016147a4ce1fadd61fd65570c14d4e013f72f521df8eb",
+    "sourceSha256": "3ca2ab86f27c4545a20d9e5004f7d477dd17674c4df2ed342f4035aab86710a6",
+    "method": "Whole-image JPEG delivery derivative; original composition preserved."
+  },
+  "N-memory-services": {
+    "src": "images/tension-trace-r4/N-memory-services.jpg",
+    "width": 960,
+    "height": 640,
+    "sha256": "a6a212a59f9e92bf54a09e61702818a261453116bbe1ce8ea700e6c4bc9e7999",
+    "sourceSha256": "e4a0f5c06896157f120b05a8550013d5d79b0687365e44155b329d9e9c5751ab",
+    "method": "Whole-image JPEG delivery derivative; original composition preserved."
+  },
+  "N-custom-state": {
+    "src": "images/tension-trace-r4/N-custom-state.jpg",
+    "width": 960,
+    "height": 640,
+    "sha256": "c9304e64dd6e89c5293c4123fb169354286e7bb214e829c4316cd7098d8e9cca",
+    "sourceSha256": "354cb41ec41f7fb7d917dd1c63b6fd110fc10a9fb3631513e376eddbf2cf4098",
+    "method": "Whole-image JPEG delivery derivative; original composition preserved."
+  },
+  "A-harness": {
+    "src": "images/tension-trace-r4/A-harness.jpg",
+    "width": 960,
+    "height": 640,
+    "sha256": "4c78ef5abea47486eee41102a4ab7d893478fffb4d86820200095a7a71d36869",
+    "sourceSha256": "0e684890d23fc9e5632a81c3e25a21e79faec51034af85565d48e34b0def2583",
+    "method": "Whole-image JPEG delivery derivative; original composition preserved."
+  },
+  "A-framework": {
+    "src": "images/tension-trace-r4/A-framework.jpg",
+    "width": 960,
+    "height": 640,
+    "sha256": "a0297347ac178cd09a0e4351f6297961cdde483fdce629789b915baef8448c16",
+    "sourceSha256": "2a2ec1fca4f330eac814d8219e0e5170dbf345e7d5d59f052bb0de22a5f23f42",
+    "method": "Whole-image JPEG delivery derivative; original composition preserved."
+  }
+}

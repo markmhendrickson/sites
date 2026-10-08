@@ -1,0 +1,9 @@
+.cloud-interest{max-width:34rem;display:grid;gap:.85rem}
+.cloud-interest input[type=email]{box-sizing:border-box;width:100%;font:inherit;padding:.75rem;border:1px solid currentColor;background:transparent;color:inherit}
+.cloud-consent{display:flex;align-items:flex-start;gap:.65rem;line-height:1.5}
+.cloud-consent input{margin-top:.35rem;flex:none}
+.cloud-interest p{font-size:.875rem;line-height:1.5;margin:.25rem 0;overflow-wrap:anywhere}
+.cloud-interest button{justify-self:start;font:inherit;padding:.75rem 1rem}
+.cloud-interest :focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.cloud-interest :disabled{cursor:not-allowed;opacity:.65}
+

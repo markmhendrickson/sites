@@ -1,0 +1,25 @@
+import {bridgeFigure} from './semantic-visuals.mjs';
+const path=(brand,key)=>`tension-trace-${brand}-${key}-2026-10-06-r4.html`;
+const points={
+ ateles:[['You move context between sessions and chats.','You sequence every agent.','You check whether the work really happened.'],['Responsibilities stay tied to the work.','Explicit dependencies govern the next step.','Evidence distinguishes progress from completion.']],
+ neotoma:[['Useful context is scattered across conversations and files.','Copies drift as new information arrives.','You reconstruct which value is current.'],['Agents read a shared, structured record.','New evidence updates current fields.','Earlier values and their sources remain inspectable.']]
+};
+export function applyOct8Refinement(route,html){
+ const brand=['ateles','neotoma'].find(b=>route.startsWith(`tension-trace-${b}-`)&&route.endsWith('-2026-10-06-r4.html'));
+ if(!brand)return html;
+ html=html.replace('</head>','<link rel="stylesheet" href="oct8-refinement.css"></head>');
+ if(route===path('neotoma','cloud'))html=html.replace(/(<div class="path-grid cloud-choice"><article class="path-card">)/,'$1<img class="cloud-option-image" src="images/tension-trace-r2/N-capture.jpg" alt="A paper source and connected observations illustrate trying a bounded example." loading="lazy">').replace(/(<\/article><article class="path-card">)/,'$1<img class="cloud-option-image" src="images/tension-trace-feedback/N-cloud.jpg" alt="A paper cloud connected to a laptop represents planned hosted Neotoma." loading="lazy">');
+ if(route===path(brand,'compare')){const product=brand==='neotoma'?'Neotoma':'Ateles';const art=brand==='neotoma'?'N-hero':'A-hero';html=html.replace(`<article><h2>${product}</h2>`,`<article><img class="alternative-photo" src="images/tension-trace-r2/${art}.jpg" alt="${product} material illustration of its own operating model." loading="lazy"><h2>${product}</h2>`).replace(new RegExp(`(<h2>${product}<\\/h2>[\\s\\S]*?)<a class="textlink" href="[^"]+">${product} (?:source|foundations)<\\/a>`),`$1<a class="textlink" href="${path(brand,'architecture')}">Explore ${product} architecture</a>`);}
+ if(route!==`tension-trace-${brand}-2026-10-06-r4.html`)return html;
+ html=html.replace('Give connected agents operational truth they can read, update, and maintain as they work.','Give agents operational truth they can read, update, and maintain as they work.');
+ html=html.replace('Start in your agent workspace.','Start in your favorite AI tool.');
+ if(brand==='ateles')html=html.replace(/<figure class="scene" data-visual-id="A-audience">[\s\S]*?<\/figure>/,'<figure class="scene" data-visual-id="A-audience"><div class="photo"><img src="images/feedback-2026-10-08/A-audience.png" width="1536" height="1024" alt="An overfilled cloth carrier takes separate paper and fabric handoffs from four directions; communications, contact and invoice slips have fallen outside it." loading="lazy" decoding="async"><span class="pin" aria-hidden="true" style="left:50%;top:43%">1</span><span class="pin" aria-hidden="true" style="left:18%;top:68%">2</span><span class="pin" aria-hidden="true" style="left:54%;top:85%">3</span><span class="pin" aria-hidden="true" style="left:80%;top:76%">4</span></div><figcaption><span><b>1</b>Coordination overload</span><span><b>2</b>Communications</span><span><b>3</b>Customer records</span><span><b>4</b>Finance</span></figcaption></figure>');
+ const title=brand==='neotoma'?'You become the reconciliation layer.':'You are the coordination layer.';
+ const after=brand==='neotoma'?'Own a shared basis beyond any one vendor.':'Move from babysitting agent sessions to governing meaningful work.';
+ const panel=(side)=>`<div class="${side===0?'recognition':'resolution'}"><p class="eyebrow">${side===0?(brand==='neotoma'?'When conversations and files are the record':'When sessions and chats are the operating model'):'A different way forward'}</p><h2>${side===0?title:after}</h2>${bridgeFigure(brand,side).replace(/<figcaption>[\s\S]*?<\/figcaption>/,'')}<ul class="bridge-points">${points[brand][side].map(p=>`<li>${p}</li>`).join('')}</ul><a class="textlink" href="${path(brand,side===0?'compare':'architecture')}">${side===0?'Compare approaches':'Explore the architecture'}</a></div>`;
+ html=html.replace(/(<section\b[^>]*id="why"[^>]*>)[\s\S]*?<\/section>/,(_match,open)=>open+panel(0)+panel(1)+'</section>');
+ const product=brand==='neotoma'?'Neotoma':'Ateles';
+ const prompt=`Visit this website and tell me if ${product} fits my workflow. Explain its benefits, limits, and current readiness. Ask what you need to know, and say if my existing tools are enough.`;
+ html=html.replace('</main>',`<section class="agent-evaluate" aria-labelledby="agent-evaluate-title"><div><p class="eyebrow">Evaluate with your agent</p><h2 id="agent-evaluate-title">Ask for a second opinion.</h2><p>${prompt}</p></div><button type="button" data-evaluate-copy data-evaluate-brand="${brand}">Copy prompt</button><span class="visually-hidden" data-evaluate-status role="status" aria-live="polite"></span></section></main>`);
+ return html;
+}

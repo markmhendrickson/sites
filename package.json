@@ -1,0 +1,18 @@
+{
+  "name": "sites",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs all",
+    "build:ateles": "node scripts/build.mjs ateles",
+    "build:neotoma": "node scripts/build.mjs neotoma",
+    "build:company": "node scripts/build.mjs company",
+    "build:pages": "node scripts/build-pages.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node scripts/test.mjs",
+    "preview": "node scripts/preview.mjs"
+  }
+}

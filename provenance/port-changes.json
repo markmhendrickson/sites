@@ -1,0 +1,20 @@
+[
+  {
+    "path": "shared/site/generator/build-tension-trace-r3.mjs",
+    "before": "220043ced86beb01ccbe4c59d53d06ee9febbb7291f08a1755a23a163d25af12",
+    "after": "30500028e80d5bb365e4a28433e315ddb81e36e18f1e07c7d29c582b639624e0",
+    "reason": "Exclude neutral private-review hub and logo studies from public product builds"
+  },
+  {
+    "path": "shared/site/generator/technical-ia.test.mjs",
+    "before": "d211ffa8917e2111ef23b29de605ef3b0e88b2933dfa4063f13e4b71fcd4ce55",
+    "after": "a16f50974f1f24e886586a21dc71588d87dc5bcec76133cc3f624beda8fa6549",
+    "reason": "Assert the public route inventory without two neutral review routes"
+  },
+  {
+    "path": "shared/site/generator/integration-regression.mjs",
+    "before": "5f7df56f0555e78450a649b39b5d139a14eac714a3866fee81b844b6026e5aad",
+    "after": "9ca4f818a06e94faa6cada8c345245e467a4c371d4c51500078c3f93de4d2d0f",
+    "reason": "Validate the 61 product routes after excluding neutral private-review pages"
+  }
+]

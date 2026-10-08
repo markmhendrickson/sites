@@ -1,0 +1,247 @@
+{
+  "A-workflows": {
+    "src": "images/tension-trace-r3/A-workflows.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "ac0cd452419dcd727b6e7b048fa2824c443d9d9faffa2b0a708e12e91d1faf69",
+    "original_sha256": "80a588870db4bd6874a86c369d7efbfd32f06b907b06819a0742a35fcb587424"
+  },
+  "A-workflows-detail": {
+    "src": "images/tension-trace-r3/A-workflows-detail.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "023f921a3d7b1fa0eed9d288644fda3c9804c11c6e2f6e18511a96e13e740652",
+    "original_sha256": "93af2e2fb1568c6998a589ab5ea74f01d114c520bc612ea9e1572aee624b5eff"
+  },
+  "A-audience": {
+    "src": "images/tension-trace-r3/A-audience.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "63379c8aa2e77617fc29ba7b733a94760eab2627bdb3f55852ed07c3d2e246a0",
+    "original_sha256": "f634dac76d73dac8b2b57a3efef187c781fc1739149eba610828137a51dedfce"
+  },
+  "N-audience": {
+    "src": "images/tension-trace-r3/N-audience.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "cd59d38f2691a16d7f9fceacedd1eedcbef741afec04ed7318bc67bb93782b82",
+    "original_sha256": "60df51791152a0206280bede25f8d5e9ff2d1fab6f8cb4698d212f59b1a6774d"
+  },
+  "A-audience-detail": {
+    "src": "images/tension-trace-r3/A-audience-detail.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "e108c3b7e2b0b6327cad99018d0aa5c176b09caba4554ed29f085193303f8b8d",
+    "original_sha256": "0893b398a612bbf00bbeb7eb2fcb8f79af21b826c259261fbe8d96da31826ada"
+  },
+  "N-audience-detail": {
+    "src": "images/tension-trace-r3/N-audience-detail.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "6afd87efe9f1de2005575d9ec8784756e55e084cf765576553380be326cf4bab",
+    "original_sha256": "17521e7738c01ecf8a751cbbbb7e6842bca6cd96670d31fe7e3c485585e8370b"
+  },
+  "A-purpose-step-1": {
+    "src": "images/tension-trace-r3/A-purpose-step-1.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "3a308c83212b54247c5a16c2fb2727ff880edb28747663dab7130d1e78180c05",
+    "original_sha256": "15b89e9f2aa1d26ff1452a17074bb3d268f7b89750c3bd5db52b9c14cc838367"
+  },
+  "A-purpose-step-2": {
+    "src": "images/tension-trace-r3/A-purpose-step-2.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "5068ce466f2d497dffff595e6e900217a048c508a69a138be26d7072370b95e0",
+    "original_sha256": "60b114c438a584f00e54d9855154952bf20a351ac43e633f47ea2792a0868aeb"
+  },
+  "A-contributors-step-1": {
+    "src": "images/tension-trace-r3/A-contributors-step-1.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "642d1c524b11423215be52c8f1bf9e0eb3277cb1c99a49d2bfdbcbc38fe64e85",
+    "original_sha256": "34396e79204298eb3ccadffef788627a07ab51bf23768bc5c8304cf094d38b12"
+  },
+  "A-contributors-step-2": {
+    "src": "images/tension-trace-r3/A-contributors-step-2.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "d64bd1e45e2eddd9bd0390ce1be6af01a83fb7cff004f75b48fdb95947d3e59d",
+    "original_sha256": "67f06e50bb68c405e28008972efe4168814441cf472c74c4055fdb2617ce8d6c"
+  },
+  "A-workflows-step-1": {
+    "src": "images/tension-trace-r3/A-workflows-step-1.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "65fed87a1f208de038649e4b4b5c89f1b2eddefda629ecd5b8d31255507ef6ff",
+    "original_sha256": "566f5ae96471e8ed9f26c430d1b91ef66afed3213e1e7e31771c8d5589dde7f6"
+  },
+  "A-workflows-step-2": {
+    "src": "images/tension-trace-r3/A-workflows-step-2.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "b99cd548573de4288e375b5ff4affe32751f528858de2735fc9ef7bd15d2faa0",
+    "original_sha256": "29582bf6341c5b5a6fb7b3166eef4a280326deee25395fa683d32e033f3379a2"
+  },
+  "A-authority-step-1": {
+    "src": "images/tension-trace-r3/A-authority-step-1.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "4b513ea7c3d864707f647d5cd5312eea31f4d84b97f36aac14869c92a0904ef5",
+    "original_sha256": "81cafae402003cb93c1b4d13f4897c15dde65d7640c3e0d07a248ccce8e24720"
+  },
+  "A-authority-step-2": {
+    "src": "images/tension-trace-r3/A-authority-step-2.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "a53456270fd1e6619a01892f9685872fb10307b5e82543bab46124c4ea074b2d",
+    "original_sha256": "9cc4937109e7863c7e0c8a9fbd1cce97d84a8aeb652bd8fa2c6db79220c03689"
+  },
+  "A-outcomes-step-1": {
+    "src": "images/tension-trace-r3/A-outcomes-step-1.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "9166c2a929c2566aa7e84a84d2d0bd97533971694c856f439f785b1ce415fade",
+    "original_sha256": "a04477016927d98c61bc0ce4c78bad760aed86b5f0a5bed7f799b85dfa2d5e4f"
+  },
+  "A-outcomes-step-2": {
+    "src": "images/tension-trace-r3/A-outcomes-step-2.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "28093cc40f9b4c57ef1792bf9e1561cee343ff8a5ad0fa70d19e8a92528d950a",
+    "original_sha256": "635a9fc275e3d5a203f2529e3a0dfd09655ee7693bdc8dc03b59d563e43efb5e"
+  },
+  "A-continuity-step-1": {
+    "src": "images/tension-trace-r3/A-continuity-step-1.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "6ea18f070bff45ff0ac2c1ca489438dfbb4178f1d2e6fa3825ec2b2a4e2e026c",
+    "original_sha256": "49289265a37aa515476ec63d087c82a7d2ffc7073c30738ba4faf64ce593089f"
+  },
+  "A-continuity-step-2": {
+    "src": "images/tension-trace-r3/A-continuity-step-2.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "5c46c3468e0fa27df16256fe6d3062e7c4a37ad5b61d4fa862ec48b1d94c8df2",
+    "original_sha256": "981a306ddcf9e3aeb7c76ecb0278e98d4cf2b1a34d974b7c9517d6ee81c0d4c7"
+  },
+  "A-extension-step-1": {
+    "src": "images/tension-trace-r3/A-extension-step-1.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "cae3b3df782230dec9be9879b28a7954fd9ebdfbf5883781e3e0c77f8dfc87e9",
+    "original_sha256": "2140107696a4041294464cbadf57f8a2ecd8075c3d990850a5673f333b0d9179"
+  },
+  "A-extension-step-2": {
+    "src": "images/tension-trace-r3/A-extension-step-2.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "e141ebf6dbe60f3d83525448356b44e150905df3affb4ab75b9d0cef0b8d22fc",
+    "original_sha256": "d6e4eed11ba312550b3ec5b765371c1e79e472904d92e67d4437a8b6a1db69c6"
+  },
+  "N-capture-step-1": {
+    "src": "images/tension-trace-r3/N-capture-step-1.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "b6cb757cc58292e0fadf452b166d63db57271feb7ae4b469dd593a23c6fa0082",
+    "original_sha256": "d42510769fcb91a1500f99bb7aeae6dc676c34a1fdb2dc4d58c6efa31afb7397"
+  },
+  "N-capture-step-2": {
+    "src": "images/tension-trace-r3/N-capture-step-2.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "fb7dfd920e78c44893f915dc8f1c8b507ecaae313b7d3591a81be42ece83be70",
+    "original_sha256": "9e4c7e37e1246c9a06ef39f4bb43b66b0e95228dfbab33205dc3f5082c971031"
+  },
+  "N-structure-step-1": {
+    "src": "images/tension-trace-r3/N-structure-step-1.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "017c769e101928da0d43a140fcf6facd514aee78bd4652d0861d327d359bf4f4",
+    "original_sha256": "4f6e831400c56ea6add21560562738352dd3d9abf464b645e618defbff03fb31"
+  },
+  "N-structure-step-2": {
+    "src": "images/tension-trace-r3/N-structure-step-2.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "0509bd4949511451add5ca3737ff5a2c4a1c5f19f075209a91dbeaba9c895cb0",
+    "original_sha256": "e42a64864073bdef04ba6c926640cfccddcba003448fe35c5805e27dcfb93b4d"
+  },
+  "N-current-step-1": {
+    "src": "images/tension-trace-r3/N-current-step-1.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "7378b2b55126a736c1d7aaf875f643b2d58ac1d30e89b28819abade10f912f4e",
+    "original_sha256": "52f6c398767ba6de0d4d487a5c0b096af391bae862e6880d867b5b2f52754935"
+  },
+  "N-current-step-2": {
+    "src": "images/tension-trace-r3/N-current-step-2.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "80a80b0b9594df907471c812abac4e1894d7c1181fe9543c5978f568f756f115",
+    "original_sha256": "5d12e4cfc2a014201793722eb0afe596979f0ea2cf1f1929e02a761224dc9d49"
+  },
+  "N-basis-step-1": {
+    "src": "images/tension-trace-r3/N-basis-step-1.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "a3e52509c40a58e998b1bbd6153ce71f0dad5d49c44c06c594688a2864f75c2d",
+    "original_sha256": "26262cdec8c213aaa54a6b797f4307a398d3c20eb13f08ffcef8d6c02415c46b"
+  },
+  "N-basis-step-2": {
+    "src": "images/tension-trace-r3/N-basis-step-2.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "b6e1fe6366949ed338633234c49424799cacb1d3504f9b75ab932e68b346c6ae",
+    "original_sha256": "4b6bdf703cf6f4be0083f588d4a9f4b10f34a1d929c38d51459892858d76a3ce"
+  },
+  "N-history-step-1": {
+    "src": "images/tension-trace-r3/N-history-step-1.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "d18be6d15bba068854b00c68f60680addf3b4a8dbdf86067d32ea2d45216907a",
+    "original_sha256": "f02c0ae31f40c46796dc574842e2de5f2534cf384d9a4deb1b3aa7abd53fc613"
+  },
+  "N-history-step-2": {
+    "src": "images/tension-trace-r3/N-history-step-2.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "0ee3cded8b9abc36ceee3504ea36d1368950c4d33cc1f5f7bebce7802ee8c1df",
+    "original_sha256": "0e694c62e591f198e5dfd0edec706e5e7c6c0c1cb0e5ec4167c6eea044c07cc8"
+  },
+  "N-change-step-1": {
+    "src": "images/tension-trace-r3/N-change-step-1.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "f08b535bfbbb324904eb23aba03564fc2e12e8bd57def6a2f68bd648cf506ab9",
+    "original_sha256": "65d3c5750a4ebeef8e44d93469688f3b77af8e2510dbc58a45ff41e9651ba80a"
+  },
+  "N-change-step-2": {
+    "src": "images/tension-trace-r3/N-change-step-2.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "3cbec85e791d579e4e2a8b82203cc8dac46de62c6282f9487f1e9ece712b98ee",
+    "original_sha256": "30ad28ef12920c777835db75969ecec5036d2d0ac9f571614528c5c72868b819"
+  },
+  "logo-pair-1": {
+    "src": "images/tension-trace-r3/logo-pair-1.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "e11ab816528ab561ea02c9c0d076e64455306d1960ab0e3a738eaab23efdb1a9",
+    "original_sha256": "1c5fbe674c26cbe98587e9d9d1c74439999847a1075ca8e9aa526d20b3a82b59"
+  },
+  "logo-pair-2": {
+    "src": "images/tension-trace-r3/logo-pair-2.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "6d9dc78711e8630188bf3abd13463f1b5176db0591800562c53a70dbd7c42be8",
+    "original_sha256": "9dee9d3be59da3d8e9f984d44587066ab44bf700e4a9e2aba29eb4d285352f02"
+  },
+  "logo-pair-3": {
+    "src": "images/tension-trace-r3/logo-pair-3.jpg",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "20063c2e1830f02c13048571da6cefafdcf561f6657fff46716155f9728d7520",
+    "original_sha256": "9367f48647e01e8c5b507c759088c70d8fc2c7d261a99c1e655a84fdccb68934"
+  }
+}
