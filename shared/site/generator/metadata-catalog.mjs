@@ -18,7 +18,7 @@ export const pageCatalog = {
     updates:['Updates','Product notes, explanations and availability changes from Ateles.']
   },
   neotoma: {
-    home:['Context worth relying on','Keep typed, connected records outside one model vendor, with an inspectable current and prior basis.'],
+    home:['Make context worth relying on','Keep typed, connected records outside one model vendor, with an inspectable current and prior basis.'],
     'capture-structure':['Capture and structure','See how a source becomes identified records and named relationships for later use.'],
     'current-change':['Current state and change','Inspect the current value, make a correction and retain the earlier observation.'],
     'basis-history':['Evidence and history','Follow a recorded value back to its basis and inspect what changed over time.'],

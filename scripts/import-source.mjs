@@ -78,6 +78,22 @@ port(base+'/integration-regression.mjs',
  'routes.length===(development?63:53)',
  'routes.length===(development?61:51)',
  'Validate the 61 product routes after excluding neutral private-review pages');
+port(base+'/tension-trace-r3-data.mjs',
+ "brands.neotoma.eyebrow='Context worth relying on';",
+ "brands.neotoma.eyebrow='Make context worth relying on';",
+ 'Use an imperative Neotoma tagline parallel to Ateles');
+port(base+'/tension-trace-r4.mjs',
+ "b==='ateles'?'Delegate meaningful work':'Context worth relying on'",
+ "b==='ateles'?'Delegate meaningful work':'Make context worth relying on'",
+ 'Use the selected imperative tagline in the Neotoma footer');
+port(base+'/metadata-catalog.mjs',
+ "home:['Context worth relying on'",
+ "home:['Make context worth relying on'",
+ 'Use the imperative tagline in Neotoma home metadata');
+port(base+'/check-landing-feedback.mjs',
+ "route.includes('neotoma')?'Context worth relying on':'Delegate meaningful work'",
+ "route.includes('neotoma')?'Make context worth relying on':'Delegate meaningful work'",
+ 'Update the brand-specific landing assertion');
 mkdirSync(resolve(root,'provenance'),{recursive:true});
 writeFileSync(resolve(root,'provenance/source-import.json'),JSON.stringify({schemaVersion:1,sourceRevision:expectedSource,method:'pinned tracked byte import; no hosting identity',referencePages,files:rows,excluded:['hosting identity/configuration','untracked files','rendered HTML contacts','unused image archives','vendored renderer dependencies']},null,2)+'\n');
 writeFileSync(resolve(root,'provenance/port-changes.json'),JSON.stringify(changed,null,2)+'\n');

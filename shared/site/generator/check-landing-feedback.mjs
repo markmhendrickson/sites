@@ -21,7 +21,7 @@ for(const route of readdirSync('dist').filter(x=>/^tension-trace-(ateles|neotoma
  if(fault==='footer-label')html=html.replace('<label class="theme-control">','<label class="theme-control">Appearance ');
  if(fault==='section-order')html=html.replace('id="why"','id="temporary"').replace('id="setup"','id="why"').replace('id="temporary"','id="setup"');
  assert(!html.includes('<label class="theme-control">Appearance'),'Visible Appearance label');
- assert(html.includes(route.includes('neotoma')?'Context worth relying on':'Delegate meaningful work'),'Brand-specific footer slogan');
+ assert(html.includes(route.includes('neotoma')?'Make context worth relying on':'Delegate meaningful work'),'Brand-specific footer slogan');
  assert(!html.includes('sibling-logo-link'),'Sibling logo navigation');
  for(const caption of html.matchAll(/<figcaption>([\s\S]*?)<\/figcaption>/g))for(const label of caption[1].matchAll(/<b>\d+<\/b>([^<]+)/g)){
   assert(!/:|Current date slip|Task packet|Exact paper revision|Retained paper context|Same task packet/.test(label[1]),'Physical legend label');labels++;

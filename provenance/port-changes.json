@@ -16,5 +16,29 @@
     "before": "5f7df56f0555e78450a649b39b5d139a14eac714a3866fee81b844b6026e5aad",
     "after": "9ca4f818a06e94faa6cada8c345245e467a4c371d4c51500078c3f93de4d2d0f",
     "reason": "Validate the 61 product routes after excluding neutral private-review pages"
+  },
+  {
+    "path": "shared/site/generator/tension-trace-r3-data.mjs",
+    "before": "fea290088e88f0e633de004fdaf6fc878a62cbb0bf3afeb483dc1f417912dfd1",
+    "after": "f9b0cc5b415a2442b789befedf071e678864cd4c3b401fa60738dde0c3767883",
+    "reason": "Use an imperative Neotoma tagline parallel to Ateles"
+  },
+  {
+    "path": "shared/site/generator/tension-trace-r4.mjs",
+    "before": "0862ab3257df1aa492aa0c9ff960b1ae5e381add4378e02e6f1faa6e3cc36d47",
+    "after": "5cdedcf1ba1d1b5331f76e6a8a17d1e7804d1391bd9a0155a613b5678c941b27",
+    "reason": "Use the selected imperative tagline in the Neotoma footer"
+  },
+  {
+    "path": "shared/site/generator/metadata-catalog.mjs",
+    "before": "97a19892d34c7de8833ae3ffac88c7c5f33ddfe4aeeab1237b4aa3c73eb9f9ff",
+    "after": "93065f003bce6800a76b11fde8d85c088236a9a435cd5de004e4315c78bc412e",
+    "reason": "Use the imperative tagline in Neotoma home metadata"
+  },
+  {
+    "path": "shared/site/generator/check-landing-feedback.mjs",
+    "before": "b58342eee8e57ad77e0af4d770581f93de98e6b8eb362e1a16febd1287d35716",
+    "after": "9cc39d82ce23c7482d5778f6b7d659b2505daf396b662e9bc9cdf637c4e4531a",
+    "reason": "Update the brand-specific landing assertion"
   }
 ]
