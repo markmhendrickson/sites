@@ -1,0 +1,8 @@
+[data-motion-overlay][hidden] { display: none !important; }
+[data-motion-legend-number].is-motion-active {
+  outline: 2px solid currentColor;
+  outline-offset: 0.2rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-motion-legend-number] { transition: none; }
+}

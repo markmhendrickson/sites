@@ -1,0 +1,10 @@
+.updates{max-width:var(--content-width,72rem);margin-inline:auto;padding:clamp(1.5rem,5vw,5rem)}
+.updates .topic-heading{max-width:48rem;margin-bottom:3rem}
+.updates-empty,.updates article{max-width:48rem}
+.updates-list{list-style:none;padding:0;margin:0}
+.updates-list li{padding-block:2rem;border-top:1px solid currentColor}
+.updates-list h2{font-size:clamp(1.4rem,3vw,2rem);margin-block:.6rem}
+.updates-list a{color:inherit;text-underline-offset:.2em}
+.updates article p{line-height:1.65;overflow-wrap:anywhere}
+.update-revision{font-size:.85rem;opacity:.75;margin-top:3rem}
+@media(prefers-reduced-motion:reduce){.updates *{scroll-behavior:auto}}

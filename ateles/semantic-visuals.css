@@ -1,0 +1,10 @@
+.semantic-symbol{display:inline-block;width:1.5rem;height:1.5rem;flex:none;color:inherit;vertical-align:middle}
+.semantic-label{display:inline-flex;align-items:center;gap:.5rem}
+.bridge>div:nth-of-type(2){border-left-color:var(--ink);background:var(--wash)}
+.bridge-visual{margin:1.25rem 0 0;min-width:0}
+.bridge-visual img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;border-radius:.4rem;border:1px solid var(--rule,#d8d2c7);background:#faf8f3}
+.bridge-visual figcaption{padding:.8rem 0 0;font-size:.9rem;line-height:1.5;color:var(--muted,var(--ink,#18333d));max-width:60ch}
+.bridge-visual figcaption{font-size:1rem;line-height:1.6}
+.bridge>.bridge-visual-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.875rem;line-height:1.5;color:var(--muted,var(--ink,#18333d));max-width:85ch}
+@media(max-width:720px){.bridge-visual{margin-top:1rem}.bridge-visual-note{font-size:.8rem}}
+@media(forced-colors:active){.bridge-visual img{border-color:CanvasText}}

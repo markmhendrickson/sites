@@ -1,0 +1,12 @@
+[data-motion-player] { margin: 0; }
+[data-motion-frame] { aspect-ratio: 3 / 2; position: relative; overflow: hidden; background: var(--motion-ground, #f7f5ee); }
+[data-motion-frame] > img, [data-motion-frame] > video { width: 100%; height: 100%; object-fit: contain; display: block; }
+[data-motion-frame] > img { position: absolute; inset: 0; z-index: 1; background: var(--motion-ground, #f7f5ee); }
+[data-motion-frame] > video { position: absolute; inset: 0; z-index: 0; }
+[data-motion-player] [hidden] { display: none !important; }
+[data-motion-player] figcaption { padding-block: .75rem; }
+.motion-controls { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem; padding-block: .5rem; }
+[data-motion-control] { min-width: 44px; min-height: 44px; padding: .7rem 1rem; font: inherit; color: var(--motion-control-ink, #fff); background: var(--motion-control-ground, #182d39); border: 1px solid currentColor; cursor: pointer; }
+[data-motion-control]:focus-visible { outline: 3px solid var(--motion-focus, #a13d1e); outline-offset: 4px; }
+[data-motion-control]:disabled { cursor: default; opacity: .7; }
+[data-motion-status] { flex: 1 1 15rem; font-size: .9rem; }
