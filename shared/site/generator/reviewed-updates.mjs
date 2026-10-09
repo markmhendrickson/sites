@@ -13,11 +13,12 @@ const authorize=(result,reviewed)=>{authorizedResults.set(result,{digest:project
 export const bytesDigest=value=>createHash('sha256').update(value).digest('hex');
 export function sourceDigest(entity){return projectionDigest({entity_id:entity.entity_id,entity_type:entity.entity_type,schema_version:entity.schema_version,snapshot:entity.snapshot,last_observation_at:entity.last_observation_at});}
 export function assertSafePublicText(value){
- check(typeof value==='string'&&!/(?:\b(?:ent|obs|source)_[a-f0-9]{12,}\b|\/(?:Users|home)\/|Bearer\s+\S+|(?:access_token|api_key|password|secret)\s*[=:]|\/entities\/ent_|[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|\b[A-Z]{2}\d{2}[ A-Z0-9]{15,30}\b)/i.test(value),'private_content_rejected');
+ check(typeof value==='string'&&!/(?:(?:ent|obs|source)_[a-f0-9]{12,}|\/(?:Users|home)\/|Bearer\s+\S+|(?:access_token|api_key|password|secret)\s*[=:]|\/entities\/ent_|[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|\b[A-Z]{2}\d{2}[ A-Z0-9]{15,30}\b)/i.test(value),'private_content_rejected');
  return value;
 }
 function validatePublicRevision(revision){
  check(typeof revision==='string'&&/^[a-z0-9][a-z0-9._-]{0,99}$/.test(revision),'invalid_public_revision');
+ check(!/(?:ent_|obs_|source_)/.test(revision),'private_content_rejected');
  return assertSafePublicText(revision);
 }
 export function strictPublicPath(path,{directory=false}={}){
