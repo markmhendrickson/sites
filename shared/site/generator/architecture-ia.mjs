@@ -2,6 +2,9 @@
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {validateManifest} from './verify-architecture-bindings.mjs';
+import {applyComparisonInventory,newComparisonPages,comparisonMetadata} from './comparison-inventory.mjs';
+import {pageCatalog} from './metadata-catalog.mjs';
+for(const brand of ['ateles','neotoma'])Object.assign(pageCatalog[brand],comparisonMetadata[brand]);
 export const revision='2026-10-06-r4';
 export const route=(brand,key)=>`tension-trace-${brand}-${key}-${revision}.html`;
 const esc=x=>String(x).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
@@ -28,12 +31,12 @@ function publicSource(claim){const b=sourceBindings.claims.find(x=>x.id===claim)
 function functionalDiagram(brand,d){return `<figure class="architecture-diagram" aria-labelledby="${brand}-diagram-title"><figcaption id="${brand}-diagram-title">${esc(d.title)}</figcaption><ol class="architecture-flow">${d.steps.map(([title,detail],i)=>`<li><span class="architecture-order">${i+1}</span><strong>${esc(title)}</strong><p>${esc(detail)}</p>${i<d.steps.length-1?'<span class="architecture-next" aria-hidden="true">→</span>':''}</li>`).join('')}</ol><p class="architecture-diagram-note">${esc(d.caption)}</p></figure>`;}
 export function architecturePages({head,header,footer,brands,home}){
  if([head,header,footer,home].some(x=>typeof x!=='function')||!brands?.ateles||!brands?.neotoma)throw Error('Architecture requires existing head/header/footer/home and both brands');
- return ['ateles','neotoma'].map(brand=>{const t=tours[brand],name=brands[brand].name;const overview=brand==='ateles'?'<div class="architecture-context"><h3>Planning context is not workflow order.</h3><p>Mission → strategy → project → plan → task</p><p>The illustrative labels name declared planning levels. The separate workflow orders contributions to the task.</p><a href="'+route(brand,'workflows')+'">Explore workflows</a></div>':'<div class="architecture-context"><h3>One record across connected tools.</h3><p>First configured session → your Neotoma → a second configured session</p><p>Each reader needs access and a fresh read. Sharing a record does not synchronize every tool’s private memory or make consumers act automatically.</p><a href="'+route(brand,'current-change')+'#change">Explore configured readers</a></div>';
+ return [...newComparisonPages({head,header,footer}),...['ateles','neotoma'].map(brand=>{const t=tours[brand],name=brands[brand].name;const overview=brand==='ateles'?'<div class="architecture-context"><h3>Planning context is not workflow order.</h3><p>Mission → strategy → project → plan → task</p><p>The illustrative labels name declared planning levels. The separate workflow orders contributions to the task.</p><a href="'+route(brand,'workflows')+'">Explore workflows</a></div>':'<div class="architecture-context"><h3>One record across connected tools.</h3><p>First configured session → your Neotoma → a second configured session</p><p>Each reader needs access and a fresh read. Sharing a record does not synchronize every tool’s private memory or make consumers act automatically.</p><a href="'+route(brand,'current-change')+'#change">Explore configured readers</a></div>';
   const html=head(`${name} — Architecture`,brand)+`<body class="${brand}">${header(brand)}<main id="main" class="architecture-tour"><div class="topic-heading"><p class="eyebrow">Architecture</p><h1>${esc(t.title)}</h1><p class="intro">${esc(t.intro)}</p><nav class="chapter-nav" aria-label="In this tour">${t.stages.map(s=>`<a href="#${s.key}">${esc(s.title.replace(/\.$/,''))}</a>`).join('')}<a href="#boundaries">Boundaries</a></nav></div><section class="architecture-overview">${functionalDiagram(brand,t.diagram)}${overview}</section><div class="architecture-stages">${t.stages.map((s,i)=>`<section id="${s.key}" class="architecture-stage"><p class="eyebrow">${i+1} · ${esc(s.key)}</p><h2>${esc(s.title)}</h2><p>${esc(s.copy)}</p><nav aria-label="More about ${esc(s.title.replace(/\.$/,''))}"><a class="textlink" href="${route(brand,s.chapter)}${s.anchor?'#'+s.anchor:''}">${esc(s.link)}</a><a class="architecture-source" href="${publicSource(s.claim)}">Foundation reference</a></nav></section>`).join('')}</div><section class="architecture-boundary" id="boundaries"><h2>${esc(t.boundary)}</h2><p>${esc(t.boundaryCopy)}</p><p class="support-note">${esc(t.status)}</p><nav aria-label="Continue from Architecture"><a class="textlink" href="${route(brand,'explore')}">Explore the chapters</a><a class="textlink" href="${route(brand,'start')}">Get started</a><a class="textlink" href="${home(brand==='ateles'?'neotoma':'ateles')}">${brand==='ateles'?'Neotoma':'Ateles'}</a></nav></section></main>${footer(brand)}</body></html>`;
   const boundaryClaims=brand==='neotoma'?['n-boundary','n-readers']:['a-overlay','a-status'];
   const bound=html.replace('<p class="support-note">',`<nav aria-label="Architecture boundaries and status references">${boundaryClaims.map(id=>`<a class="architecture-source" href="${publicSource(id)}">${id==='a-status'?'Dated implementation reference':'Foundation boundary reference'}</a>`).join('')}</nav><p class="support-note">`);
   return [route(brand,'architecture'),bound];
- });
+ })];
 }
 function directoryLink(href,title,copy=''){return `<a class="directory-link" href="${esc(href)}"><span>${esc(title)}</span>${copy?`<small>${esc(copy)}</small>`:''}</a>`;}
 function referenceDirectory(brand,docs){
@@ -64,5 +67,5 @@ export function applyInformationArchitecture(routeName,html,{docs}={}){
  }
  const docsRoute=route(brand,'docs');if(routeName===docsRoute)html=docsAlias(html,brand);else html=html.replaceAll(`href="${docsRoute}"`,`href="${route(brand,'explore')}#reference"`).replace(/>Docs<\/a>/g,'>Guides and reference</a>');
  html=html.replace('</head>',cssLink+'</head>').replace(/<body class="(ateles|neotoma)"/,`<body data-ia-ready="true" class="$1"`);
- return html;
+ return applyComparisonInventory(routeName,html);
 }

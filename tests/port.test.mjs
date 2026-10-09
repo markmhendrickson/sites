@@ -6,7 +6,7 @@ import {root,contained} from '../scripts/paths.mjs';
 import {privacyIssues,verifyImport,check} from '../scripts/check.mjs';
 const manifest=JSON.parse(readFileSync(resolve(root,'provenance/source-import.json')));
 const changes=JSON.parse(readFileSync(resolve(root,'provenance/port-changes.json')));
-test('exact imported provenance and independent app outputs',()=>{const result=check();assert(result.imported>=200);assert.equal(result.checkedRoutes,61);});
+test('exact imported provenance and independent app outputs',()=>{const result=check();assert(result.imported>=200);assert.equal(result.checkedRoutes,64);});
 test('changed source bytes go RED without explicit provenance',()=>{const target=manifest.files.find(f=>f.path.endsWith('email-story.mjs'));assert(target);assert.throws(()=>verifyImport(manifest,changes,p=>p===target.path?Buffer.from('mutated'):readFileSync(resolve(root,p))),/byte hash mismatch/);});
 test('wrong source commit goes RED',()=>assert.throws(()=>verifyImport({...manifest,sourceRevision:'0'.repeat(40)},changes),/Source provenance/));
 test('unapproved change and malformed approval go RED',()=>{const target=manifest.files[0];assert.throws(()=>verifyImport(manifest,[{path:target.path,reason:'invalid',before:'0'.repeat(64),after:'0'.repeat(64)}]),/source mismatch/);for(const v of [null,false,''])assert.throws(()=>verifyImport(manifest,v),/inventory/);});

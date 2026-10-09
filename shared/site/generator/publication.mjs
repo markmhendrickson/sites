@@ -57,19 +57,23 @@ export function jsonFeed(brand, posts, { origin, indexPath = '/updates/', feedPa
   origin = publicOrigin(origin); publicPath(indexPath); publicPath(feedPath);
   return { version:'https://jsonfeed.org/version/1.1', title:`${brand === 'ateles' ? 'Ateles' : 'Neotoma'} Updates`, home_page_url:origin + indexPath, feed_url:origin + feedPath, items:posts.map(p => ({id:p.id,url:origin + indexPath + p.slug + '/',title:p.title,summary:p.summary,content_text:p.paragraphs.join('\n\n'),date_published:p.published_at,date_modified:p.modified_at})) };
 }
-export function metadataTags({ title, description, mode = 'preview', origin, path, image, feed, article } = {}) {
+export function metadataTags({ title, description, mode = 'preview', origin, path, image, imageOrigin, siteName, feed, article } = {}) {
   assert(text(title, 240) && text(description, 600), 'Page-specific title and description required');
   assert(['preview','public'].includes(mode), 'Unknown publication mode');
   const publicMode = mode === 'public';
   const base = publicMode ? publicOrigin(origin) : undefined;
   const url = publicMode ? base + publicPath(path) : undefined;
+  const imageBase = publicMode ? base : imageOrigin ? publicOrigin(imageOrigin) : undefined;
   const tags = [`<title>${escapeHtml(title)}</title>`, `<meta name="description" content="${escapeHtml(description)}">`, `<meta name="robots" content="${publicMode ? 'index,follow' : 'noindex,nofollow'}">`, `<meta property="og:title" content="${escapeHtml(title)}">`, `<meta property="og:description" content="${escapeHtml(description)}">`, `<meta property="og:type" content="${article ? 'article' : 'website'}">`];
   if (url) tags.push(`<link rel="canonical" href="${escapeHtml(url)}">`, `<meta property="og:url" content="${escapeHtml(url)}">`);
+  if(siteName){assert(text(siteName,100),'Invalid site name');tags.push(`<meta property="og:site_name" content="${escapeHtml(siteName)}">`);}
+  tags.push(`<meta name="twitter:title" content="${escapeHtml(title)}">`, `<meta name="twitter:description" content="${escapeHtml(description)}">`);
   if (image) {
     keys(image,['path','alt','width','height']); publicPath(image.path);
     assert(text(image.alt, 500) && Number.isInteger(image.width) && image.width > 0 && Number.isInteger(image.height) && image.height > 0, 'Reviewed image dimensions/alt required');
-    // Preview cards intentionally omit private-host image URLs.
-    if (publicMode) tags.push(`<meta property="og:image" content="${escapeHtml(base + image.path)}">`, `<meta property="og:image:alt" content="${escapeHtml(image.alt)}">`, `<meta property="og:image:width" content="${image.width}">`, `<meta property="og:image:height" content="${image.height}">`, '<meta name="twitter:card" content="summary_large_image">');
+    // A review build may point only to an explicitly configured public image origin.
+    // This does not enable indexing, canonical URLs, feeds or release claims.
+    if (imageBase) tags.push(`<meta property="og:image" content="${escapeHtml(imageBase + image.path)}">`, `<meta property="og:image:alt" content="${escapeHtml(image.alt)}">`, `<meta property="og:image:width" content="${image.width}">`, `<meta property="og:image:height" content="${image.height}">`, `<meta name="twitter:image" content="${escapeHtml(imageBase + image.path)}">`, `<meta name="twitter:image:alt" content="${escapeHtml(image.alt)}">`, '<meta name="twitter:card" content="summary_large_image">');
   }
   if (feed) {
     assert(feed.emitted === true, 'Feed link requires an emitted artifact'); publicPath(feed.path);

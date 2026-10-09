@@ -36,7 +36,7 @@ export function refinePage(route,html){
   let surface=0;
   html=html.replace(/<section\b([^>]*)>/g,(section,attributes)=>attributes.includes('id="opening"')?section:`<section data-surface="${surface++%2?'soft':'base'}"${attributes}>`);
  }
- html=html.replace('Meaningful work. Continuing context.',b==='ateles'?'Delegate meaningful work':'Context worth relying on');
+ html=html.replace('Meaningful work. Continuing context.',b==='ateles'?'Delegate meaningful work':'Make context worth relying on');
  html=html.replace(/(href="https:\/\/github\.com\/markmhendrickson\/(?:ateles|neotoma)")>Open source<\/a>/g,'$1>GitHub</a>');
  html=html.replace('<label class="theme-control">Appearance ','<label class="theme-control">');
  html=html.replace(/<p class="eyebrow">Installation and onboarding<\/p>/g,'<p class="eyebrow">Get started</p>');

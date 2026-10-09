@@ -8,6 +8,7 @@ import {renderEmailDemo,renderMiniToolScene,emailRequests} from './harness/email
 import {readFileSync,existsSync,copyFileSync} from 'node:fs';
 import {resolve} from 'node:path';
 import {createDevelopmentUpdatesPages,copyDevelopmentAssets,assertNoDevelopmentOutputs} from './development-updates.mjs';
+import {applyOct9Ui} from './oct9-ui.mjs';
 const home=b=>`tension-trace-${b}-2026-10-06-r4.html`;
 const route=(b,k)=>`tension-trace-${b}-${k}-2026-10-06-r4.html`;
 const descriptors={
@@ -25,7 +26,6 @@ for(const b of ['ateles','neotoma'])Object.assign(pageCatalog[b],descriptors);
 pageCatalog.neotoma.cloud=['Neotoma cloud options','Compare the free, temporary public sandbox with the planned durable Neotoma Cloud service and dedicated hosting.'];
 pageCatalog.ateles.cloud=['Hosted Ateles','Understand the reference hosted Ateles scope, operating responsibility and readiness requirements before choosing a service.'];
 for(const [key,chapter]of Object.entries({capture:'capture-structure',structure:'capture-structure',current:'current-change',change:'current-change',basis:'basis-history',history:'basis-history'}))pageCatalog.neotoma[key]=pageCatalog.neotoma[chapter];
-for(const key of ['session-project-platform-memory','files-document-retrieval','memory-services','workflow-custom-state'])pageCatalog.neotoma['alternatives-'+key]=pageCatalog.neotoma.compare;
 const ghIcon='<svg class="github-link-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.86c-2.78.61-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.1.64-1.35-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.58 9.58 0 0 1 5 0c1.9-1.3 2.74-1.03 2.74-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>';
 export function createVisitorMap(ctx,docs){
  const items=visitorPages({...ctx,emailRequests},{managedHref:process.env.PUBLIC_MANAGED_MEET_URL});
@@ -125,5 +125,5 @@ export function completeOct8Page(r,html){
   metadata={title,description:text};
  }
  const image=verifiedBrandPhoto(b,'dist');
- return applyPageMetadata(html,{...metadata,image,mode:'preview'}).replaceAll('\r','&#13;');
+ return applyOct9Ui(r,applyPageMetadata(html,{...metadata,image,mode:'preview'})).replaceAll('\r','&#13;');
 }

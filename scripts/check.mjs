@@ -3,12 +3,14 @@ import {resolve,relative} from 'node:path';
 import {createHash} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
 import {root,generator,contained} from './paths.mjs';
+import {publicManagedContact} from '../shared/site/generator/managed-inquiry.mjs';
 export const digest=b=>createHash('sha256').update(b).digest('hex');
-export function privacyIssues(path,text){
+export function privacyIssues(path,text,{approvedPublicContact}={}){
  const issues=[];
  if(/\/Users\/[^/\s]+\//.test(text)||/\/private\/tmp\//.test(text))issues.push('private-path:'+path);
  if(/(?:ghp_|github_pat_|sk-proj-)[A-Za-z0-9_]{20,}/.test(text)||/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/.test(text))issues.push('sensitive-data:'+path);
- if(/mailto:[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2}/i.test(text))issues.push('contact:'+path);
+ const approved=publicManagedContact(approvedPublicContact)?.toLowerCase();
+ for(const match of text.matchAll(/mailto:([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63})/gi))if(match[1].toLowerCase()!==approved)issues.push('contact:'+path);
  if(/appgdep_[a-f0-9]{20,}|markmhendricksonopen\.chatgpt\.site/.test(text))issues.push('hosting-identity:'+path);
  return issues;
 }
@@ -29,20 +31,26 @@ export function verifyImport(manifest,changes,read=path=>readFileSync(resolve(ro
 }
 function walk(dir){return readdirSync(dir).flatMap(n=>{const p=resolve(dir,n);if(['.git','node_modules','.build'].includes(n))return[];return statSync(p).isDirectory()?walk(p):[p];});}
 export function check(){
+ const approvedPublicContact=publicManagedContact(process.env.NEOTOMA_MANAGED_CONTACT_EMAIL);
  const manifest=JSON.parse(readFileSync(resolve(root,'provenance/source-import.json')));
  const changes=JSON.parse(readFileSync(resolve(root,'provenance/port-changes.json')));
  const imported=verifyImport(manifest,changes);
- for(const p of walk(root))if(/\.(?:mjs|js|json|css|ts|sql|md|txt|svg|html)$/.test(p)){const errors=privacyIssues(relative(root,p),readFileSync(p,'utf8'));if(errors.length)throw Error(errors.join(','));}
+ for(const p of walk(root))if(/\.(?:mjs|js|json|css|ts|sql|md|txt|svg|html)$/.test(p)){
+  const path=relative(root,p);
+  // Only the generated managed page may contain the deployment's approved public contact.
+  const generatedManaged=/^shared\/site\/generator\/dist\/tension-trace-neotoma-managed-[0-9-]+-r4\.html$/.test(path);
+  const errors=privacyIssues(path,readFileSync(p,'utf8'),{approvedPublicContact:generatedManaged?approvedPublicContact:undefined});if(errors.length)throw Error(errors.join(','));
+ }
  let count=0;
  for(const b of ['ateles','neotoma']){
   const out=resolve(root,'.build',b);
   if(!existsSync(out))continue;
   const m=JSON.parse(readFileSync(resolve(out,'build-manifest.json')));
   if(m.mode!=='preview'||m.registrationLive!==false||m.deployTarget!==null||m.publicOrigin!==null)throw Error('Unsafe output contract');
-  if(m.routes.length!==(b==='ateles'?25:36))throw Error('Route inventory changed');
+  if(m.routes.length!==(b==='ateles'?28:36))throw Error('Route inventory changed');
   for(const r of m.routes){
    const html=readFileSync(resolve(out,r),'utf8');
-   if(privacyIssues(r,html).length||/undefined|mailto:\?/.test(html))throw Error('Private/unresolved output');
+   if(privacyIssues(r,html,{approvedPublicContact:b==='neotoma'&&/-managed-/.test(r)?approvedPublicContact:undefined}).length||/undefined|mailto:\?/.test(html))throw Error('Private/unresolved output');
    if(!html.includes('content="noindex,nofollow"')||/rel="canonical"/.test(html))throw Error('Preview metadata boundary');
    if(/data-waitlist/.test(html)&&/<fieldset(?![^>]*disabled)/.test(html))throw Error('Live form unexpectedly enabled');
    for(const m of html.matchAll(/(?:href|src|data-layer-src|data-static-layer-src)="([^"]+)"/g)){

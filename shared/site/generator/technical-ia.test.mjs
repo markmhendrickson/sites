@@ -6,7 +6,7 @@ import {route,routeContract} from './technical-ia.mjs';
 const root=fileURLToPath(new URL('.',import.meta.url));
 test('current technical pages, email labels, native adoption, metadata and all local destinations',()=>{
  const result=inspect(root);assert.deepEqual(result.issues,[]);
- assert.ok(result.stats.checks>2000);assert.equal(result.stats.routes,[...result.files.values()].some(h=>h.includes('data-development-updates'))?61:51);
+ assert.ok(result.stats.checks>2000);assert.equal(result.stats.routes,[...result.files.values()].some(h=>h.includes('data-development-updates'))?64:54);
 });
 test('missing anchor, stale legend, cross-brand metadata and primary navigation mutants go red',()=>{
  const proof=proveMutants(root);assert.equal(proof.passed,true);assert.equal(proof.deliberateRed,4);

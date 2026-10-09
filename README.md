@@ -24,7 +24,7 @@ Open the printed loopback URL at /ateles/ or /neotoma/. Build one app using npm 
 - provenance/source-import.json pins source revision and imported byte hashes; port-changes.json pins explicit portability changes.
 - apps/*/site.json defines independent builds. The company slot is unconfigured.
 
-The GitHub Pages build is a public, noindex review. Updates deliberately contain labeled synthetic development posts so image, gallery, video and audio layouts can be inspected. They are not announcements or a product release. Publication validators are contracts, not a completed exporter or publication permission. No raw private graph or personal Neotoma/browser credential belongs here.
+The GitHub Pages build is a public, noindex review. Updates deliberately contain labeled synthetic development posts so image, gallery, video and audio layouts can be inspected. They are not announcements or a product release. A separate [reviewed Updates exporter](shared/site/generator/REVIEWED-UPDATES.md) can prepare immutable public artifacts after exact external review; it is not wired into the Pages build and grants no publication permission. No raw private graph or personal Neotoma/browser credential belongs here.
 
 The owner-private Site and product repositories remain separate. Provider identity, secrets, grants and production bindings are excluded. GitHub Pages review publication is authorized; DNS, product versions, tags, packages and release notes are not. Live waitlist collection needs storage/origin, privacy/controller/removal, retention and credential gates plus durable hosted readback.
 
