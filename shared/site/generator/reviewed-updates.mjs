@@ -8,6 +8,7 @@ const hash=x=>typeof x==='string'&&/^[a-f0-9]{64}$/.test(x);
 const role=x=>typeof x==='string'&&/^[a-z][a-z0-9-]{2,80}$/.test(x);
 const instant=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z$/.test(x)&&Number.isFinite(Date.parse(x));
 const authorizedResults=new WeakMap();
+const authorizedBuilds=new WeakMap();
 const authorize=(result,reviewed)=>{authorizedResults.set(result,{digest:projectionDigest(result.projection),reviewed});return result;};
 export const bytesDigest=value=>createHash('sha256').update(value).digest('hex');
 export function sourceDigest(entity){return projectionDigest({entity_id:entity.entity_id,entity_type:entity.entity_type,schema_version:entity.schema_version,snapshot:entity.snapshot,last_observation_at:entity.last_observation_at});}
@@ -93,15 +94,37 @@ export function buildUpdatesArtifacts(result,{brand,mode='preview',origin,indexP
  const posts=validateProjection(result.projection,{brand,approvedDigest:projectionDigest(result.projection),now});
  // The caller must obtain result from exportReviewedPublic; re-validation here is integrity, not approval.
  strictPublicPath(indexPath,{directory:true});strictPublicPath(articleBase,{directory:true});strictPublicPath(feedPath);
+ const indexFile=indexPath.slice(1)+'index.html';
+ const articleFiles=posts.map(post=>{const path=articleBase+post.slug+'/';strictPublicPath(path,{directory:true});return path.slice(1)+'index.html';});
+ const plannedFiles=[indexFile,feedPath.slice(1),...articleFiles,'projection.json','artifact-manifest.json'];
+ for(let i=0;i<plannedFiles.length;i++){
+  const path=plannedFiles[i];check(path&&!path.endsWith('/'),'file_path_required');strictPublicPath('/'+path);
+  for(let j=0;j<i;j++){const prior=plannedFiles[j].toLowerCase(),current=path.toLowerCase();check(prior!==current&&!prior.startsWith(current+'/')&&!current.startsWith(prior+'/'),'artifact_path_collision');}
+ }
  const artifacts={};const name=brand==='ateles'?'Ateles':'Neotoma';
  const frame=(body,spec)=>'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'+metadataTags(spec)+'</head><body class="'+brand+'">'+body+'</body></html>\n';
  const feed=mode==='public'&&posts.length>0?{path:feedPath,emitted:true}:undefined;
- if(feed)artifacts[feedPath.slice(1)]=JSON.stringify(jsonFeed(brand,posts,{origin,indexPath,feedPath}),null,2)+'\n';
- artifacts[indexPath.slice(1)+'index.html']=frame(renderUpdatesIndex(brand,posts,{articleBase}),{title:name+' — Updates',description:'Product notes, explanations and availability changes from '+name+'.',mode,origin,path:indexPath,feed});
- for(const post of posts){const path=articleBase+post.slug+'/';strictPublicPath(path,{directory:true});artifacts[path.slice(1)+'index.html']=frame(renderUpdate(post),{title:post.title+' — '+name+' Updates',description:post.summary,mode,origin,path,...(mode==='public'?{article:post}:{})});}
+ if(feed){
+  // The shared feed helper uses one base for home and articles; restore the distinct index URL here.
+  const content=jsonFeed(brand,posts,{origin,indexPath:articleBase,feedPath});content.home_page_url=publicOrigin(origin)+indexPath;
+  artifacts[feedPath.slice(1)]=JSON.stringify(content,null,2)+'\n';
+ }
+ artifacts[indexFile]=frame(renderUpdatesIndex(brand,posts,{articleBase}),{title:name+' — Updates',description:'Product notes, explanations and availability changes from '+name+'.',mode,origin,path:indexPath,feed});
+ for(const post of posts){const path=articleBase+post.slug+'/';artifacts[path.slice(1)+'index.html']=frame(renderUpdate(post),{title:post.title+' — '+name+' Updates',description:post.summary,mode,origin,path,...(mode==='public'?{article:post}:{})});}
+ artifacts['projection.json']=JSON.stringify(result.projection,null,2)+'\n';
  const hashes=Object.fromEntries(Object.keys(artifacts).sort().map(path=>[path,bytesDigest(artifacts[path])]));
  const manifest={version:1,brand,revision:result.projection.revision,projection_digest:projectionDigest(result.projection),artifacts:hashes};
- return {artifacts,manifest};
+ const built={artifacts,manifest};authorizedBuilds.set(built,{result,manifestDigest:bytesDigest(JSON.stringify(manifest)),artifactDigest:bytesDigest(JSON.stringify(artifacts))});return built;
+}
+export function assertImmutableUpdatesInput(result,built){
+ const approval=authorizedResults.get(result),receipt=authorizedBuilds.get(built);
+ check(approval&&receipt&&receipt.result===result,'trusted_build_result_required');
+ check(approval.digest===projectionDigest(result.projection)&&receipt.manifestDigest===bytesDigest(JSON.stringify(built.manifest))&&receipt.artifactDigest===bytesDigest(JSON.stringify(built.artifacts)),'changed_build_result_rejected');
+ check(built.manifest.brand===result.projection.brand&&built.manifest.revision===result.projection.revision&&built.manifest.projection_digest===approval.digest,'projection_build_mismatch');
+ check(built.artifacts['projection.json']===JSON.stringify(result.projection,null,2)+'\n','projection_bytes_mismatch');
+ check(Object.keys(built.artifacts).sort().join('\n')===Object.keys(built.manifest.artifacts).sort().join('\n'),'artifact_inventory_mismatch');
+ verifyArtifactBytes(built.manifest,path=>built.artifacts[path]);
+ return true;
 }
 export function verifyArtifactBytes(expected,readArtifact){
  for(const [path,digest]of Object.entries(expected.artifacts)){strictPublicPath('/'+path);check(hash(digest)&&bytesDigest(readArtifact(path))===digest,'artifact_readback_mismatch');}
