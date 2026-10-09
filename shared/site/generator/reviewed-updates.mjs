@@ -16,6 +16,10 @@ export function assertSafePublicText(value){
  check(typeof value==='string'&&!/(?:\b(?:ent|obs|source)_[a-f0-9]{12,}\b|\/(?:Users|home)\/|Bearer\s+\S+|(?:access_token|api_key|password|secret)\s*[=:]|\/entities\/ent_|[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|\b[A-Z]{2}\d{2}[ A-Z0-9]{15,30}\b)/i.test(value),'private_content_rejected');
  return value;
 }
+function validatePublicRevision(revision){
+ check(typeof revision==='string'&&/^[a-z0-9][a-z0-9._-]{0,99}$/.test(revision),'invalid_public_revision');
+ return assertSafePublicText(revision);
+}
 export function strictPublicPath(path,{directory=false}={}){
  publicPath(path);check(!path.includes('//')&&!path.split('/').some(p=>p==='.'||p==='..')&&!/(?:ent_|obs_|source_)/.test(path),'unsafe_artifact_path');
  if(directory)check(path.endsWith('/'),'directory_path_required');return path;
@@ -23,7 +27,7 @@ export function strictPublicPath(path,{directory=false}={}){
 export function validateReviewManifest(manifest,{brand,approvedReviewDigest,now}){
  strict(manifest,['version','brand','revision','projection_digest','reviews']);
  check(manifest.version===1&&manifest.brand===brand&&['ateles','neotoma'].includes(brand),'invalid_review_identity');
- check(typeof manifest.revision==='string'&&/^[a-z0-9][a-z0-9._-]{0,99}$/.test(manifest.revision)&&!manifest.revision.startsWith('ent_'),'invalid_public_revision');
+ validatePublicRevision(manifest.revision);
  check(hash(approvedReviewDigest)&&projectionDigest(manifest)===approvedReviewDigest,'review_manifest_unapproved_or_changed');
  check(hash(manifest.projection_digest)&&Array.isArray(manifest.reviews)&&manifest.reviews.length<=100,'invalid_review_manifest');
  check(instant(now),'explicit_build_time_required');
@@ -69,6 +73,7 @@ export async function exportReviewedPublic({brand,manifest,approvedReviewDigest,
  return authorize({projection,posts:validated,privateProof},true);
 }
 export function restoreApprovedProjection(projection,{brand,approvedDigest,now}){
+ validatePublicRevision(projection?.revision);
  const posts=validateProjection(projection,{brand,approvedDigest,now});
  for(const post of posts)for(const text of [post.id,post.slug,post.title,post.summary,...post.paragraphs])assertSafePublicText(text);
  return authorize({projection,posts,privateProof:[]},true);
