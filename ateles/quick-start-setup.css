@@ -1,0 +1,20 @@
+.quickstart-panel{margin:0 0 2.5rem}
+.quickstart-panel .quickstart-intro{max-width:45rem;margin:0 0 1rem;font-size:1.05rem}
+.quickstart-controls{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+.quickstart-controls label{font-size:.9rem;font-weight:600}
+.quickstart-controls select{min-height:44px;max-width:100%;padding:.6rem 2rem .6rem .8rem;border:1px solid var(--line);border-radius:.4rem;background:var(--bg);color:var(--ink);font:inherit}
+.quickstart-commands{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1rem}
+.quickstart-command{min-width:0;border:1px solid var(--line);border-radius:.5rem;padding:1rem;background:var(--bg)}
+.quickstart-command-heading{display:flex;align-items:center;justify-content:space-between;gap:.6rem;font-size:.85rem;font-weight:600}
+.command-copy{display:flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;margin:-.4rem -.4rem -.4rem 0;border:0;border-radius:.3rem;background:transparent;color:var(--muted);cursor:pointer}
+.command-copy:hover{background:var(--wash);color:var(--ink)}
+.quickstart-command pre{margin:1rem 0 .5rem;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.875rem;line-height:1.6;user-select:text}
+.quickstart-command code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+.copy-feedback{display:block;min-height:1.2em;color:var(--muted);font-size:.75rem;line-height:1.5}
+.quickstart-panel .quickstart-note{max-width:70rem;margin:1rem 0;font-size:.875rem;line-height:1.6;color:var(--muted)}
+.quickstart-note a{color:var(--ink)}
+.quickstart-options{display:flex;flex-wrap:wrap;align-items:baseline;gap:.7rem 1.4rem;font-size:.9rem}
+.quickstart-options .textlink{margin:0}
+.quickstart-options span{color:var(--muted);font-size:.8rem}
+.quickstart-panel button:focus-visible,.quickstart-panel select:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:760px){.quickstart-commands{grid-template-columns:1fr}.quickstart-controls{flex-wrap:wrap}.quickstart-options{gap:.7rem 1rem}}

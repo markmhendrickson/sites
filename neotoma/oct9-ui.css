@@ -1,0 +1,26 @@
+.path-grid>a.path-card-link{display:flex;flex-direction:column;color:var(--ink);text-decoration:none;position:relative;transition:transform 180ms ease,box-shadow 180ms ease;border:1px solid var(--line);background:var(--bg);min-width:0}
+.path-card-link .textlink{margin-top:auto;padding-top:1.5rem;align-self:flex-start}
+.path-card-link:focus-visible{outline:3px solid var(--accent,var(--brand-primary));outline-offset:5px;box-shadow:0 6px 18px rgb(0 0 0 / .08)}
+@media(hover:hover){.path-grid>a.path-card-link:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgb(0 0 0 / .09)}}
+.technical-visitor-page section>p+.directory-link{display:block;margin-top:1.5rem}
+.technical-visitor-page .technical-call{margin-block:1.5rem}
+.technical-visitor-page .quickstart-command{margin-block:1.25rem}
+.technical-visitor-page section>.directory-list{margin-top:1.5rem}
+.technical-visitor-page section>p{line-height:1.65}
+.shared-code{margin-block:1.25rem}
+.shared-code pre{max-width:100%;white-space:pre-wrap;overflow-wrap:anywhere}
+.quickstart-command .command-copy:focus-visible{outline:3px solid var(--accent,var(--brand-primary));outline-offset:3px}
+.quickstart-command .command-copy svg{display:block;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6}
+.quickstart-command .sr-only,.theme-control .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.agent-evaluate{display:block}
+.agent-evaluate>div{max-width:62rem;margin-inline:auto}
+.agent-evaluate .evaluate-intro{margin-bottom:1.5rem}
+.agent-evaluate .evaluation-command{margin-top:1.5rem;max-width:100%}
+.agent-evaluate .command-copy{background:transparent;color:var(--muted);padding:0;margin:-.4rem -.4rem -.4rem 0;white-space:normal}
+.agent-evaluate .command-copy:hover{background:var(--wash);color:var(--ink)}
+.evaluation-command code{font-size:.9rem;line-height:1.7}
+.dev-update-code{padding:0;background:transparent;color:var(--ink)}
+.dev-update-code>span{display:block;margin-bottom:.7rem;color:var(--muted)}
+.dev-update-code .quickstart-command{margin-block:0}
+.dev-update-code .quickstart-command pre{white-space:pre-wrap;font-size:.875rem;margin:1rem 0 .5rem}
+@media(prefers-reduced-motion:reduce){.path-grid>a.path-card-link{transition:none}.path-grid>a.path-card-link:hover{transform:none}}
