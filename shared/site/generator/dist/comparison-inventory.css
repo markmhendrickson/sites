@@ -40,6 +40,13 @@
 .comparison-checks li+li{margin-top:1rem}
 .comparison-checks ol{max-width:54rem;padding-left:1.4rem}
 .comparison-components nav{display:flex;flex-wrap:wrap;gap:1rem 2rem;margin-top:1.5rem}
+.comparison-related{padding:3rem var(--pad);border-top:1px solid var(--line)}
+.comparison-related h2{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.15;margin:.6rem 0 1.5rem}
+.comparison-related nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:1.5rem}
+.comparison-related nav a{display:block;padding:1.4rem;border:1px solid var(--line);color:inherit;text-decoration:none;background:var(--wash)}
+.comparison-related nav strong,.comparison-related nav span{display:block}
+.comparison-related nav span{margin-top:.7rem;color:var(--muted)}
+.comparison-related nav a:hover{border-color:var(--accent)}
 .comparison-inventory a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
 .comparison-inventory p,.comparison-inventory h2,.comparison-inventory h3{overflow-wrap:anywhere}
 @media(max-width:760px){.comparison-approaches,.comparison-offerings,.comparison-fit{grid-template-columns:1fr}.comparison-fit{gap:1.5rem}.comparison-layer-map{padding:1.25rem;gap:.8rem}.comparison-node{width:2.8rem;height:2.8rem}}

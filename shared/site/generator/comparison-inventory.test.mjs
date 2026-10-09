@@ -45,6 +45,14 @@ test('record substrates retain temporal/history strengths; own-product maturity 
  const a=applyComparisonInventory(comparisonRoute('ateles','compare'),shell);
  assert.match(a,/single-principal governed execution/);assert.match(a,/not a shipped multi-operator delegation service/);assert.match(a,/does not prove universal enforcement/);
 });
+test('overlapping memory, retrieval and framework roles crosslink other layers without new vendors',()=>{
+ const memory=applyComparisonInventory(comparisonRoute('neotoma','alternatives-memory-services'),shell);
+ assert.match(memory,/Letta supplies stateful agents as well as memory/);assert.match(memory,/tension-trace-ateles-alternatives-agent-harnesses/);
+ const frameworks=applyComparisonInventory(comparisonRoute('ateles','alternatives-workflow-frameworks'),shell);
+ assert.match(frameworks,/Agno, Pydantic AI and Strands/);assert.match(frameworks,/tension-trace-neotoma-alternatives-memory-services/);
+ const retrieval=applyComparisonInventory(comparisonRoute('neotoma','alternatives-files-document-retrieval'),shell);
+ assert.match(retrieval,/LlamaIndex and Haystack include agents and workflows/);assert.match(retrieval,/Glean also describes enterprise agents/);
+});
 test('rendered Pages inventory links every new route and preserves distinct announcement evidence',()=>{
  const root=new URL('../../../',import.meta.url);
  const manifest=JSON.parse(readFileSync(new URL('.build/ateles/build-manifest.json',root),'utf8'));assert.equal(manifest.routes.length,28);
