@@ -116,15 +116,20 @@ export function buildUpdatesArtifacts(result,{brand,mode='preview',origin,indexP
  const manifest={version:1,brand,revision:result.projection.revision,projection_digest:projectionDigest(result.projection),artifacts:hashes};
  const built={artifacts,manifest};authorizedBuilds.set(built,{result,manifestDigest:bytesDigest(JSON.stringify(manifest)),artifactDigest:bytesDigest(JSON.stringify(artifacts))});return built;
 }
-export function assertImmutableUpdatesInput(result,built){
+export function captureImmutableUpdatesInput(result,built){
  const approval=authorizedResults.get(result),receipt=authorizedBuilds.get(built);
  check(approval&&receipt&&receipt.result===result,'trusted_build_result_required');
- check(approval.digest===projectionDigest(result.projection)&&receipt.manifestDigest===bytesDigest(JSON.stringify(built.manifest))&&receipt.artifactDigest===bytesDigest(JSON.stringify(built.artifacts)),'changed_build_result_rejected');
- check(built.manifest.brand===result.projection.brand&&built.manifest.revision===result.projection.revision&&built.manifest.projection_digest===approval.digest,'projection_build_mismatch');
- check(built.artifacts['projection.json']===JSON.stringify(result.projection,null,2)+'\n','projection_bytes_mismatch');
- check(Object.keys(built.artifacts).sort().join('\n')===Object.keys(built.manifest.artifacts).sort().join('\n'),'artifact_inventory_mismatch');
- verifyArtifactBytes(built.manifest,path=>built.artifacts[path]);
- return true;
+ const projection=JSON.parse(JSON.stringify(result.projection));
+ const manifest=JSON.parse(JSON.stringify(built.manifest));
+ const artifacts={...built.artifacts};
+ const projectionBytes=JSON.stringify(projection,null,2)+'\n';
+ const manifestBytes=JSON.stringify(manifest,null,2)+'\n';
+ check(approval.digest===projectionDigest(projection)&&receipt.manifestDigest===bytesDigest(JSON.stringify(manifest))&&receipt.artifactDigest===bytesDigest(JSON.stringify(artifacts)),'changed_build_result_rejected');
+ check(manifest.brand===projection.brand&&manifest.revision===projection.revision&&manifest.projection_digest===approval.digest,'projection_build_mismatch');
+ check(artifacts['projection.json']===projectionBytes,'projection_bytes_mismatch');
+ check(Object.keys(artifacts).sort().join('\n')===Object.keys(manifest.artifacts).sort().join('\n'),'artifact_inventory_mismatch');
+ verifyArtifactBytes(manifest,path=>artifacts[path]);
+ return {manifest,name:manifest.brand+'-'+bytesDigest(JSON.stringify(manifest)),files:{...artifacts,'artifact-manifest.json':manifestBytes}};
 }
 export function verifyArtifactBytes(expected,readArtifact){
  for(const [path,digest]of Object.entries(expected.artifacts)){strictPublicPath('/'+path);check(hash(digest)&&bytesDigest(readArtifact(path))===digest,'artifact_readback_mismatch');}
