@@ -32,8 +32,8 @@
   {
     "path": "shared/site/generator/integration-regression.mjs",
     "before": "5f7df56f0555e78450a649b39b5d139a14eac714a3866fee81b844b6026e5aad",
-    "after": "9ca4f818a06e94faa6cada8c345245e467a4c371d4c51500078c3f93de4d2d0f",
-    "reason": "Validate the 61 product routes after excluding neutral private-review pages"
+    "after": "1427adb02e910af53ef82bf2968b52dfafd04aa87fe41b2c90a56930c48f9d16",
+    "reason": "Validate 64 product routes including three sourced Ateles comparison details"
   },
   {
     "path": "shared/site/generator/metadata-catalog.mjs",
@@ -44,7 +44,7 @@
   {
     "path": "shared/site/generator/oct8-publication-integration.mjs",
     "before": "9561dac9cfe1f16520eb915d7fd6820791a173b14570a051e040470a3105ca00",
-    "after": "efaa4c26217a66765bfd99927d98d50cc9f57528c06515eeb1ddad87d7c8ae33",
+    "after": "129b19dfeefbc85d601d1385edf5b63acca7ab41235353d3aacd1b252833deff",
     "reason": "Implement reviewed site interaction, technical journey and metadata refinements"
   },
   {
@@ -68,8 +68,8 @@
   {
     "path": "shared/site/generator/technical-ia.test.mjs",
     "before": "d211ffa8917e2111ef23b29de605ef3b0e88b2933dfa4063f13e4b71fcd4ce55",
-    "after": "401175e9e2d70445b97aba3e7a88743e45ea01086cd46b59a305324e2281a382",
-    "reason": "Assert the public route inventory without two neutral review routes"
+    "after": "61c8eb5a66f9d0f1c96d1c8427ad128744f79a18972c51ee4e77b453619898fe",
+    "reason": "Validate 64 product routes including three sourced Ateles comparison details"
   },
   {
     "path": "shared/site/generator/tension-trace-r3-data.mjs",
@@ -94,5 +94,11 @@
     "before": "ac82934af78223dd31229429775bf633ce61278863f598436c7ee9c863eafaf2",
     "after": "abb829cc131df2bd8303caba7608f7ab47c18ae6878540a6c3dd7a76ca6ecf7e",
     "reason": "Implement reviewed site interaction, technical journey and metadata refinements"
+  },
+  {
+    "path": "shared/site/generator/architecture-ia.mjs",
+    "before": "a9adecfa7d03422d5a02ac25e2f5703afcaacb80f5582a2854b09ed39313c833",
+    "after": "58444cc7d89bba33b4a457862eea35c85416c84ff44267f2528b2044864929ce",
+    "reason": "Implement reviewed site refinements and sourced comparison inventory"
   }
 ]

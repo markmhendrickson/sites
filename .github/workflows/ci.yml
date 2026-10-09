@@ -13,6 +13,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      SITE_REVIEW_ORIGIN: ${{ vars.SITE_REVIEW_ORIGIN }}
+      NEOTOMA_MANAGED_CONTACT_EMAIL: ${{ vars.NEOTOMA_MANAGED_CONTACT_EMAIL }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

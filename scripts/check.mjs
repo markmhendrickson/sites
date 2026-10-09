@@ -47,7 +47,7 @@ export function check(){
   if(!existsSync(out))continue;
   const m=JSON.parse(readFileSync(resolve(out,'build-manifest.json')));
   if(m.mode!=='preview'||m.registrationLive!==false||m.deployTarget!==null||m.publicOrigin!==null)throw Error('Unsafe output contract');
-  if(m.routes.length!==(b==='ateles'?25:36))throw Error('Route inventory changed');
+  if(m.routes.length!==(b==='ateles'?28:36))throw Error('Route inventory changed');
   for(const r of m.routes){
    const html=readFileSync(resolve(out,r),'utf8');
    if(privacyIssues(r,html,{approvedPublicContact:b==='neotoma'&&/-managed-/.test(r)?approvedPublicContact:undefined}).length||/undefined|mailto:\?/.test(html))throw Error('Private/unresolved output');

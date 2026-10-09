@@ -28,7 +28,7 @@ export function inspect(rootPath,{overrides=new Map()}={}){
  const check=(ok,code,r,detail)=>{stats.checks++;if(!ok)issues.push({code,route:r,detail});};
  const development=[...files.values()].some(h=>h.includes('data-development-updates'));
  const samples=['ateles','neotoma'].flatMap(b=>['short-note','technical-article','image-gallery','release-note','video-audio'].map(k=>route(b,'update-dev-'+k)));
- check(routes.length===(development?61:51)&&samples.every(r=>files.has(r)===development),'inventory-count','inventory','Expected original 53 routes and exactly ten opt-in development details');
+ check(routes.length===(development?64:54)&&samples.every(r=>files.has(r)===development),'inventory-count','inventory','Expected 54 product routes and exactly ten opt-in development details');
  for(const [r,t]of trees){const nodes=walk(t),ids=nodes.filter(n=>has(n,'id')).map(n=>n.attrs.id);check(new Set(ids).size===ids.length,'duplicate-id',r,'IDs must be unique');
   for(const n of nodes)for(const a of ['href','src']){const value=n.attrs[a];if(!value||/^(https?:|mailto:|data:|tel:)/.test(value))continue;
    const [raw,fragment]=value.split('#'),name=raw.split('?')[0],target=name?path.normalize(name.startsWith('/')?name.slice(1):path.join(path.dirname(r),name)):r;stats.localReferences++;
