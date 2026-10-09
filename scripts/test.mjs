@@ -4,4 +4,4 @@ const run=(args,cwd)=>{const r=spawnSync(process.execPath,args,{cwd,stdio:'inher
 run(['scripts/build-pages.mjs'],root);
 run(['scripts/check.mjs'],root);
 run(['--test','tests/port.test.mjs'],root);
-run(['--test','motion-player.test.mjs','motion-semantic.test.mjs','authored-layer-scene.test.mjs','authored-integration.test.mjs','section-reveals.test.mjs','technical-ia.test.mjs'],generator);
+run(['--test','motion-player.test.mjs','motion-semantic.test.mjs','authored-layer-scene.test.mjs','authored-integration.test.mjs','section-reveals.test.mjs','technical-ia.test.mjs','oct9-ui.test.mjs'],generator);

@@ -81,7 +81,7 @@ function renderBlock(block,assetRoot){
 }
 export function renderDevelopmentDetail(fixture,{assetRoot,...options}={}){
  check(context(options)&&fixture?.sample===true&&fixture.development_only===true&&fixture.synthetic_state==='development_sample','sample_detail_context_required');
- return `<main id="main" class="dev-updates dev-update-detail" data-development-updates><p class="dev-updates-banner">Development sample · synthetic content · private preview</p><article><header class="dev-update-title"><p class="eyebrow">${escapeHtml(fixture.format)}</p><h1>${escapeHtml(fixture.title)}</h1><p class="intro">${escapeHtml(fixture.summary)}</p></header><div class="dev-update-body">${fixture.blocks.map(b=>renderBlock(b,assetRoot)).join('')}</div></article></main>`;
+ return `<main id="main" class="dev-updates dev-update-detail" data-development-updates><article><header class="dev-update-title"><p class="eyebrow">${escapeHtml(fixture.format)}</p><p class="dev-example-label">Illustrative example · synthetic content</p><h1>${escapeHtml(fixture.title)}</h1><p class="intro">${escapeHtml(fixture.summary)}</p></header><div class="dev-update-body">${fixture.blocks.map(b=>renderBlock(b,assetRoot)).join('')}</div></article></main>`;
 }
 function frame(ctx,brand,title,description,body,startSection){
  const head=ctx.head(title,brand).replace('</head>','<link rel="stylesheet" href="development-updates.css"></head>');
@@ -95,11 +95,11 @@ export function createDevelopmentUpdatesPages(ctx,{assetRoot,route={index:indexR
  const pages=[],catalog={ateles:{},neotoma:{}};
  for(const brand of ['ateles','neotoma']){
   const fixtures=developmentFixtures(brand,options),index=safeRoute(route.index(brand));
-  const cards=fixtures.map(f=>`<li class="dev-update-card dev-update-card-${f.slug}">${f.cover?'<img src="'+escapeHtml(validateDevelopmentMedia(f.cover,assetRoot).src)+'" alt="Development sample editorial illustration" loading="lazy">':''}<div><p class="dev-update-kicker">Development sample · ${escapeHtml(f.format)}</p><h2><a href="${safeRoute(route.detail(brand,f.slug))}">${escapeHtml(f.title)}</a></h2><p>${escapeHtml(f.summary)}</p></div></li>`).join('');
-  const body=`<main id="main" class="dev-updates" data-development-updates><div class="topic-heading"><p class="eyebrow">${brandName(brand)}</p><h1>Updates</h1><p class="intro">Product notes, explanations and media.</p></div><p class="dev-updates-banner">Development samples · synthetic content · private preview</p><ol class="dev-updates-grid">${cards}</ol></main>`;
+  const cards=fixtures.map(f=>`<li class="dev-update-card dev-update-card-${f.slug}">${f.cover?'<img src="'+escapeHtml(validateDevelopmentMedia(f.cover,assetRoot).src)+'" alt="Development sample editorial illustration" loading="lazy">':''}<div><p class="dev-update-kicker">Illustrative example · ${escapeHtml(f.format)}</p><h2><a href="${safeRoute(route.detail(brand,f.slug))}">${escapeHtml(f.title)}</a></h2><p>${escapeHtml(f.summary)}</p></div></li>`).join('');
+  const body=`<main id="main" class="dev-updates" data-development-updates><div class="topic-heading"><p class="eyebrow">${brandName(brand)}</p><h1>Updates</h1><p class="intro">Product notes, explanations and media.</p></div><ol class="dev-updates-grid">${cards}</ol></main>`;
   pages.push([index,frame(ctx,brand,brandName(brand)+' — Updates development samples','Development-only synthetic examples of Updates formats.',body,renderStartSection)]);
   catalog[brand].updates=['Updates development samples','Development-only synthetic examples of Updates formats.'];
-  for(const f of fixtures){const key='update-dev-'+f.slug;catalog[brand][key]=['Development sample: '+f.title,'Synthetic development sample. '+f.summary];const detail=renderDevelopmentDetail(f,{assetRoot,...options}).replace('<article>',`<p class="dev-update-back"><a href="${index}">Updates</a></p><article>`);pages.push([safeRoute(route.detail(brand,f.slug)),frame(ctx,brand,'Development sample: '+f.title+' — '+brandName(brand),catalog[brand][key][1],detail,renderStartSection)]);}
+  for(const f of fixtures){const key='update-dev-'+f.slug;catalog[brand][key]=[f.title,'Illustrative example. '+f.summary];const detail=renderDevelopmentDetail(f,{assetRoot,...options});pages.push([safeRoute(route.detail(brand,f.slug)),frame(ctx,brand,f.title+' — '+brandName(brand),catalog[brand][key][1],detail,renderStartSection)]);}
  }
  return {pages,catalog,ownedOutputs:[...pages.map(([r])=>r),...Object.keys(expected).map(n=>mediaPrefix+n),'development-updates.css']};
 }

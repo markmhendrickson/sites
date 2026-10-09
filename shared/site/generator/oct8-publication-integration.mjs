@@ -8,6 +8,7 @@ import {renderEmailDemo,renderMiniToolScene,emailRequests} from './harness/email
 import {readFileSync,existsSync,copyFileSync} from 'node:fs';
 import {resolve} from 'node:path';
 import {createDevelopmentUpdatesPages,copyDevelopmentAssets,assertNoDevelopmentOutputs} from './development-updates.mjs';
+import {applyOct9Ui} from './oct9-ui.mjs';
 const home=b=>`tension-trace-${b}-2026-10-06-r4.html`;
 const route=(b,k)=>`tension-trace-${b}-${k}-2026-10-06-r4.html`;
 const descriptors={
@@ -125,5 +126,5 @@ export function completeOct8Page(r,html){
   metadata={title,description:text};
  }
  const image=verifiedBrandPhoto(b,'dist');
- return applyPageMetadata(html,{...metadata,image,mode:'preview'}).replaceAll('\r','&#13;');
+ return applyOct9Ui(r,applyPageMetadata(html,{...metadata,image,mode:'preview'})).replaceAll('\r','&#13;');
 }
