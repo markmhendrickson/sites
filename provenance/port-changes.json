@@ -62,13 +62,13 @@
   {
     "path": "shared/site/generator/technical-ia.mjs",
     "before": "b83d88cb625bbfca655552fec6cfa472b49935118db12f94d96c89cdacb22d8e",
-    "after": "1a5711d8c274fa249bf50d07b2e29df55121b413101143ffb8435f284a4365be",
+    "after": "5e7b3a63024a12f29eda4e211db9abe009b7c4183083a1513bb585c692c40378",
     "reason": "Implement reviewed site interaction, technical journey and metadata refinements"
   },
   {
     "path": "shared/site/generator/technical-ia.test.mjs",
     "before": "d211ffa8917e2111ef23b29de605ef3b0e88b2933dfa4063f13e4b71fcd4ce55",
-    "after": "61c8eb5a66f9d0f1c96d1c8427ad128744f79a18972c51ee4e77b453619898fe",
+    "after": "171e7a4c40ab1ee03262c64f9cca6daf386b3f4b58448d4a00f61837f8f4b26b",
     "reason": "Validate 64 product routes including three sourced Ateles comparison details"
   },
   {
@@ -92,7 +92,7 @@
   {
     "path": "shared/site/generator/dist/technical-ia.css",
     "before": "ac82934af78223dd31229429775bf633ce61278863f598436c7ee9c863eafaf2",
-    "after": "abb829cc131df2bd8303caba7608f7ab47c18ae6878540a6c3dd7a76ca6ecf7e",
+    "after": "0d630c6d01565c0c31ce6424d068ec5c8710cae6f5aafd60ef14e4939ff3e86e",
     "reason": "Implement reviewed site interaction, technical journey and metadata refinements"
   },
   {
