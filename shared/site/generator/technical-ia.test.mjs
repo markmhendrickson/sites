@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {fileURLToPath} from 'node:url';
 import {inspect,proveMutants,copyContract} from './integration-regression.mjs';
 import {route,routeContract} from './technical-ia.mjs';
+import './technical-journey.test.mjs';
 const root=fileURLToPath(new URL('.',import.meta.url));
 test('current technical pages, email labels, native adoption, metadata and all local destinations',()=>{
  const result=inspect(root);assert.deepEqual(result.issues,[]);
