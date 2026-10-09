@@ -1,0 +1,45 @@
+.comparison-inventory{max-width:80rem;margin-inline:auto;color:var(--ink);line-height:1.65}
+.comparison-inventory .topic-heading{padding-bottom:3rem}
+.comparison-inventory .topic-heading h1{max-width:18ch}
+.comparison-approaches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;padding:0 var(--pad) 4rem}
+.comparison-approach{min-width:0;border:1px solid var(--line);background:var(--bg);display:flex;flex-direction:column;overflow:hidden}
+.comparison-photo{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
+.comparison-approach-copy{padding:1.6rem;display:flex;flex-direction:column;flex:1;min-width:0}
+.comparison-approach h2{font-size:clamp(1.8rem,3vw,2.55rem);line-height:1.1;margin:.6rem 0 1rem}
+.comparison-approach p{margin:0 0 1rem}
+.comparison-representatives{color:var(--muted);font-size:.875rem}
+.comparison-question{font-weight:600;padding-left:1rem;border-left:2px solid var(--accent);margin-top:1rem}
+.comparison-approach .textlink{margin-top:auto;align-self:flex-start;padding-top:.5rem}
+.comparison-layer-map{display:flex;align-items:center;justify-content:center;gap:1rem;aspect-ratio:3/2;padding:2rem;background:var(--wash);color:var(--brand-primary,var(--ink))}
+.comparison-layer-map span{display:grid;justify-items:center;gap:1rem;font-size:.8rem;letter-spacing:.05em;text-transform:uppercase}
+.comparison-node{display:block;width:3.4rem;height:3.4rem;border:2px solid currentColor;background:var(--bg);box-shadow:.3rem .3rem 0 color-mix(in srgb,currentColor 15%,transparent)}
+.comparison-layer-organization-platforms .node-0{border-radius:50%}.comparison-layer-organization-platforms .node-1{transform:rotate(8deg)}
+.comparison-layer-durable-automation .node-1{border-style:dashed;border-radius:50%}.comparison-layer-durable-automation .node-2{border-radius:0 50% 50% 0}
+.comparison-layer-enterprise-platforms .node-1{clip-path:polygon(0 0,100% 0,100% 70%,50% 100%,0 70%)}
+.comparison-own-contract,.comparison-fit,.comparison-checks,.comparison-components{padding:clamp(2rem,5vw,4rem) var(--pad);border-top:1px solid var(--line)}
+.comparison-own-contract{background:var(--wash)}
+.comparison-own-contract h2,.comparison-components>h2,.comparison-checks h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;margin:.8rem 0 1.2rem;max-width:24ch}
+.comparison-own-contract p,.comparison-components>p,.comparison-checks>p{max-width:54rem}
+.comparison-source{display:inline-block;font-size:.875rem;color:var(--muted);text-underline-offset:.25em;margin-top:.8rem}
+.comparison-own-contract>.textlink{display:block;margin-top:1.5rem}
+.comparison-source-note{padding:1.5rem var(--pad) 3rem;color:var(--muted);font-size:.8rem;max-width:65rem}
+.comparison-family{padding:3rem var(--pad);border-top:1px solid var(--line)}
+.comparison-components .comparison-family{padding:2rem 0}
+.comparison-family-heading{max-width:54rem;margin-bottom:2rem}
+.comparison-family h2{font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.15;margin:.6rem 0 1rem}
+.comparison-offerings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.comparison-offering{padding:1.4rem;border:1px solid var(--line);min-width:0;background:var(--bg)}
+.comparison-offering h3{font-family:inherit;font-size:1.2rem;line-height:1.3;margin:.5rem 0 .8rem}
+.comparison-offering h3 a{color:inherit;text-decoration:none}
+.comparison-evidence{font-size:.75rem;font-weight:600;letter-spacing:.035em;text-transform:uppercase;color:var(--accent);margin:0}
+.comparison-offering p{margin-bottom:0}
+.comparison-fit{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem}
+.comparison-fit h2{font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.15;margin:.8rem 0 1.2rem}
+.comparison-replacement{padding:1.5rem;border-left:2px solid var(--accent);background:var(--wash)}
+.comparison-replacement h3{margin-top:0}
+.comparison-checks li+li{margin-top:1rem}
+.comparison-checks ol{max-width:54rem;padding-left:1.4rem}
+.comparison-components nav{display:flex;flex-wrap:wrap;gap:1rem 2rem;margin-top:1.5rem}
+.comparison-inventory a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.comparison-inventory p,.comparison-inventory h2,.comparison-inventory h3{overflow-wrap:anywhere}
+@media(max-width:760px){.comparison-approaches,.comparison-offerings,.comparison-fit{grid-template-columns:1fr}.comparison-fit{gap:1.5rem}.comparison-layer-map{padding:1.25rem;gap:.8rem}.comparison-node{width:2.8rem;height:2.8rem}}
