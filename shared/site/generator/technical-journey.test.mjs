@@ -1,6 +1,5 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {execFileSync} from 'node:child_process';
 import {readFileSync} from 'node:fs';
 import {visitorPages,route,interfaceTabs,interfaceSourcePin} from './technical-ia.mjs';
 import {enhanceInterfaceTabs} from './dist/technical-tabs.js';
@@ -25,10 +24,11 @@ function checkJourney(pages){
  assert.match(get('self-host'),/installing the plugin alone does not install or host/);
 }
 test('technical journey has product language, visual paths and supported setup choices',()=>checkJourney(visitorPages(ctx)));
-test('RED proof: original generator fails the new journey contract',async()=>{
- const baseline=execFileSync('git',['show','origin/main:shared/site/generator/technical-ia.mjs'],{encoding:'utf8'});
- const old=await import('data:text/javascript;base64,'+Buffer.from(baseline).toString('base64'));
- assert.throws(()=>checkJourney(old.visitorPages(ctx)),/Explore how Neotoma keeps context usable/);
+test('RED proof: restoring the generic heading fails the journey contract without git history',()=>{
+ const pages=visitorPages(ctx);
+ const mutant=pages.map(([path,html])=>[path,path===route('neotoma','explore')?html.replace('Explore how Neotoma keeps context usable.','Find a useful path through Neotoma.'):html]);
+ assert.throws(()=>checkJourney(mutant),/Explore how Neotoma keeps context usable/);
+ checkJourney(pages);
 });
 test('CLI/API equivalents pin contract source and keep credentials as environment references',()=>{
  assert.equal(interfaceSourcePin.length,40);
