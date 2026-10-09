@@ -1,13 +1,21 @@
-import {cpSync,mkdirSync,rmSync,writeFileSync} from 'node:fs';
+import {cpSync,mkdirSync,rmSync,writeFileSync,readFileSync,readdirSync} from 'node:fs';
 import {resolve} from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {root,contained} from './paths.mjs';
+import {applyReviewMetadata} from '../shared/site/generator/review-metadata.mjs';
 
 const build=spawnSync(process.execPath,['scripts/build.mjs','all'],{cwd:root,stdio:'inherit'});
 if(build.status!==0)process.exit(build.status||1);
 const out=contained(root,'.build/pages');
 rmSync(out,{recursive:true,force:true});mkdirSync(out,{recursive:true});
 for(const brand of ['ateles','neotoma'])cpSync(resolve(root,'.build',brand),resolve(out,brand),{recursive:true});
+for(const brand of ['ateles','neotoma']){
+ const folder=resolve(out,brand);
+ for(const route of readdirSync(folder).filter(name=>name.endsWith('.html'))){
+  const file=resolve(folder,route);
+  writeFileSync(file,applyReviewMetadata(readFileSync(file,'utf8'),{brand,assetRoot:folder,baseUrl:process.env.SITE_REVIEW_ORIGIN}));
+ }
+}
 writeFileSync(resolve(out,'.nojekyll'),'');
 writeFileSync(resolve(out,'robots.txt'),'User-agent: *\nDisallow: /\n');
 writeFileSync(resolve(out,'index.html'),`<!doctype html>

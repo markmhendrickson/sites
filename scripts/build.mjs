@@ -3,6 +3,7 @@ import {resolve,dirname} from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {root,generator,contained} from './paths.mjs';
 const requested=process.argv[2]||'all';
+for(const asset of ['managed-setup.css','managed-inquiry.mjs'])copyFileSync(resolve(generator,asset),resolve(generator,'dist',asset));
 if(!['all','ateles','neotoma','company'].includes(requested))throw Error('Unknown app');
 if(requested==='company')throw Error('Company identity and deployment are intentionally unconfigured');
 const child=spawnSync(process.execPath,['build-tension-trace-r3.mjs','--r4','--development-updates','--public-sites'],{cwd:generator,encoding:'utf8',env:{...process.env,PUBLIC_MANAGED_MEET_URL:'',PUBLIC_WAITLIST_MAILTO:''}});
