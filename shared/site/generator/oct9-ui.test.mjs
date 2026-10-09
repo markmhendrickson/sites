@@ -24,6 +24,7 @@ test('evaluation prompt is copyable with authorized-context boundaries and quest
  const html=applyOct9Ui('tension-trace-neotoma-2026-10-06-r4.html','<head></head><section class="agent-evaluate"><p>Old prompt</p><button data-evaluate-copy>Copy</button></section>');
  assert.match(html,/data-evaluation-prompt/);
  assert.match(html,/already explicitly authorized/);
+ assert.match(html,/If I have already explicitly authorized your access/);
  assert.match(html,/recent emails and agent conversations/);
  assert.match(html,/Otherwise, ask me/);
  assert.match(html,/Do not request new access or send messages/);

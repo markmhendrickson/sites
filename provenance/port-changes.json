@@ -6,16 +6,70 @@
     "reason": "Exclude neutral private-review hub and logo studies from public product builds"
   },
   {
-    "path": "shared/site/generator/technical-ia.test.mjs",
-    "before": "d211ffa8917e2111ef23b29de605ef3b0e88b2933dfa4063f13e4b71fcd4ce55",
-    "after": "a16f50974f1f24e886586a21dc71588d87dc5bcec76133cc3f624beda8fa6549",
-    "reason": "Assert the public route inventory without two neutral review routes"
+    "path": "shared/site/generator/check-landing-feedback.mjs",
+    "before": "b58342eee8e57ad77e0af4d770581f93de98e6b8eb362e1a16febd1287d35716",
+    "after": "9cc39d82ce23c7482d5778f6b7d659b2505daf396b662e9bc9cdf637c4e4531a",
+    "reason": "Update the brand-specific landing assertion"
+  },
+  {
+    "path": "shared/site/generator/development-updates.css",
+    "before": "089dac5178b4a189c9fc92c4e60edd0322d34f7f0c61e6e65b0881cd3cbec69d",
+    "after": "d546bad0232ca1c9f83c4c23ce68fe82eca371d1fba8419644dc95c62c679695",
+    "reason": "Implement reviewed site interaction, technical journey and metadata refinements"
+  },
+  {
+    "path": "shared/site/generator/development-updates.mjs",
+    "before": "031589564d91921faa9c29164a27bac75be8c26e7de427cf8e5f27341cd13dfc",
+    "after": "df277f590a3e130160865a3b69e8f8d2250f0ed062671075b30e5d476a75b2f6",
+    "reason": "Implement reviewed site interaction, technical journey and metadata refinements"
+  },
+  {
+    "path": "shared/site/generator/development-updates.test.mjs",
+    "before": "9f65e1ae4f6f6f59a6d4795a3d9a9b9793d1c3273195e0c8c6551b3d53143a3a",
+    "after": "08f486cd11284dbb1ee869433d784a5a5fccf81096454b24f190ed9b3bf2caeb",
+    "reason": "Implement reviewed site interaction, technical journey and metadata refinements"
   },
   {
     "path": "shared/site/generator/integration-regression.mjs",
     "before": "5f7df56f0555e78450a649b39b5d139a14eac714a3866fee81b844b6026e5aad",
     "after": "9ca4f818a06e94faa6cada8c345245e467a4c371d4c51500078c3f93de4d2d0f",
     "reason": "Validate the 61 product routes after excluding neutral private-review pages"
+  },
+  {
+    "path": "shared/site/generator/metadata-catalog.mjs",
+    "before": "97a19892d34c7de8833ae3ffac88c7c5f33ddfe4aeeab1237b4aa3c73eb9f9ff",
+    "after": "93065f003bce6800a76b11fde8d85c088236a9a435cd5de004e4315c78bc412e",
+    "reason": "Use the imperative tagline in Neotoma home metadata"
+  },
+  {
+    "path": "shared/site/generator/oct8-publication-integration.mjs",
+    "before": "9561dac9cfe1f16520eb915d7fd6820791a173b14570a051e040470a3105ca00",
+    "after": "efaa4c26217a66765bfd99927d98d50cc9f57528c06515eeb1ddad87d7c8ae33",
+    "reason": "Implement reviewed site interaction, technical journey and metadata refinements"
+  },
+  {
+    "path": "shared/site/generator/publication.mjs",
+    "before": "9fb76ff75642ce59fa2ad455a90a5051e1f688b5ef8efb72eb47bae8eed8bb63",
+    "after": "7e3fe577387366c9598748adae9d7a15d25b28852a1d87b1c1b80036fdd37e69",
+    "reason": "Implement reviewed site interaction, technical journey and metadata refinements"
+  },
+  {
+    "path": "shared/site/generator/source-contracts.mjs",
+    "before": "713cb99b9e84b08a71e7c1236b19660dd0800a9ee83dd701d65272b818cedd79",
+    "after": "2588c03282e47ce8894bc214cfdd3be4632feb413ec6259d8a5773d4351c0263",
+    "reason": "Implement reviewed site interaction, technical journey and metadata refinements"
+  },
+  {
+    "path": "shared/site/generator/technical-ia.mjs",
+    "before": "b83d88cb625bbfca655552fec6cfa472b49935118db12f94d96c89cdacb22d8e",
+    "after": "1a5711d8c274fa249bf50d07b2e29df55121b413101143ffb8435f284a4365be",
+    "reason": "Implement reviewed site interaction, technical journey and metadata refinements"
+  },
+  {
+    "path": "shared/site/generator/technical-ia.test.mjs",
+    "before": "d211ffa8917e2111ef23b29de605ef3b0e88b2933dfa4063f13e4b71fcd4ce55",
+    "after": "401175e9e2d70445b97aba3e7a88743e45ea01086cd46b59a305324e2281a382",
+    "reason": "Assert the public route inventory without two neutral review routes"
   },
   {
     "path": "shared/site/generator/tension-trace-r3-data.mjs",
@@ -30,15 +84,15 @@
     "reason": "Use the selected imperative tagline in the Neotoma footer"
   },
   {
-    "path": "shared/site/generator/metadata-catalog.mjs",
-    "before": "97a19892d34c7de8833ae3ffac88c7c5f33ddfe4aeeab1237b4aa3c73eb9f9ff",
-    "after": "93065f003bce6800a76b11fde8d85c088236a9a435cd5de004e4315c78bc412e",
-    "reason": "Use the imperative tagline in Neotoma home metadata"
+    "path": "shared/site/generator/dist/development-updates.css",
+    "before": "089dac5178b4a189c9fc92c4e60edd0322d34f7f0c61e6e65b0881cd3cbec69d",
+    "after": "d546bad0232ca1c9f83c4c23ce68fe82eca371d1fba8419644dc95c62c679695",
+    "reason": "Implement reviewed site interaction, technical journey and metadata refinements"
   },
   {
-    "path": "shared/site/generator/check-landing-feedback.mjs",
-    "before": "b58342eee8e57ad77e0af4d770581f93de98e6b8eb362e1a16febd1287d35716",
-    "after": "9cc39d82ce23c7482d5778f6b7d659b2505daf396b662e9bc9cdf637c4e4531a",
-    "reason": "Update the brand-specific landing assertion"
+    "path": "shared/site/generator/dist/technical-ia.css",
+    "before": "ac82934af78223dd31229429775bf633ce61278863f598436c7ee9c863eafaf2",
+    "after": "abb829cc131df2bd8303caba7608f7ab47c18ae6878540a6c3dd7a76ca6ecf7e",
+    "reason": "Implement reviewed site interaction, technical journey and metadata refinements"
   }
 ]

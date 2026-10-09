@@ -5,7 +5,7 @@ const feedback='<span class="copy-feedback sr-only" role="status" aria-live="pol
 const escape=text=>text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 export function evaluationPrompt(brand){
  const product=brand==='neotoma'?'Neotoma':'Ateles';
- return `Visit this website and tell me if ${product} fits my workflow. Explain its benefits, limits, and current readiness. If you have already explicitly authorized access to my recent emails and agent conversations, use a small relevant sample to identify recurring workflows. Otherwise, ask me about my tools, repeated tasks, and where context gets lost. Say whether my existing tools are enough and suggest one bounded first workflow. Do not request new access or send messages.`;
+ return `Visit this website and tell me if ${product} fits my workflow. Explain its benefits, limits, and current readiness. If I have already explicitly authorized your access to my recent emails and agent conversations, use a small relevant sample to identify recurring workflows. Otherwise, ask me about my tools, repeated tasks, and where context gets lost. Say whether my existing tools are enough and suggest one bounded first workflow. Do not request new access or send messages.`;
 }
 // Keep existing interactive copy containers intact. Every other preformatted
 // example adopts the same npm component and existing copy-controller contract.
