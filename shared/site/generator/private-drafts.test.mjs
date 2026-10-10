@@ -35,7 +35,7 @@ test('both brands use actual article shell, exact text/markup, explicit provenan
     const html = built.files[path].toString(), article = main(html);
     assert.match(article, /Draft · unpublished/); assert.match(article, /Synthetic article/); assert.match(article, /Synthetic review excerpt\./);
     assert.match(article, /<strong>strong<\/strong>/); assert.match(article, /<em>emphasis<\/em>/);
-    assert.match(article, /<h2>First topic<\/h2>/); assert.match(article, /<h2>Second topic<\/h2>/); assert.match(article, /<h3>Nested topic<\/h3>/);
+    assert.match(article, /<h2>First topic<\/h2>/); assert.match(article, /<h3>Second topic<\/h3>/); assert.match(article, /<h4>Nested topic<\/h4>/);
     assert.match(article, /<ul><li>First item<\/li><li>Second item<\/li><\/ul>/); assert.match(article, /<ol start="1">/);
     assert.match(article, /href="https:\/\/example.test\/source"/); assert.match(article, /&lt;img src=x onerror=alert\(1\)&gt;/); assert.doesNotMatch(article, /<img|<script/);
     assert.equal((article.match(/<h1>/g) ?? []).length, 1); assert.match(article, new RegExp(projectionDigest(f.p)));
@@ -149,6 +149,44 @@ test('blog_post explicit draft projects summary/content and refuses contradictor
   const f = fixture({sourceType:'blog_post'}); assert.equal((await prepare(f)).projections[0].body, body);
   f.entity.snapshot.published = true; f.receipt.selections[0].source_digest = sourceDigest(f.entity); f.approvedReceiptDigest = projectionDigest(f.receipt);
   await assert.rejects(prepare(f), /unpublished_draft_required/);
+});
+
+test('body heading hierarchy shifts as one tree only for a level-one root', () => {
+  assert.equal(renderDraftMarkdown('# Parent\n## Child\n##### Deepest'), '<h2>Parent</h2>\n<h3>Child</h3>\n<h6>Deepest</h6>');
+  assert.equal(renderDraftMarkdown('## Parent\n### Child\n###### Deepest'), '<h2>Parent</h2>\n<h3>Child</h3>\n<h6>Deepest</h6>');
+  assert.throws(() => renderDraftMarkdown('# Parent\n###### Beyond supported hierarchy'), /unsupported_draft_heading_depth/);
+});
+
+test('balanced and escaped source-link parentheses preserve destination and visible label', () => {
+  for (const markdown of ['[Source](https://example.test/topic_(detail))','[Source](https://example.test/topic_\\(detail\\))']) {
+    assert.equal(renderDraftMarkdown(markdown), '<p><a href="https://example.test/topic_(detail)" rel="noreferrer">Source</a></p>');
+  }
+  assert.equal(renderDraftMarkdown('[Nested](https://example.test/a_(b_(c)))'), '<p><a href="https://example.test/a_(b_(c))" rel="noreferrer">Nested</a></p>');
+  assert.throws(() => renderDraftMarkdown('[Source](https://example.test/topic_(detail)'), /malformed_draft_link/);
+});
+
+test('intraword underscores remain literal while standalone emphasis remains semantic', () => {
+  assert.equal(renderDraftMarkdown('draft_in_progress and _emphasis_ and __strong__'), '<p>draft_in_progress and <em>emphasis</em> and <strong>strong</strong></p>');
+});
+
+test('ordinary article slugs emit identical library and natural CLI routes/bytes; private markers refuse', async () => {
+  for (const slug of ['independent-synthetic','current-facts','agent-review','persistent-state','source-backed-facts']) {
+    const f = fixture(); f.p.slug = slug; f.receipt.selections[0].slug = slug;
+    f.receipt.selections[0].content_digest = projectionDigest(f.p); f.approvedReceiptDigest = projectionDigest(f.receipt);
+    const expected = capturePrivatePackage(buildPrivateDraftPackage(await prepare(f))), path = 'neotoma/draft/' + slug + '/index.html';
+    assert.ok(Object.hasOwn(expected.files, path));
+    const root = temp(), receiptPath = join(root,'selection.json'); writeFileSync(receiptPath,JSON.stringify(f.receipt));
+    const report = await runPrivateDraftCLI(['--receipt',receiptPath,'--site-root',siteRoot,'--out',join(root,'prepared')], {PRIVATE_DRAFT_APPROVED_RECEIPT_DIGEST:f.approvedReceiptDigest}, {fetchSnapshot:async () => f.entity});
+    assert.deepEqual(readFileSync(join(report.output,path)), expected.files[path]);
+  }
+  for (const slug of ['ent-private-id','obs-private-id','source-' + 'a'.repeat(24),'draft-ent-private-id','../escape','escaped%2froute']) {
+    const f = fixture(); f.p.slug = slug; f.receipt.selections[0].slug = slug;
+    f.receipt.selections[0].content_digest = projectionDigest(f.p); f.approvedReceiptDigest = projectionDigest(f.receipt);
+    const root = temp(), receiptPath = join(root,'selection.json'); writeFileSync(receiptPath,JSON.stringify(f.receipt));
+    await assert.rejects(prepare(f), /unsafe_draft_slug/);
+    await assert.rejects(runPrivateDraftCLI(['--receipt',receiptPath,'--site-root',siteRoot,'--out',join(root,'prepared')], {PRIVATE_DRAFT_APPROVED_RECEIPT_DIGEST:f.approvedReceiptDigest}, {fetchSnapshot:async () => f.entity}), /unsafe_draft_slug/);
+    assert.equal(existsSync(join(root,'prepared')), false);
+  }
 });
 
 test('post draft_in_progress requires exact unpublished false and refuses contradictory or unknown status', async () => {

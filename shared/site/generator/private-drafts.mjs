@@ -14,7 +14,7 @@ const text = (x, max) => {
   assertSafePublicText(x); return x;
 };
 export function draftSlug(value) {
-  check(typeof value === 'string' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value) && value.length <= 100 && !/(?:ent|obs|source)-/.test(value), 'unsafe_draft_slug');
+  check(typeof value === 'string' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value) && value.length <= 100 && !/(?:^|-)(?:ent|obs)-|(?:^|-)source-(?:private(?:-|$)|[a-f0-9]{12,}(?:-|$))/.test(value), 'unsafe_draft_slug');
   return value;
 }
 export function draftAssetPath(value) {
@@ -35,10 +35,21 @@ export function validatePrivateProjection(p, expectedDigest) {
   renderDraftMarkdown(p.body); return p;
 }
 function safeLink(url) {
-  check(!/[\s\u0000-\u001f\u007f]/.test(url), 'unsafe_draft_link');
+  check(!/[\s\\\u0000-\u001f\u007f]/.test(url), 'unsafe_draft_link');
   let u; try { u = new URL(url); } catch { throw Error('unsafe_draft_link'); }
   check(u.protocol === 'https:' && !u.username && !u.password, 'unsafe_draft_link');
   assertSafePublicText(url); return url;
+}
+function linkDestination(input, start) {
+  let url = '', balance = 1;
+  for (let i = start; i < input.length; i++) {
+    const c = input[i];
+    if (c === '\\' && /[()\\]/.test(input[i + 1] ?? '')) { url += input[++i]; continue; }
+    if (c === '(') { balance++; check(balance <= 16, 'markdown_too_deep'); }
+    if (c === ')') { balance--; if (balance === 0) return {url, close:i}; check(balance > 0, 'malformed_draft_link'); }
+    url += c;
+  }
+  throw Error('malformed_draft_link');
 }
 function inline(input, depth = 0) {
   check(depth < 12, 'markdown_too_deep');
@@ -46,17 +57,20 @@ function inline(input, depth = 0) {
   while (i < input.length) {
     if (input[i] === '\\' && i + 1 < input.length) { result += escapeHtml(input[i + 1]); i += 2; continue; }
     if (input[i] === '[') {
-      const end = input.indexOf('](', i + 1), close = end < 0 ? -1 : input.indexOf(')', end + 2);
-      if (end >= 0 && close >= 0) {
-        const label = input.slice(i + 1, end), url = input.slice(end + 2, close);
+      const end = input.indexOf('](', i + 1);
+      if (end >= 0) {
+        const label = input.slice(i + 1, end), {url, close} = linkDestination(input, end + 2);
         check(label.length > 0 && !label.includes('['), 'unsupported_draft_link');
         result += '<a href="' + escapeHtml(safeLink(url)) + '" rel="noreferrer">' + inline(label, depth + 1) + '</a>';
         i = close + 1; continue;
       }
     }
-    const marker = input.startsWith('**', i) ? '**' : input[i] === '*' ? '*' : input.startsWith('__', i) ? '__' : input[i] === '_' ? '_' : input[i] === '`' ? '`' : null;
+    let marker = input.startsWith('**', i) ? '**' : input[i] === '*' ? '*' : input.startsWith('__', i) ? '__' : input[i] === '_' ? '_' : input[i] === '`' ? '`' : null;
+    const word = c => /[\p{L}\p{N}_]/u.test(c ?? '');
+    if (marker?.startsWith('_') && (word(input[i - 1]) || /\s/.test(input[i + marker.length] ?? ''))) marker = null;
     if (marker) {
-      const end = input.indexOf(marker, i + marker.length);
+      let end = input.indexOf(marker, i + marker.length);
+      while (marker.startsWith('_') && end >= 0 && (word(input[end + marker.length]) || /\s/.test(input[end - 1] ?? ''))) end = input.indexOf(marker, end + marker.length);
       if (end > i + marker.length) {
         const tag = marker === '`' ? 'code' : marker.length === 2 ? 'strong' : 'em';
         const value = input.slice(i + marker.length, end);
@@ -73,10 +87,13 @@ export function renderDraftMarkdown(body) {
   text(body, 100000);
   check(!/!\[[^\]]*\]\(/.test(body), 'unsupported_draft_embed');
   const lines = body.replace(/\r\n/g, '\n').split('\n'), nodes = [];
+  const headingDepths = lines.map(line => /^(#{1,6}) +(.+)$/.exec(line)?.[1].length).filter(Boolean);
+  const headingShift = Math.min(...headingDepths) === 1 ? 1 : 0;
+  check(!headingShift || !headingDepths.includes(6), 'unsupported_draft_heading_depth');
   for (let i = 0; i < lines.length;) {
     if (!lines[i].trim()) { i++; continue; }
     const heading = /^(#{1,6}) +(.+)$/.exec(lines[i]);
-    if (heading) { const level = Math.max(heading[1].length, 2); nodes.push('<h' + level + '>' + inline(heading[2]) + '</h' + level + '>'); i++; continue; }
+    if (heading) { const level = heading[1].length + headingShift; nodes.push('<h' + level + '>' + inline(heading[2]) + '</h' + level + '>'); i++; continue; }
     const item = /^(?:([-+*])|(\d+)\.) +(.+)$/.exec(lines[i]);
     if (item) {
       const ordered = Boolean(item[2]), items = [], start = ordered ? Number(item[2]) : null;

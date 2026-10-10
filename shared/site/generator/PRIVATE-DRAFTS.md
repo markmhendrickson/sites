@@ -93,7 +93,12 @@ Failed refreshes leave earlier verified packages intact; nothing changes the
 host's active snapshot. Root activation/rollback requires its established guarded
 workflow. CLI refusals return stable redacted categories and `refreshed:false`.
 
-Markdown supports headings (body `#` becomes `h2`; `##` stays `h2`, etc.),
+Markdown supports headings (a body tree rooted at `#` shifts every level by one;
+a tree rooted at `##` or deeper retains its supplied depths). A `#`-rooted tree
+containing `######` explicitly refuses rather than flattening levels or emitting
+an invalid `h7`. Balanced or escaped link parentheses preserve the complete URL;
+malformed destinations refuse. Underscores within words remain literal.
+Other supported constructs are
 paragraphs, emphasis, code spans, ordered/unordered flat lists and credential-free
 HTTPS links. Raw HTML is escaped text. Images/embeds reject. Unsupported block
 constructs stay escaped literal text. Links never fetch resources. The page has
