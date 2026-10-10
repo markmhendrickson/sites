@@ -115,7 +115,7 @@ export function projectUnpublishedSource(entity, selection) {
   check(object(entity) && object(entity.snapshot) && entity.entity_id === selection.source_id && entity.entity_type === selection.source_type, 'wrong_draft_source');
   check(entity.last_observation_at === selection.observed_at && sourceDigest(entity) === selection.source_digest, 'stale_draft_source');
   const s = entity.snapshot;
-  check(entity.entity_type === 'post' ? s.published === false && (s.status === undefined || s.status === 'draft') : s.status === 'draft' && (s.published === undefined || s.published === false), 'unpublished_draft_required');
+  check(entity.entity_type === 'post' ? s.published === false && (s.status === undefined || ['draft','draft_in_progress'].includes(s.status)) : s.status === 'draft' && (s.published === undefined || s.published === false), 'unpublished_draft_required');
   check(s.visibility === undefined || s.visibility === 'private', 'private_draft_source_required');
   const p = {version:1, mode:'private_draft', brand:selection.brand, slug:selection.slug, title:s.title, excerpt:entity.entity_type === 'post' ? s.excerpt : s.summary, body:entity.entity_type === 'post' ? s.body : s.content, published:false, revision:selection.revision};
   return validatePrivateProjection(p, selection.content_digest);

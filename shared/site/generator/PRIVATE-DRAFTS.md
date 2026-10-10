@@ -56,7 +56,7 @@ trusted workflow; the CLI cannot mint that authority or verify hosting access.
 ```
 
 A `post` uses `title`, `excerpt`, `body` and requires `published === false`, with
-status absent or `draft`. A `blog_post` uses `title`, `summary`, `content` and
+status absent, `draft`, or `draft_in_progress`. A `blog_post` uses `title`, `summary`, `content` and
 requires `status === 'draft'`, with published absent or false. Visibility must
 be absent or private. Contradictory state rejects; no state is corrected.
 The full strings, including line endings, remain in the projection/digest;

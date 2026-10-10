@@ -151,6 +151,17 @@ test('blog_post explicit draft projects summary/content and refuses contradictor
   await assert.rejects(prepare(f), /unpublished_draft_required/);
 });
 
+test('post draft_in_progress requires exact unpublished false and refuses contradictory or unknown status', async () => {
+  const f = fixture({brand:'ateles'}); f.entity.snapshot.status = 'draft_in_progress';
+  f.receipt.selections[0].source_digest = sourceDigest(f.entity); f.approvedReceiptDigest = projectionDigest(f.receipt);
+  assert.equal((await prepare(f)).projections[0].published, false);
+  for (const patch of [{published:true},{published:undefined},{status:'published'},{status:'unknown'}]) {
+    const bad = structuredClone(f); Object.assign(bad.entity.snapshot, patch);
+    bad.receipt.selections[0].source_digest = sourceDigest(bad.entity); bad.approvedReceiptDigest = projectionDigest(bad.receipt);
+    await assert.rejects(prepare(bad), /unpublished_draft_required/);
+  }
+});
+
 async function mutant(replace) {
   let source = readFileSync(new URL('./private-drafts.mjs',import.meta.url),'utf8');
   for (const name of ['publication','reviewed-updates']) source = source.replace("'./" + name + ".mjs'", JSON.stringify(new URL('./' + name + '.mjs',import.meta.url).href));
