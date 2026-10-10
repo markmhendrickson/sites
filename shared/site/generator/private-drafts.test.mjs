@@ -168,14 +168,27 @@ async function mutant(replace) {
   source = replace(source); return import('data:text/javascript;base64,' + Buffer.from(source).toString('base64'));
 }
 test('RED state, digest and slug guard removal fail observable acceptance assertions', async () => {
-  const state = await mutant(s => s.replace("check(p.published === false, 'unpublished_draft_required');", ''));
-  const f = fixture(); f.p.published = true;
-  assert.throws(() => assert.throws(() => state.validatePrivateProjection(f.p,projectionDigest(f.p)), /unpublished/));
+  const sourceGuard = "check(entity.entity_type === 'post' ? s.published === false && (s.status === undefined || ['draft','draft_in_progress'].includes(s.status)) : s.status === 'draft' && (s.published === undefined || s.published === false), 'unpublished_draft_required');";
+  const state = await mutant(s => { assert.ok(s.includes(sourceGuard)); return s.replace(sourceGuard, ''); });
+  const f = fixture(); f.entity.snapshot.published = true;
+  f.receipt.selections[0].source_digest = sourceDigest(f.entity); f.approvedReceiptDigest = projectionDigest(f.receipt);
+  await assert.rejects(prepare(f), /unpublished_draft_required/);
+  const wrongState = await state.refreshPrivateDrafts({...f,layout,fetchSnapshot:async () => f.entity});
+  const mislabeled = state.buildPrivateDraftPackage(wrongState).files['neotoma/draft/synthetic-review/index.html'].toString();
+  assert.throws(() => assert.doesNotMatch(main(mislabeled), /Draft · unpublished/));
   const digest = await mutant(s => s.replace("check(hash(expectedDigest) && projectionDigest(p) === expectedDigest, 'changed_draft_projection');", ''));
-  assert.throws(() => assert.throws(() => digest.validatePrivateProjection(fixture().p,'0'.repeat(64)), /changed/));
-  const slug = await mutant(s => s.replace("draftSlug(p.slug); revision(p.revision);", 'revision(p.revision);'));
-  const escaped = fixture().p; escaped.slug = '../escape';
-  assert.throws(() => assert.throws(() => slug.validatePrivateProjection(escaped,projectionDigest(escaped)), /unsafe/));
+  const stale = fixture(); stale.entity.snapshot.title = 'Synthetic unapproved changed title';
+  stale.receipt.selections[0].source_digest = sourceDigest(stale.entity); stale.approvedReceiptDigest = projectionDigest(stale.receipt);
+  await assert.rejects(prepare(stale), /changed_draft_projection/);
+  const wrongDigest = await digest.refreshPrivateDrafts({...stale,layout,fetchSnapshot:async () => stale.entity});
+  const changedTitle = digest.buildPrivateDraftPackage(wrongDigest).files['neotoma/draft/synthetic-review/index.html'].toString();
+  assert.throws(() => assert.doesNotMatch(main(changedTitle), /Synthetic unapproved changed title/));
+  const slug = await mutant(s => s.replace('draftSlug(p.slug); revision(p.revision);','revision(p.revision);').replace('draftSlug(r.slug); revision(r.revision);','revision(r.revision);'));
+  const escaped = fixture(); escaped.p.slug = '../escape'; escaped.receipt.selections[0].slug = '../escape';
+  escaped.receipt.selections[0].content_digest = projectionDigest(escaped.p); escaped.approvedReceiptDigest = projectionDigest(escaped.receipt);
+  await assert.rejects(prepare(escaped), /unsafe_draft_slug/);
+  const unsafeRoute = await slug.refreshPrivateDrafts({...escaped,layout,fetchSnapshot:async () => escaped.entity});
+  assert.throws(() => assert.ok(Object.keys(slug.buildPrivateDraftPackage(unsafeRoute).files).every(path => !path.includes('/../'))));
 });
 test('RED escaping and layout digest guard removal fail visible safety/refusal assertions', async () => {
   const escaping = await mutant(s => s.replace('result += escapeHtml(input[i++]);', 'result += input[i++];'));
@@ -184,7 +197,8 @@ test('RED escaping and layout digest guard removal fail visible safety/refusal a
   const f = fixture(), changed = structuredClone(layout); changed.neotoma.assets['development-updates.css'][0] ^= 1;
   const result = await drift.refreshPrivateDrafts({...f,layout:changed,fetchSnapshot:async () => f.entity});
   const expected = capturePrivatePackage(buildPrivateDraftPackage(await prepare(f)));
-  assert.throws(() => assert.deepEqual(drift.capturePrivatePackage(drift.buildPrivateDraftPackage(result)).files, expected.files));
+  const changedAsset = drift.capturePrivatePackage(drift.buildPrivateDraftPackage(result)).files['site/neotoma/development-updates.css'];
+  assert.throws(() => assert.equal(bytesDigest(changedAsset), bytesDigest(expected.files['site/neotoma/development-updates.css'])));
   // The unmodified guard rejects this exact input before preparing any package.
   await assert.rejects(refreshPrivateDrafts({...f,layout:changed,fetchSnapshot:async () => f.entity}), /stale_draft_layout/);
 });
