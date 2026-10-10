@@ -1,6 +1,6 @@
-import test from 'node:test';
+import test, {afterEach} from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync, writeFileSync, mkdirSync, mkdtempSync, realpathSync, existsSync, readdirSync, symlinkSync} from 'node:fs';
+import {readFileSync, writeFileSync, mkdirSync, mkdtempSync, realpathSync, existsSync, readdirSync, symlinkSync, rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {resolve, join} from 'node:path';
 import {spawnSync} from 'node:child_process';
@@ -13,7 +13,9 @@ import {runPrivateDraftCLI} from './private-drafts-cli.mjs';
 const siteRoot = new URL('../../../.build/pages/', import.meta.url).pathname;
 const layout = readPrivateLayout(siteRoot), layoutDigest = privateLayoutDigest(layout);
 const now = '2026-10-10T10:00:00Z';
-const temp = () => mkdtempSync(join(realpathSync(tmpdir()), 'private-drafts-synthetic-'));
+const temporaryDirectories = [];
+const temp = () => { const path = mkdtempSync(join(realpathSync(tmpdir()), 'private-drafts-synthetic-')); temporaryDirectories.push(path); return path; };
+afterEach(() => { for (const path of temporaryDirectories.splice(0)) rmSync(path, {recursive:true, force:true}); });
 const body = 'Synthetic paragraph with **strong** and *emphasis*.\r\n\r\n# First topic\r\n## Second topic\r\n### Nested topic\r\n\r\n- First item\r\n- Second item\r\n\r\n1. Ordered one\r\n2. Ordered two\r\n\r\n[Source](https://example.test/source) and <img src=x onerror=alert(1)>.';
 function fixture({brand = 'neotoma', revision = 'synthetic-r1', sourceType = 'post', content = body} = {}) {
   const entity = {entity_id:'ent_' + (brand === 'ateles' ? 'a' : 'b').repeat(24), entity_type:sourceType, schema_version:'synthetic-v1', last_observation_at:now, snapshot:sourceType === 'post' ? {title:'Synthetic article', excerpt:'Synthetic review excerpt.', body:content, published:false, visibility:'private'} : {title:'Synthetic article', summary:'Synthetic review excerpt.', content, status:'draft'}};
@@ -23,6 +25,10 @@ function fixture({brand = 'neotoma', revision = 'synthetic-r1', sourceType = 'po
   return {entity, p, receipt, approvedReceiptDigest:projectionDigest(receipt)};
 }
 const prepare = f => refreshPrivateDrafts({...f, layout, fetchSnapshot:async () => f.entity});
+const executable = (f, receiptPath, out) => {
+  const hook = 'globalThis.fetch=async()=>new Response(' + JSON.stringify(JSON.stringify(f.entity)) + ',{status:200});';
+  return spawnSync(process.execPath, ['--import','data:text/javascript;base64,' + Buffer.from(hook).toString('base64'),new URL('./private-drafts-cli.mjs', import.meta.url).pathname,'--receipt',receiptPath,'--site-root',siteRoot,'--out',out], {encoding:'utf8', env:{...process.env, PRIVATE_DRAFT_APPROVED_RECEIPT_DIGEST:f.approvedReceiptDigest, NEOTOMA_EXPORT_ORIGIN:'https://example.test', NEOTOMA_EXPORT_TOKEN:'synthetic-server-reader'}});
+};
 const main = html => html.match(/<main\b[^>]*>[\s\S]*?<\/main>/)[0];
 const hashes = (root, prefix = '') => Object.fromEntries(readdirSync(resolve(root, prefix), {withFileTypes:true}).flatMap(e => {
   const p = prefix ? prefix + '/' + e.name : e.name;
@@ -100,6 +106,59 @@ test('unsafe Markdown rejects with current receipt on both surfaces; unsupported
     assert.equal(existsSync(join(root,'prepared')), false);
   }
   assert.match(renderDraftMarkdown('> unsupported quote\n\n```\nunsupported fence\n```'), /&gt; unsupported quote/);
+});
+
+const guardedPresentation = () => {
+  const marker = 'ent_' + 'a'.repeat(24);
+  return [
+    marker,
+    'ent\\_' + 'a'.repeat(24),
+    'e**nt**_' + 'a'.repeat(24),
+    '[e**nt**](https://example.test/)_'+ 'a'.repeat(24),
+    '# e**nt**_' + 'a'.repeat(24),
+    '- e**nt**_' + 'a'.repeat(24),
+    'synthetic\\@example.test',
+    '/Us**ers**/synthetic',
+    'api\\_key=synthetic',
+    'Be**arer** synthetic',
+    '- Be**arer**\n- synthetic',
+    '# sec**ret**\n\n=synthetic',
+    '[Source](https://example.test/' + encodeURIComponent(marker).replace('_','%5f') + ')',
+    '[Source](https://example.test/%2565nt%255f' + 'a'.repeat(24) + ')',
+    '[Source](https://example.test/%2fUsers%2fsynthetic)',
+    '[Source](https://example.test/?api%5fkey%3dsynthetic)',
+    '[Source](https://example.test/synthetic%40example.test)',
+  ];
+};
+for (const surface of ['renderer','API','natural CLI','executable CLI']) test(surface + ' screens semantic text and interpreted destinations before any package effect', async () => {
+  for (const content of guardedPresentation()) {
+    if (surface === 'renderer') { assert.throws(() => renderDraftMarkdown(content), /private_content_rejected/); continue; }
+    for (const brand of ['ateles','neotoma']) {
+      const f = fixture({brand,content}), root = temp(), receiptPath = join(root,'selection.json'), out = join(root,'prepared');
+      writeFileSync(receiptPath, JSON.stringify(f.receipt));
+      if (surface === 'API') await assert.rejects(prepare(f).then(buildPrivateDraftPackage).then(capturePrivatePackage), /private_content_rejected/);
+      if (surface === 'natural CLI') await assert.rejects(runPrivateDraftCLI(['--receipt',receiptPath,'--site-root',siteRoot,'--out',out], {PRIVATE_DRAFT_APPROVED_RECEIPT_DIGEST:f.approvedReceiptDigest}, {fetchSnapshot:async () => f.entity}), /private_content_rejected/);
+      if (surface === 'executable CLI') {
+        const run = executable(f,receiptPath,out);
+        assert.equal(run.status,1); assert.equal(JSON.parse(run.stderr).error,'private_content_rejected'); assert.equal(run.stdout,'');
+      }
+      assert.equal(existsSync(out),false);
+    }
+  }
+});
+
+test('screened presentation preserves benign source text and prior verified packages on refusal', async () => {
+  const content = 'draft_in_progress, agent_review and independent-source-backed-facts. **Normal** *emphasis* and `literal_code`.\\!\n\n[Source](https://example.test/topic_(detail)?q=public%20record)\n\n&lt;literal&gt;';
+  for (const brand of ['ateles','neotoma']) {
+    const f = fixture({brand,content}), root = temp(), prior = writePrivateDraftPackage(buildPrivateDraftPackage(await prepare(f)), {outRoot:root,siteRoot}), before = hashes(prior.output);
+    const captured = capturePrivatePackage(buildPrivateDraftPackage(await prepare(f))), html = captured.files[brand+'/draft/synthetic-review/index.html'].toString();
+    assert.match(html,/draft_in_progress, agent_review/); assert.match(html,/<strong>Normal<\/strong> <em>emphasis<\/em>/); assert.match(html,/<code>literal_code<\/code>\.!/);
+    assert.match(html,/href="https:\/\/example.test\/topic_\(detail\)\?q=public%20record"/); assert.match(html,/&amp;lt;literal&amp;gt;/);
+    assert.equal((await prepare(f)).projections[0].body,content);
+    const bad = fixture({brand,content:'e**nt**_'+ 'a'.repeat(24)}), receiptPath = join(root,'selection.json'); writeFileSync(receiptPath,JSON.stringify(bad.receipt));
+    await assert.rejects(runPrivateDraftCLI(['--receipt',receiptPath,'--site-root',siteRoot,'--out',root], {PRIVATE_DRAFT_APPROVED_RECEIPT_DIGEST:bad.approvedReceiptDigest}, {fetchSnapshot:async () => bad.entity}), /private_content_rejected/);
+    assert.equal(executable(bad,receiptPath,root).status,1); assert.deepEqual(hashes(prior.output),before);
+  }
 });
 
 test('fresh receipt refresh retains stable route; stale and failed refresh retain exact previous package', async () => {
@@ -229,7 +288,7 @@ test('RED state, digest and slug guard removal fail observable acceptance assert
   assert.throws(() => assert.ok(Object.keys(slug.buildPrivateDraftPackage(unsafeRoute).files).every(path => !path.includes('/../'))));
 });
 test('RED escaping and layout digest guard removal fail visible safety/refusal assertions', async () => {
-  const escaping = await mutant(s => s.replace('result += escapeHtml(input[i++]);', 'result += input[i++];'));
+  const escaping = await mutant(s => { assert.ok(s.includes('html += escapeHtml(input[i++]);')); return s.replace('html += escapeHtml(input[i++]);', 'html += input[i++];'); });
   assert.throws(() => assert.doesNotMatch(escaping.renderDraftMarkdown('<img src=x onerror=alert(1)>'), /<img/));
   const drift = await mutant(s => s.replace("check(privateLayoutDigest(layout) === receipt.layout_digest, 'stale_draft_layout');", ''));
   const f = fixture(), changed = structuredClone(layout); changed.neotoma.assets['development-updates.css'][0] ^= 1;

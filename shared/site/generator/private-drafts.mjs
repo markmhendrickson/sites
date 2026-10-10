@@ -38,7 +38,15 @@ function safeLink(url) {
   check(!/[\s\\\u0000-\u001f\u007f]/.test(url), 'unsafe_draft_link');
   let u; try { u = new URL(url); } catch { throw Error('unsafe_draft_link'); }
   check(u.protocol === 'https:' && !u.username && !u.password, 'unsafe_draft_link');
-  assertSafePublicText(url); return url;
+  assertSafePublicText(url);
+  let interpreted = u.href;
+  for (let depth = 0; depth < 8; depth++) {
+    assertSafePublicText(interpreted);
+    let decoded; try { decoded = decodeURIComponent(interpreted); } catch { throw Error('unsafe_draft_link'); }
+    if (decoded === interpreted) return url;
+    interpreted = decoded;
+  }
+  throw Error('unsafe_draft_link');
 }
 function linkDestination(input, start) {
   let url = '', balance = 1;
@@ -53,15 +61,17 @@ function linkDestination(input, start) {
 }
 function inline(input, depth = 0) {
   check(depth < 12, 'markdown_too_deep');
-  let result = '', i = 0;
+  let html = '', visible = '', i = 0;
   while (i < input.length) {
-    if (input[i] === '\\' && i + 1 < input.length) { result += escapeHtml(input[i + 1]); i += 2; continue; }
+    if (input[i] === '\\' && i + 1 < input.length) { visible += input[i + 1]; html += escapeHtml(input[i + 1]); i += 2; continue; }
     if (input[i] === '[') {
       const end = input.indexOf('](', i + 1);
       if (end >= 0) {
         const label = input.slice(i + 1, end), {url, close} = linkDestination(input, end + 2);
         check(label.length > 0 && !label.includes('['), 'unsupported_draft_link');
-        result += '<a href="' + escapeHtml(safeLink(url)) + '" rel="noreferrer">' + inline(label, depth + 1) + '</a>';
+        const destination = safeLink(url), content = inline(label, depth + 1);
+        visible += content.visible;
+        html += '<a href="' + escapeHtml(destination) + '" rel="noreferrer">' + content.html + '</a>';
         i = close + 1; continue;
       }
     }
@@ -74,26 +84,28 @@ function inline(input, depth = 0) {
       if (end > i + marker.length) {
         const tag = marker === '`' ? 'code' : marker.length === 2 ? 'strong' : 'em';
         const value = input.slice(i + marker.length, end);
-        result += '<' + tag + '>' + (tag === 'code' ? escapeHtml(value) : inline(value, depth + 1)) + '</' + tag + '>';
+        const content = tag === 'code' ? {html:escapeHtml(value), visible:value} : inline(value, depth + 1);
+        visible += content.visible; html += '<' + tag + '>' + content.html + '</' + tag + '>';
         i = end + marker.length; continue;
       }
     }
-    result += escapeHtml(input[i++]);
+    visible += input[i]; html += escapeHtml(input[i++]);
   }
-  return result;
+  assertSafePublicText(visible);
+  return {html, visible};
 }
 // Explicit allowed nodes. Unsupported blocks remain escaped literal text.
 export function renderDraftMarkdown(body) {
   text(body, 100000);
   check(!/!\[[^\]]*\]\(/.test(body), 'unsupported_draft_embed');
-  const lines = body.replace(/\r\n/g, '\n').split('\n'), nodes = [];
+  const lines = body.replace(/\r\n/g, '\n').split('\n'), nodes = [], visibleBlocks = [];
   const headingDepths = lines.map(line => /^(#{1,6}) +(.+)$/.exec(line)?.[1].length).filter(Boolean);
   const headingShift = Math.min(...headingDepths) === 1 ? 1 : 0;
   check(!headingShift || !headingDepths.includes(6), 'unsupported_draft_heading_depth');
   for (let i = 0; i < lines.length;) {
     if (!lines[i].trim()) { i++; continue; }
     const heading = /^(#{1,6}) +(.+)$/.exec(lines[i]);
-    if (heading) { const level = heading[1].length + headingShift; nodes.push('<h' + level + '>' + inline(heading[2]) + '</h' + level + '>'); i++; continue; }
+    if (heading) { const level = heading[1].length + headingShift, content = inline(heading[2]); visibleBlocks.push(content.visible); nodes.push('<h' + level + '>' + content.html + '</h' + level + '>'); i++; continue; }
     const item = /^(?:([-+*])|(\d+)\.) +(.+)$/.exec(lines[i]);
     if (item) {
       const ordered = Boolean(item[2]), items = [], start = ordered ? Number(item[2]) : null;
@@ -101,14 +113,15 @@ export function renderDraftMarkdown(body) {
       while (i < lines.length) {
         const next = /^(?:([-+*])|(\d+)\.) +(.+)$/.exec(lines[i]);
         if (!next || Boolean(next[2]) !== ordered) break;
-        items.push('<li>' + inline(next[3]) + '</li>'); i++;
+        const content = inline(next[3]); visibleBlocks.push(content.visible); items.push('<li>' + content.html + '</li>'); i++;
       }
       const tag = ordered ? 'ol' : 'ul'; nodes.push('<' + tag + (ordered ? ' start="' + start + '"' : '') + '>' + items.join('') + '</' + tag + '>'); continue;
     }
     const paragraph = [];
     do { paragraph.push(lines[i++]); } while (i < lines.length && lines[i].trim() && !/^(?:#{1,6} |[-+*] |\d+\. )/.test(lines[i]));
-    nodes.push('<p>' + inline(paragraph.join('\n')) + '</p>');
+    const content = inline(paragraph.join('\n')); visibleBlocks.push(content.visible); nodes.push('<p>' + content.html + '</p>');
   }
+  assertSafePublicText(visibleBlocks.join('\n'));
   return nodes.join('\n');
 }
 
